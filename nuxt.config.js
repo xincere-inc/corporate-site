@@ -24,12 +24,23 @@ export default {
         content:
           "一般的にライフステージが変化するタイミング（入学・就職・結婚・出産）で、人は住まいを変えます。その重要な出来事で発生する  不動産の売買・賃貸  に伴う手続きなどを“”、我々はその時代における最善の方法を用いて、より簡単に・効率化していきます。"
       }
+    ],
+    link: [
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com"
+      },
+      {
+        ref: "stylesheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      }
     ]
   },
   env: envSet,
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: ["~assets/stylesheets/main.scss"],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
@@ -50,10 +61,7 @@ export default {
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    "@nuxtjs/bulma"
-  ],
+  modules: [],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
