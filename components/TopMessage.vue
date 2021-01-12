@@ -33,6 +33,8 @@
     overflow: hidden;
   }
   .logo {
+    max-width: 1440px;
+    margin: 0 auto;
     justify-content: center;
     display: flex;
     position: relative;
