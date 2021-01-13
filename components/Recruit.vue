@@ -85,6 +85,7 @@
   }
   .bg-gray {
     padding: 30px 0;
+    margin-top: 100px;
   }
 }
 @media only screen and (min-width: 980px) {
@@ -134,9 +135,11 @@
 
     color: #333333;
   }
+  .bg-gray {
+    margin-top: 150px;
+  }
 }
 .bg-gray {
-  margin-top: 150px;
   background-color: #f8f8f8;
 }
 
