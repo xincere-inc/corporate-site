@@ -77,7 +77,7 @@ export default Vue.extend({
   },
   head() {
     return {
-      title: "ソフトウェアエンジニア",
+      title: "ソフトウェアエンジニアの募集要項",
       meta: [
         {
           hid: "description",
