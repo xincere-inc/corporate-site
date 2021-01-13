@@ -1,4 +1,4 @@
 module.exports = {
-  gaKey: "G-F33V17FPK8",
+  gaKey: "",
   devTool: true
 };
