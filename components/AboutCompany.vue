@@ -54,11 +54,37 @@
           2020年6月8日
         </div>
       </div>
+      <div class="apply_link">
+        <a
+          href="https://forms.gle/TiWhkAbmg63kuoLi8"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          お問い合わせする
+        </a>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.apply_link {
+  text-align: center;
+  margin-top: 80px;
+}
+a {
+  background: #518c3c;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px 80px;
+}
 @media only screen and (max-width: 980px) {
   .container {
     margin: 100px 30px;

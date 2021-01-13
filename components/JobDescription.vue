@@ -13,7 +13,11 @@
         </div>
       </div>
       <div class="apply_link">
-        <a href="https://forms.gle/sdEpyhFmpfV2n1D76">
+        <a
+          href="https://forms.gle/sdEpyhFmpfV2n1D76"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           応募する
         </a>
       </div>
