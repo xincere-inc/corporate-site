@@ -9,7 +9,7 @@ export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
     title: "株式会社シンシア",
-    titleTemplate: "ライフステージの変化をサポートします | %s",
+    titleTemplate: "%s | 株式会社シンシア",
     meta: [
       { hid: "og:type", property: "og:type", content: "website" },
       {
