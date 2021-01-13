@@ -23,9 +23,18 @@ export default {
         name: "description",
         content:
           "一般的にライフステージが変化するタイミング（入学・就職・結婚・出産）で、人は住まいを変えます。その重要な出来事で発生する  不動産の売買・賃貸  に伴う手続きなどを“”、我々はその時代における最善の方法を用いて、より簡単に・効率化していきます。"
+      },
+      {
+        name: "keywords",
+        content: "不動産仲介,ライフステージ,エンジニア"
       }
     ],
     link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "/favicon.ico"
+      },
       {
         rel: "preconnect",
         href: "https://fonts.gstatic.com"

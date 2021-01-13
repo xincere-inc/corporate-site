@@ -6,9 +6,9 @@
     <div class="container">
       <div class="grid">
         <div class="text-box">
-          <p class="copy">
+          <h1 class="copy">
             ライフステージの変化をなめらかにする
-          </p>
+          </h1>
           <div class="message">
             一般的にライフステージが変化するタイミング(入学・就職・結婚・
             出産)で、人は住まいを変えます。その重要な出来事で発生する
