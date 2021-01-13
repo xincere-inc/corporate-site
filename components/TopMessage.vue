@@ -107,6 +107,8 @@
     overflow: hidden;
     img {
       width: 120%;
+      height: intrinsic;
+      object-fit: contain;
     }
   }
   .copy {
