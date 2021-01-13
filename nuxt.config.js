@@ -11,6 +11,18 @@ export default {
     title: "株式会社シンシア",
     titleTemplate: "ライフステージの変化をサポートします | %s",
     meta: [
+      { hid: "og:type", property: "og:type", content: "website" },
+      {
+        hid: "og:description",
+        property: "og:description",
+        content:
+          "一般的にライフステージが変化するタイミング（入学・就職・結婚・出産）で、人は住まいを変えます。その重要な出来事で発生する  不動産の売買・賃貸  に伴う手続きなどを“”、我々はその時代における最善の方法を用いて、より簡単に・効率化していきます。"
+      },
+      {
+        hid: "og:image",
+        property: "og:image",
+        content: "https://corp.xincere.jp/og_image.png"
+      },
       {
         charset: "utf-8"
       },
