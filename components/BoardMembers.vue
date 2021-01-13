@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="wrapper">
+    <img src="~/assets/images/left_door.png" class="left_door"/>
     <div class="container">
       <h2>
         事業内容
@@ -77,6 +78,28 @@
     }
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .wrapper {
+    max-width: 1440px;
+    width: 1440px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .left_door {
+    height: 285px;
+    position: absolute;
+    left: 0;
+    bottom: -120px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .left_door {
+    display: none;
+  }
+}
+
 @media only screen and (min-width: 980px) {
   .container {
     max-width: 980px;

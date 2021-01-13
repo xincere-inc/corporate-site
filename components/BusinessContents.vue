@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="wrapper">
+    <img src="~/assets/images/right_door.png" class="right_door"/>
     <div class="container">
       <h2>
         事業内容
@@ -91,6 +92,26 @@ a {
       margin-top: 10px;
       margin-left: auto;
     }
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .wrapper {
+    max-width: 1440px;
+    width: 1440px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .right_door {
+    height: 285px;
+    position: absolute;
+    right: 0;
+    bottom: -120px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .right_door {
+    display: none;
   }
 }
 @media only screen and (min-width: 980px) {
