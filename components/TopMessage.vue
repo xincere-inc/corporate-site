@@ -57,7 +57,7 @@
     display: flex;
     align-items: center;
     letter-spacing: 0.2em;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: #333333;
   }
 

@@ -32,6 +32,7 @@ footer {
   text-align: center;
   color: #333333;
   background-color: #f8f8f8;
+  letter-spacing: 0.03rem;
 }
 </style>
 

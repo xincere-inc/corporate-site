@@ -55,7 +55,7 @@
       line-height: 19px;
       align-items: center;
       letter-spacing: 0.2em;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
 
       /* Gray 3 */
 
@@ -142,7 +142,7 @@
       font-size: 16px;
       line-height: 23px;
       letter-spacing: 0.2em;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
 
       /* Gray 3 */
 
