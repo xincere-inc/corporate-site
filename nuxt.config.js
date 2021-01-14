@@ -64,7 +64,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: ["@/plugins/gtag"],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -72,27 +72,11 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    "@nuxt/typescript-build",
-    "@nuxtjs/google-analytics",
-    "@nuxtjs/gtm"
-    // [
-    //   "@nuxtjs/google-analytics",
-    //   {
-    //     id: envSet.gaKey
-    //   }
-    // ]
+    "@nuxt/typescript-build"
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
-  modules: ["@nuxtjs/gtm"],
-  publicRuntimeConfig: {
-    gtm: {
-      id: envSet.gaTagKey
-    },
-    googleAnalytics: {
-      id: envSet.gaTagKey
-    }
-  },
+  modules: [],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
