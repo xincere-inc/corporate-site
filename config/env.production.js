@@ -1,4 +1,5 @@
 module.exports = {
-  gaKey: "UA-167802575-1",
-  devTool: false
+  gaKey: "",
+  devTool: false,
+  gaTagKey: "G-F33V17FPK8"
 };

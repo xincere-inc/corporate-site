@@ -1,4 +1,5 @@
 module.exports = {
   gaKey: "",
-  devTool: true
+  devTool: true,
+  gaTagKey: ""
 };
