@@ -73,7 +73,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
-    "@nuxtjs/google-analytics"
+    "@nuxtjs/google-analytics",
+    "@nuxtjs/gtm"
     // [
     //   "@nuxtjs/google-analytics",
     //   {
@@ -84,11 +85,13 @@ export default {
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: ["@nuxtjs/gtm"],
-  gtm: {
-    id: envSet.gaTagKey
-  },
-  googleAnalytics: {
-    id: envSet.gaTagKey
+  publicRuntimeConfig: {
+    gtm: {
+      id: envSet.gaTagKey
+    },
+    googleAnalytics: {
+      id: envSet.gaTagKey
+    }
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
