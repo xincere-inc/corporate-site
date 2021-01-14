@@ -8,6 +8,16 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
+    script: [
+      {
+        src: `https://www.googletagmanager.com/gtag/js?id=${envSet.gaTagKey}`,
+        defer: true
+      },
+      {
+        innerHTML: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${envSet.gaTagKey}');`
+      }
+    ],
+    __dangerouslyDisableSanitizers: ["script"],
     title: "株式会社シンシア",
     titleTemplate: "%s | 株式会社シンシア",
     meta: [
@@ -64,7 +74,7 @@ export default {
   css: [],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: ["@/plugins/gtag"],
+  plugins: [],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
