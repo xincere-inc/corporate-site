@@ -3,7 +3,7 @@
     <img src="~/assets/images/left_door.png" class="left_door"/>
     <div class="container">
       <h2>
-        事業内容
+        役員紹介
       </h2>
       <div class="grid">
         <div class="text-box">
