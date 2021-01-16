@@ -21,7 +21,7 @@ export default Vue.extend({
         },
         {
           key: "雇用形態",
-          value: "正社員・契約社員・副業"
+          value: "正社員・契約社員・副業・インターン"
         },
         {
           key: "業務内容",
