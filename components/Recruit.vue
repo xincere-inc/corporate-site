@@ -35,6 +35,21 @@
             <img src="~/assets/images/icons/arrow.svg" height="11px" />
           </div>
         </nuxt-link>
+        <nuxt-link to="/recruit/sales" class="grid-box">
+          <div class="recruit-grid">
+            <div class="text-box">
+              <h3>
+                不動産売買・賃貸営業
+              </h3>
+              <p>
+                宅地建物取引士の資格保有者で、不動産売買・賃貸営業経験ある方を募集しています。
+              </p>
+            </div>
+          </div>
+          <div class="arrow">
+            <img src="~/assets/images/icons/arrow.svg" height="11px" />
+          </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
