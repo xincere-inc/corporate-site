@@ -1,6 +1,6 @@
 <template>
   <div>
-    <JobDescription title="セールスエンジニア" :jdTable="jdTable" />
+    <JobDescription title="セールスエンジニア(未経験可)" :jdTable="jdTable" />
   </div>
 </template>
 
