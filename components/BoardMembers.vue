@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <img src="~/assets/images/left_door.png" class="left_door"/>
+    <img src="~/assets/images/left_door.png" class="left_door" />
     <div class="container">
       <h2>
         役員紹介
@@ -9,7 +9,7 @@
         <div class="text-box">
           <h3><span>代表取締役社長</span>徐 聖博</h3>
           <p>
-            東京大学大学院情報理工学系研究科コンピュータ科学専攻にて、人工知能の研究し修士号取得。ソフトウェアエンジニアとして、スタートアップ、大手上場企業、外資系テック企業など様々会社にてエンジニアリングを経験する。2020年に自身の持つ”宅地建物取引士”免許を用いて起業。
+            東京大学大学院情報理工学系研究科コンピュータ科学専攻にて、人工知能の研究し修士号取得。ソフトウェアエンジニアとして、スタートアップ、大手上場企業、外資系テック企業など様々な会社にてエンジニアリングを経験する。2020年に自身の持つ”宅地建物取引士”免許を用いて起業。
           </p>
         </div>
         <div class="image-box">

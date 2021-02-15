@@ -21,7 +21,8 @@ export default Vue.extend({
     TopMessage,
     BusinessContents,
     BoardMembers,
-    AboutCompany
+    AboutCompany,
+    Recruit
   },
   head() {
     return {
