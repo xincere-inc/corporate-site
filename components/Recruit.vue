@@ -50,6 +50,21 @@
             <img src="~/assets/images/icons/arrow.svg" height="11px" />
           </div>
         </nuxt-link>
+        <nuxt-link to="/recruit/sales_assistant" class="grid-box">
+          <div class="recruit-grid">
+            <div class="text-box">
+              <h3>
+                営業アシスタント
+              </h3>
+              <p>
+                チャットでの顧客対応や、書類作成など不動産営業に携わる営業アシスタントを募集しています。
+              </p>
+            </div>
+          </div>
+          <div class="arrow">
+            <img src="~/assets/images/icons/arrow.svg" height="11px" />
+          </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
