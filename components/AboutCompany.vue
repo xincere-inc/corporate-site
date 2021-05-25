@@ -36,12 +36,6 @@
           東京都知事(1)第105089号
         </div>
         <div class="grid__title">
-          資本金
-        </div>
-        <div class="grid__item">
-          500万円
-        </div>
-        <div class="grid__title">
           加盟団体
         </div>
         <div class="grid__item">
