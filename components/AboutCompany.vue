@@ -24,6 +24,12 @@
           東京都港区南麻布1-9-8 509
         </div>
         <div class="grid__title">
+          資本金
+        </div>
+        <div class="grid__item">
+          6,700万円
+        </div>
+        <div class="grid__title">
           事業内容
         </div>
         <div class="grid__item">

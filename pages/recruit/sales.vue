@@ -42,7 +42,7 @@ export default Vue.extend({
         },
         {
           key: "勤務地",
-          value: "(応相談)六本木周辺・在宅"
+          value: "東京都渋谷区猿楽町4-10"
         },
         {
           key: "給与",

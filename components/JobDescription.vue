@@ -27,7 +27,6 @@
 
 <script lang="ts">
 import Vue from "vue";
-import JobDescription from "@/components/JobDescription.vue";
 
 export default Vue.extend({
   props: {

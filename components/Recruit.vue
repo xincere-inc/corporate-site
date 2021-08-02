@@ -20,21 +20,6 @@
             <img src="~/assets/images/icons/arrow.svg" height="11px" />
           </div>
         </nuxt-link>
-        <nuxt-link to="/recruit/sales_engineer" class="grid-box">
-          <div class="recruit-grid">
-            <div class="text-box">
-              <h3>
-                セールスエンジニア(未経験可)
-              </h3>
-              <p>
-                宅地建物取引士の資格保有者で、不動産営業経験ある方でソフトウェア開発をしていただく方を募集しています。エンジニア経験は必要最低限で大丈夫です。
-              </p>
-            </div>
-          </div>
-          <div class="arrow">
-            <img src="~/assets/images/icons/arrow.svg" height="11px" />
-          </div>
-        </nuxt-link>
         <nuxt-link to="/recruit/sales" class="grid-box">
           <div class="recruit-grid">
             <div class="text-box">
