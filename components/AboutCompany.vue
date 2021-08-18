@@ -27,7 +27,7 @@
           資本金
         </div>
         <div class="grid__item">
-          6,700万円
+          6,700万円（資本準備金含む）
         </div>
         <div class="grid__title">
           事業内容
