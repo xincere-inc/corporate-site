@@ -1,6 +1,11 @@
 <template>
   <div>
     <header class="container">
+      <div class="language">
+        <a href="https://corp.xincere.jp/" style="text-decoration: none;
+    color: #333333;">日本語</a>/<a href="https://corp.xincere.jp/ch" style="text-decoration: none;
+    color: #333333;">中文</a>　
+      </div>
       <img src="~/assets/images/logo.svg" class="logo" />
     </header>
     <Nuxt />
@@ -16,6 +21,7 @@
     max-width: 980px;
     margin: 0 auto;
   }
+  
   .logo {
     position: absolute;
     top: 60px;

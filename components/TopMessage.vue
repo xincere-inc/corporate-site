@@ -1,8 +1,6 @@
 
 <template>
   <div class="o-hidden">
-    <div ="language">
-      <a href="h"
     <div class="logo">
       <img src="~/assets/images/top_image.png" />
     </div>
@@ -41,7 +39,7 @@
     top: -250px;
     left: 0;
     right: 0;
-    img {
+  img {
       width: 120%;
     }
   }

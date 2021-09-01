@@ -29,6 +29,7 @@
   .o-hidden {
     overflow: hidden;
   }
+
   .logo {
     max-width: 1440px;
     margin: 0 auto;
@@ -38,7 +39,7 @@
     top: -250px;
     left: 0;
     right: 0;
-    img {
+  img {
       width: 120%;
     }
   }
