@@ -39,6 +39,7 @@
           住宅土地建筑物行业交易执照号
         </div>
         <div class="grid__item">
+
           东京都知事（1）第105089号
         </div>
         <div class="grid__title">
