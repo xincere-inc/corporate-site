@@ -1,6 +1,9 @@
 <template>
   <div>
     <header class="container">
+      <div class="language">
+        <a href="https://corp.xincere.jp/">日本語</a>/<a href="https://corp.xincere.jp/ch">中文</a>　
+      </div>
       <img src="~/assets/images/logo.svg" class="logo" />
     </header>
     <Nuxt />
@@ -16,6 +19,18 @@
     max-width: 980px;
     margin: 0 auto;
   }
+  .language {position: relative;
+  top: 25px;
+  z-index: 10000;
+  font-size:14px;
+  color: #828282;
+}
+
+  .language a { text-decoration: none; color: #828282; 
+  }
+  .language a:visited {text-decoration: none; color: #828282;
+  }
+  .language a:hover { color: #518c3c}
   .logo {
     position: absolute;
     top: 60px;
@@ -25,6 +40,17 @@
   header {
     margin-top: 30px;
   }
+  .language {position: relative;
+    font-size:14px;
+    color: #828282;
+    z-index: 10000;
+}
+
+  .language a { text-decoration: none; color: #828282; 
+  }
+  .language a:visited {text-decoration: none; color: #828282;
+  }
+  .language a:hover { color: #518c3c}
 }
 footer {
   font-size: 12px;
@@ -41,6 +67,7 @@ footer {
   .container {
     margin: 0 30px;
   }
+  
 }
 
 html {
