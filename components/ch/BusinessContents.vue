@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <img src="~/assets/images/right_door.png" class="right_door"/>
+    <img src="~/assets/images/right_door.png" class="right_door" />
     <div class="container">
       <h2>
         业务内容
@@ -17,7 +17,8 @@
             高级房产的中介业务
           </h3>
           <p>
-            运营针对高级房产的租赁、买卖的房产媒体「Xincere Residence」。在您搬进高级房产、塔楼公寓时发生烦恼，我司精通高级房产的职员会为您排忧解。一切为了您的生活阶段的改变。
+            运营针对高级房产的租赁、买卖的房产媒体「Xincere
+            Residence」。在您搬进高级房产、塔楼公寓时发生烦恼，我司精通高级房产的职员会为您排忧解。一切为了您的生活阶段的改变。
           </p>
           <p class="link">
             <a

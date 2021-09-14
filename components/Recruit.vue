@@ -20,6 +20,21 @@
             <img src="~/assets/images/icons/arrow.svg" height="11px" />
           </div>
         </nuxt-link>
+        <nuxt-link to="/recruit/designer" class="grid-box">
+          <div class="recruit-grid">
+            <div class="text-box">
+              <h3>
+                UI/UXデザイナー
+              </h3>
+              <p>
+                シンシアレジデンスなど、シンシアで運営しているプロダクトに幅広くUI/UXデザインをしていただきます。プロダクト・会社のブランディングなど幅広い業務をお願いしたいと思っております。
+              </p>
+            </div>
+          </div>
+          <div class="arrow">
+            <img src="~/assets/images/icons/arrow.svg" height="11px" />
+          </div>
+        </nuxt-link>
         <nuxt-link to="/recruit/sales" class="grid-box">
           <div class="recruit-grid">
             <div class="text-box">
@@ -107,7 +122,7 @@
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 150px;
+    grid-auto-rows: 180px;
     grid-gap: 20px;
   }
 

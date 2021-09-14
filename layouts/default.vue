@@ -6,6 +6,9 @@
     <Nuxt />
     <footer>
       Copyright © Xincere All Rights Reserved.
+      <div class="language">
+        <a href="/">日本語</a> / <a href="/ch">中文</a>
+      </div>
     </footer>
   </div>
 </template>
@@ -18,12 +21,51 @@
   }
   .logo {
     position: absolute;
-    top: 60px;
+    top: 80px;
+  }
+
+  .language {
+    // position: absolute;
+    // top: 20px;
+    padding-top: 10px;
+    z-index: 10000;
+    font-size: 14px;
+    color: #828282;
+    a {
+      text-decoration: none;
+      color: #828282;
+      &:visited {
+        text-decoration: none;
+        color: #828282;
+      }
+      &:hover {
+        color: #518c3c;
+      }
+    }
   }
 }
 @media only screen and (max-width: 980px) {
   header {
     margin-top: 30px;
+  }
+  .language {
+    // position: absolute;
+    // top: 20px;
+    padding-top: 10px;
+    font-size: 14px;
+    color: #828282;
+    z-index: 10000;
+    a {
+      text-decoration: none;
+      color: #828282;
+      &:visited {
+        text-decoration: none;
+        color: #828282;
+      }
+      &:hover {
+        color: #518c3c;
+      }
+    }
   }
 }
 footer {

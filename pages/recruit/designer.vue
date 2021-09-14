@@ -1,6 +1,6 @@
 <template>
   <div>
-    <JobDescription title="ソフトウェアエンジニア" :jdTable="jdTable" />
+    <JobDescription title="UI/UXデザイナー" :jdTable="jdTable" />
   </div>
 </template>
 
@@ -17,11 +17,11 @@ export default Vue.extend({
       jdTable: [
         {
           key: "職種",
-          value: "ソフトウェアエンジニア"
+          value: "UI/UXデザイナー"
         },
         {
           key: "雇用形態",
-          value: "正社員・契約社員・インターン"
+          value: "正社員"
         },
         {
           key: "業務内容",
@@ -31,12 +31,12 @@ export default Vue.extend({
         {
           key: "必須条件",
           value:
-            "エンジニアとしての業務経験\nアルゴリズムに対する理解\nネットワークに対する知識\n事業に焦点を当てたエンジニアリング"
+            "SketchやFigmaなどを用いたUI、プロトタイプ制作の実務経験\nAdobe Photoshopなど、ビジュアルデザインの経験\nWeb制作の経験がある方"
         },
         {
           key: "望ましい条件",
           value:
-            "プロダクトの0 → 1経験チーム開発の経験\n大規模開発の経験\n不動産の賃貸・購入経験\n宅地建物取引士の資格保有\n営業経験"
+            "HTML/CSS/Javascriptなどフロントエンド実装\nスタートアップ企業でデザイナーとして参画した経験がある方\n制作会社でのデザイナー経験がある方\nデザインシステムの設計を主導した経験がある方"
         },
         {
           key: "試用期間",
@@ -48,7 +48,7 @@ export default Vue.extend({
         },
         {
           key: "給与",
-          value: "年収400 - 800万(それ以上は応相談)"
+          value: "年収600 - 1000万"
         },
         {
           key: "勤務時間",
@@ -83,7 +83,7 @@ export default Vue.extend({
           hid: "description",
           name: "description",
           content:
-            "株式会社シンシアにおけるソフトウェアエンジニアに関する募集要項です。ご興味ある方はぜひカジュアル面談からでも大丈夫なので、ぜひよろしくお願い致します。"
+            "株式会社シンシアにおけるUI/UXデザイナーに関する募集要項です。ご興味ある方はぜひカジュアル面談からでも大丈夫なので、ぜひよろしくお願い致します。"
         }
       ]
     };
