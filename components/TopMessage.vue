@@ -1,4 +1,3 @@
-
 <template>
   <div class="o-hidden">
     <div class="logo">
@@ -38,8 +37,9 @@
     position: relative;
     top: -250px;
     left: 0;
+
     right: 0;
-  img {
+    img {
       width: 120%;
     }
   }

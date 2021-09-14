@@ -30,7 +30,7 @@
           6,700万日元
         </div>
         <div class="grid__title">
-          业务内容 
+          业务内容
         </div>
         <div class="grid__item">
           运营高级房产网站「Xincere Residence」
@@ -39,7 +39,6 @@
           住宅土地建筑物行业交易执照号
         </div>
         <div class="grid__item">
-
           东京都知事（1）第105089号
         </div>
         <div class="grid__title">
