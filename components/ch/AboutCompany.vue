@@ -18,12 +18,6 @@
           总经理 徐 圣博
         </div>
         <div class="grid__title">
-          所在地
-        </div>
-        <div class="grid__item">
-          东京都港区南麻布19-8 509
-        </div>
-        <div class="grid__title">
           注册资金
         </div>
         <div class="grid__item">

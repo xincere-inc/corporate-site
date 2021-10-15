@@ -18,12 +18,6 @@
           代表取締役社長 徐 聖博
         </div>
         <div class="grid__title">
-          所在地
-        </div>
-        <div class="grid__item">
-          東京都港区南麻布1-9-8 509
-        </div>
-        <div class="grid__title">
           資本金
         </div>
         <div class="grid__item">
