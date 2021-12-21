@@ -52,7 +52,7 @@
         <a
           href="https://forms.gle/TiWhkAbmg63kuoLi8"
           target="_blank"
-          rel="noreferrer noopener"
+          rel="noopener"
         >
           联系我们
         </a>
