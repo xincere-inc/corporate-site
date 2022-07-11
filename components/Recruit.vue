@@ -1,63 +1,14 @@
 <template>
   <div class="bg-gray">
     <div class="container">
-      <h2>
-        募集職種
-      </h2>
+      <h2>募集職種</h2>
       <div class="grid">
         <nuxt-link to="/recruit/software_engineer" class="grid-box">
           <div class="recruit-grid">
             <div class="text-box">
-              <h3>
-                ソフトウェアエンジニア
-              </h3>
+              <h3>ソフトウェアエンジニア</h3>
               <p>
                 シンシアレジデンスなど、シンシアで運営しているシステムを幅広く開発していただきます。フルスタックで開発することを想定しています。
-              </p>
-            </div>
-          </div>
-          <div class="arrow">
-            <img src="~/assets/images/icons/arrow.svg" height="11px" />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/recruit/designer" class="grid-box">
-          <div class="recruit-grid">
-            <div class="text-box">
-              <h3>
-                UI/UXデザイナー
-              </h3>
-              <p>
-                シンシアレジデンスなど、シンシアで運営しているプロダクトに幅広くUI/UXデザインをしていただきます。プロダクト・会社のブランディングなど幅広い業務をお願いしたいと思っております。
-              </p>
-            </div>
-          </div>
-          <div class="arrow">
-            <img src="~/assets/images/icons/arrow.svg" height="11px" />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/recruit/sales" class="grid-box">
-          <div class="recruit-grid">
-            <div class="text-box">
-              <h3>
-                不動産売買・賃貸営業
-              </h3>
-              <p>
-                宅地建物取引士の資格保有者で、不動産売買・賃貸営業経験ある方を募集しています。
-              </p>
-            </div>
-          </div>
-          <div class="arrow">
-            <img src="~/assets/images/icons/arrow.svg" height="11px" />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/recruit/sales_assistant" class="grid-box">
-          <div class="recruit-grid">
-            <div class="text-box">
-              <h3>
-                営業アシスタント
-              </h3>
-              <p>
-                チャットでの顧客対応や、書類作成など不動産営業に携わる営業アシスタントを募集しています。
               </p>
             </div>
           </div>

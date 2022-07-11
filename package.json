@@ -10,15 +10,15 @@
     "generate": "cross-env NODE_ENV=\"production\" nuxt-ts generate"
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^2.0.0",
-    "core-js": "^3.6.5",
+    "@nuxt/typescript-runtime": "^2.1.0",
+    "core-js": "^3.23.4",
     "cross-env": "^7.0.3",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.15.8"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.6",
-    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
     "node-sass": "^5.0.0",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^10.3.1"
   }
 }

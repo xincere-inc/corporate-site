@@ -1,49 +1,13 @@
 <template>
   <div class="bg-gray">
     <div class="container">
-      <h2>
-        招聘职位
-      </h2>
+      <h2>招聘职位</h2>
       <div class="grid">
         <nuxt-link to="/recruit/software_engineer" class="grid-box">
           <div class="recruit-grid">
             <div class="text-box">
-              <h3>
-                软件工程师
-              </h3>
-              <p>
-                针对Xincere Residence等Xincere运营的系统进行开发。
-              </p>
-            </div>
-          </div>
-          <div class="arrow">
-            <img src="~/assets/images/icons/arrow.svg" height="11px" />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/recruit/sales" class="grid-box">
-          <div class="recruit-grid">
-            <div class="text-box">
-              <h3>
-                房地产销售·租赁业务员
-              </h3>
-              <p>
-                招聘取得住宅土地建筑物交易士资格，并在房地产销售、租赁业务方面有经验的人员。
-              </p>
-            </div>
-          </div>
-          <div class="arrow">
-            <img src="~/assets/images/icons/arrow.svg" height="11px" />
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/recruit/sales_assistant" class="grid-box">
-          <div class="recruit-grid">
-            <div class="text-box">
-              <h3>
-                销售工程师（无经验也可）
-              </h3>
-              <p>
-                チャットでの顧客対応や、書類作成など不動産営業に携わる営業アシスタントを募集しています。
-              </p>
+              <h3>软件工程师</h3>
+              <p>针对Xincere Residence等Xincere运营的系统进行开发。</p>
             </div>
           </div>
           <div class="arrow">
