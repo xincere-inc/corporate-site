@@ -38,39 +38,34 @@
             自社プロダクトの開発を通し、プロダクト運営経験豊富なメンバーが貴社のDX支援・プロダクト開発を致します。
             仕様が明確に定まっていない場合でも、一緒に検討するところからサポート致します。
           </p>
+          <p class="link">
+            <nuxt-link
+              to="/dx-support"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              詳しくはこちら
+            </nuxt-link>
+          </p>
         </div>
       </div>
     </div>
-    <div class="apply_link">
-      <a
-        href="https://forms.gle/TiWhkAbmg63kuoLi8"
-        target="_blank"
-        rel="noopener"
-      >
-        お問い合わせする
-      </a>
-    </div>
+    <ApplyLink />
   </div>
 </template>
 
+<script lang="ts">
+import Vue from "vue";
+import ApplyLink from "@/components/ApplyLink.vue";
+
+export default Vue.extend({
+  components: {
+    ApplyLink,
+  },
+});
+</script>
+
 <style lang="scss" scoped>
-.apply_link {
-  text-align: center;
-  margin-top: 80px;
-  a {
-    background: #518c3c;
-    border-radius: 6px;
-    color: #ffffff;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 20px;
-    letter-spacing: 0.05em;
-    text-align: center;
-    text-decoration: none;
-    padding: 15px 80px;
-  }
-}
 .link {
   a {
     font-weight: 300;
@@ -211,6 +206,9 @@
 
       text-align: justify;
       letter-spacing: 0.1em;
+    }
+    .link {
+      text-align: right;
     }
   }
 }

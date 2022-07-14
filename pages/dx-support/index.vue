@@ -1,33 +1,30 @@
 <template>
   <div>
-    <TopMessage />
-    <BusinessContents />
-    <BoardMembers />
-    <Recruit />
-    <AboutCompany />
+    <Top />
+    <Problems />
+    <Features />
+    <Advantages />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import TopMessage from "@/components/TopMessage.vue";
-import BusinessContents from "@/components/BusinessContents.vue";
-import BoardMembers from "@/components/BoardMembers.vue";
-import Recruit from "@/components/Recruit.vue";
-import AboutCompany from "@/components/AboutCompany.vue";
+
+import Top from "@/components/dx-support/DXTop.vue";
+import Problems from "@/components/dx-support/DXProblems.vue";
+import Features from "@/components/dx-support/DXFeatures.vue";
+import Advantages from "@/components/dx-support/DXAdvantages.vue";
 
 export default Vue.extend({
-  layout: "top",
   components: {
-    TopMessage,
-    BusinessContents,
-    BoardMembers,
-    AboutCompany,
-    Recruit,
+    Top,
+    Problems,
+    Features,
+    Advantages,
   },
   head() {
     return {
-      title: "ライフステージの変化をなめらかにする",
+      title: "シンシアのDX支援事業について",
       meta: [
         {
           hid: "description",
