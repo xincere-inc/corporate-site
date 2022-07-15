@@ -1,7 +1,7 @@
 <template>
   <div>
     <DXH2Header
-      en_title="DIFFERENCE FROM EXSTING DEVELOPMENT SERVICES"
+      en_title="DIFFERENCE"
       title="従来の受託開発と<br/>月額制開発チームレンタルの違い"
     />
 
@@ -31,8 +31,8 @@ export default Vue.extend({
 .fetures {
   display: block;
   text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   img {
     width: 100%;
   }

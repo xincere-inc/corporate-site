@@ -31,6 +31,7 @@ export default Vue.extend({
     font-weight: 300;
     font-size: 10px;
     line-height: 100%;
+    margin-bottom: 10px;
 
     color: #4f4f4f;
   }
