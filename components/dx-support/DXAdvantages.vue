@@ -4,13 +4,16 @@
     <div class="features">
       <div style="margin: auto">
         <p class="merits">
+          <span class="merits__number"> 1 </span>
           事業の成長マイルストーンを予め相談できるため長期・短期の開発計画を理解しながら進められる
         </p>
         <p class="merits">
+          <span class="merits__number"> 2 </span>
           自社でも事業を運営しているため事業の目的にフォーカスした開発を提案できる
         </p>
 
         <p class="merits">
+          <span class="merits__number"> 3 </span>
           実際に事業を進めている経験豊富なメンバーが知恵を持ち寄り進める
         </p>
       </div>
@@ -42,16 +45,17 @@ export default Vue.extend({
 .advantage-bg {
   margin-top: 60px;
   background-color: #f2f3f4;
-  padding: 20px 20px 40px;
+  padding: 20px 30px 40px;
 }
 .features {
   display: block;
 }
 .merits {
+  position: relative;
   background-color: white;
   border: 2px solid #518c3c;
   padding: 16px 32px;
-  border-radius: 4px;
+  border-radius: 8px;
   margin-bottom: 40px;
 
   font-weight: 600;
@@ -59,6 +63,19 @@ export default Vue.extend({
   line-height: 24px;
 
   color: #4f4f4f;
+  &__number {
+    position: absolute;
+    left: -24px;
+    top: -24px;
+    border-radius: 100px;
+    background-color: #518c3c;
+    color: white;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 32px;
+  }
 }
 img {
   margin-top: 40px;
