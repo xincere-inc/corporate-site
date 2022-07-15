@@ -62,6 +62,7 @@ export default Vue.extend({
       /* primary/100 */
 
       color: #4f4f4f;
+      margin: 30px 0 20px;
     }
     p {
       font-weight: 300;
