@@ -38,7 +38,7 @@ export default Vue.extend({
   object-fit: cover;
   object-position: center;
   height: 100%;
-  min-width: 100%;
+  width: 100%;
   filter: brightness(0.5);
 }
 .sp-only {
