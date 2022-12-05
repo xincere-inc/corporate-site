@@ -6,7 +6,7 @@
         <div class="grid-box">
           <nuxt-link to="/recruit/software_engineer" class="recruit-grid">
             <div class="text-box">
-              <h3><span>2022/01/11（月）</span>税理士法人グランサーズ様提携</h3>
+              <h3><span class="date">2022/01/11（月）</span>税理士法人グランサーズ様提携</h3>
             </div>
           </nuxt-link>
           <div class="arrow">
@@ -73,14 +73,15 @@
   @media only screen and (min-width: 980px) {
     .grid {
       display: grid;
-      grid-auto-rows: 180px;
       grid-gap: 20px;
       background-color: #ffffff;
     }
   
     .grid-box {
       background-color: #ffffff;
-      margin: 30px;
+      margin: 40px 70px;
+      padding-top: 12px;
+      padding-bottom: 12px;
       border-bottom: 2px solid #CDD0D3;
       align-items: center;
       display: grid;
@@ -135,5 +136,11 @@
     text-decoration: none;
     color: #828282;
   }
+  .date {
+    color: #518C3C;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+
   </style>
   
