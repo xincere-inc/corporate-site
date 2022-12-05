@@ -36,20 +36,23 @@
       display: grid;
       grid-auto-rows: minmax(150px auto);
       grid-gap: 20px;
+      background-color: #ffffff;
     }
   
     .grid-box {
-      background-color: #ffffff;
-      padding: 20px;
+      margin: 20px;
+      padding-top: 12px;
+      padding-bottom: 12px;
       align-items: center;
       display: grid;
+      border-bottom: 2px solid #CDD0D3;
       grid-template-columns: repeat(16, [col-start] 1fr);
-      border: 2px solid #CDD0D3;
       .recruit-grid {
         grid-column: col-start 1 / span 14;
         font-weight: 300;
         font-size: 14px;
-        line-height: 160%;
+        line-height: 200%;
+
         /* or 22px */
   
         display: flex;
@@ -70,14 +73,15 @@
   @media only screen and (min-width: 980px) {
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       grid-auto-rows: 180px;
       grid-gap: 20px;
+      background-color: #ffffff;
     }
   
     .grid-box {
       background-color: #ffffff;
-      padding: 30px;
+      margin: 30px;
+      border-bottom: 2px solid #CDD0D3;
       align-items: center;
       display: grid;
       grid-template-columns: repeat(16, [col-start] 1fr);
