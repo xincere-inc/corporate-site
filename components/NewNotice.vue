@@ -3,16 +3,14 @@
     <div class="container">
       <h2>お知らせ</h2>
       <div class="grid">
-        <div class="grid-box">
-          <nuxt-link to="/recruit/software_engineer" class="recruit-grid">
-            <div class="text-box">
-              <h3><span class="date">2022/01/11（月）</span>税理士法人グランサーズ様提携</h3>
-            </div>
-          </nuxt-link>
+        <nuxt-link to="/recruit/software_engineer" class="grid-box">
+          <div class="text-box">
+            <h3><span class="date">2022/01/11（月）</span>税理士法人グランサーズ様提携</h3>
+          </div>
           <div class="arrow">
             <img src="~/assets/images/icons/arrow.svg" height="11px" />
           </div>
-        </div>
+        </nuxt-link>
       </div>
     </div>
   </div>
@@ -23,7 +21,7 @@
     h3 {
       font-weight: normal;
       font-size: 16px;
-      line-height: 21px;
+      line-height: 22px;
       display: flex;
       align-items: center;
       letter-spacing: 0.05em;
@@ -37,28 +35,17 @@
       grid-auto-rows: minmax(150px auto);
       grid-gap: 20px;
       background-color: #ffffff;
+      box-sizing: border-box;
+      padding: 20px;
     }
   
     .grid-box {
-      margin: 20px;
-      padding-top: 12px;
-      padding-bottom: 12px;
+      border-bottom: 2px solid #CDD0D3;
       align-items: center;
       display: grid;
-      border-bottom: 2px solid #CDD0D3;
       grid-template-columns: repeat(16, [col-start] 1fr);
-      .recruit-grid {
+      .text-box {
         grid-column: col-start 1 / span 14;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 200%;
-
-        /* or 22px */
-  
-        display: flex;
-        align-items: center;
-        text-align: justify;
-        letter-spacing: 0.05em;
       }
       .arrow {
         grid-column: col-start 16 / span 1;
@@ -75,32 +62,25 @@
       display: grid;
       grid-gap: 20px;
       background-color: #ffffff;
+      box-sizing: border-box;
+      padding: 40px 75px;
     }
   
     .grid-box {
-      background-color: #ffffff;
-      margin: 40px 70px;
-      padding-top: 12px;
-      padding-bottom: 12px;
+      padding-bottom: 8px;
       border-bottom: 2px solid #CDD0D3;
-      align-items: center;
       display: grid;
       grid-template-columns: repeat(16, [col-start] 1fr);
-      .recruit-grid {
+      .text-box {
         grid-column: col-start 1 / span 14;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 160%;
-        /* or 22px */
-  
-        display: flex;
-        align-items: center;
-        text-align: justify;
-        letter-spacing: 0.05em;
+        margin-top: 6px;
+        margin-bottom: 12px;
+
       }
       .arrow {
         grid-column: col-start 16 / span 1;
         text-align: center;
+        margin-top: 6px;
       }
     }
     .container {
@@ -113,7 +93,6 @@
       font-size: 16px;
       line-height: 16px;
       letter-spacing: 0.05em;
-      margin-bottom: 15px;
   
       /* Gray 1 */
   
@@ -128,11 +107,6 @@
   }
   
   a {
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.05em;
-  
     text-decoration: none;
     color: #828282;
   }
