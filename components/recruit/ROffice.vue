@@ -1,18 +1,44 @@
 <template>
   <section class="container">
     <RH2 etitle="Our Office" title="オフィスについて" />
-    <div></div>
+    <div class="grid">
+      <div class="grid-box">
+        <img class="img" src="~/assets/images/recruit/office1.png" />
+        <p>未来的なデザインの建物（的な文章）</p>
+      </div>
+      <div class="grid-box">
+        <img class="img" src="~/assets/images/recruit/office2.png" />
+        <p>未来的なデザインの建物（的な文章）</p>
+      </div>
+      <div class="grid-box">
+        <img class="img" src="~/assets/images/recruit/office3.png" />
+        <p>未来的なデザインの建物（的な文章）</p>
+      </div>
+      <div class="grid-box">
+        <img class="img" src="~/assets/images/recruit/office4.png" />
+        <p>未来的なデザインの建物（的な文章）</p>
+      </div>
+      <div class="grid-box">
+        <img class="img" src="~/assets/images/recruit/office5.png" />
+        <p>未来的なデザインの建物（的な文章）</p>
+      </div>
+      <div class="grid-box">
+        <img class="img" src="~/assets/images/recruit/office6.png" />
+        <p>未来的なデザインの建物（的な文章）</p>
+      </div>
+    </div>
   </section>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue, { onDeactivated } from "vue";
 import RH2 from "@/components/recruit/RH.vue";
 
 export default Vue.extend({
   components: {
     RH2,
-  },
+    onDeactivated
+},
 });
 </script>
 
@@ -43,11 +69,19 @@ export default Vue.extend({
   .container {
     max-width: 980px;
     margin: 0 auto;
-    padding: 75px 0;
   }
   .grid {
     display: grid;
-    grid-template-columns: 500px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 30px;
+  }
+
+  .img {
+    display: block;
+    height: 210px;
+    width: 360px;
   }
 }
 </style>

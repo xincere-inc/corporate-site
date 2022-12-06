@@ -40,7 +40,7 @@ h2 {
   align-items: center;
 
   color: #518c3c;
-  margin: 10px auto 20px;
+  margin: 10px auto 32px;
   display: inherit;
 }
 </style>

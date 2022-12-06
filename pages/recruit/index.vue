@@ -4,6 +4,7 @@
     <AboutCompany />
     <OurValues />
     <ROffice />
+    <RRecruit />
   </div>
 </template>
 
@@ -13,6 +14,7 @@ import Top from "@/components/recruit/RTop.vue";
 import AboutCompany from "@/components/recruit/RAboutCompany.vue";
 import OurValues from "@/components/recruit/ROurValues.vue";
 import ROffice from "@/components/recruit/ROffice.vue";
+import RRecruit from "@/components/recruit/RRecruit.vue";
 
 export default Vue.extend({
   components: {
@@ -20,6 +22,7 @@ export default Vue.extend({
     AboutCompany,
     OurValues,
     ROffice,
+    RRecruit,
   },
   head() {
     return {
