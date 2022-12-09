@@ -6,12 +6,12 @@
         <new-notice
           date="2022/01/11（月）"
           title="税理士法人グランサーズ様提携"
-          link="/news/1"
+          link="/news/grancers"
         />
         <new-notice
           date="2022/01/11（月）"
           title="税理士法人グランサーズ様提携"
-          link="/news/1"
+          link="/news/grancers"
         />
       </div>
     </div>
