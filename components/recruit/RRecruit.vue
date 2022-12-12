@@ -6,10 +6,10 @@
         <a href="https://www.wantedly.com/companies/xincere-inc/projects" class="grid-box">
           <SmallTitleText title="プロダクトマネージャー" />
         </a>
-        <a href="https://www.wantedly.com/companies/xincere-inc/projects" class="grid-box">
+        <a href="https://www.wantedly.com/projects/1188998" class="grid-box">
           <SmallTitleText title="バックエンドエンジニア" />
         </a>
-        <a href="https://www.wantedly.com/companies/xincere-inc/projects" class="grid-box">
+        <a href="https://www.wantedly.com/projects/1199599" class="grid-box">
           <SmallTitleText title="フロントエンドエンジニア" />
         </a>
       </div>
