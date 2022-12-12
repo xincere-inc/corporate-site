@@ -1,8 +1,7 @@
 <template>
   <div class="small_text_wrapper">
     <div class="contents">
-      <h2 class="text">{{ title }}</h2>
-      <p>{{ content }}</p>
+      <p class="text">{{ title }}</p>
     </div>
   </div>
 </template>
@@ -15,11 +14,7 @@ export default Vue.extend({
     title: {
       type: String,
       default: "",
-    },
-    content: {
-      type: String,
-      default: "",
-    },
+    }
   },
 });
 </script>
@@ -47,7 +42,7 @@ export default Vue.extend({
   position: relative;
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 32px;
   /* or 80% */
   display: flex;
@@ -55,10 +50,6 @@ export default Vue.extend({
   letter-spacing: 0.04em;
   color: #4F4F4F;
   padding-left: 16px;
-}
-
-p {
-  font-size: 16px;
 }
 
 </style>

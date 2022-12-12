@@ -3,15 +3,15 @@
     <div class="wrapper">
       <RH2 etitle="Recruit" title="募集要項" />
       <div class="grid">
-        <div class="grid-box">
-          <SmallTitleText title="ソフトウェアエンジニア" content="シンシアレジデンスなど、シンシアで運営しているシステムを幅広く開発していただきます。フルスタックで開発することを想定しています。"/>
-        </div>
-        <div class="grid-box">
-          <SmallTitleText title="ソフトウェアエンジニア" content="シンシアレジデンスなど、シンシアで運営しているシステムを幅広く開発していただきます。フルスタックで開発することを想定しています。"/>
-        </div>
-        <div class="grid-box">
-          <SmallTitleText title="ソフトウェアエンジニア" content="シンシアレジデンスなど、シンシアで運営しているシステムを幅広く開発していただきます。フルスタックで開発することを想定しています。"/>
-        </div>
+        <a href="https://www.wantedly.com/companies/xincere-inc/projects" class="grid-box">
+          <SmallTitleText title="プロダクトマネージャー" />
+        </a>
+        <a href="https://www.wantedly.com/companies/xincere-inc/projects" class="grid-box">
+          <SmallTitleText title="バックエンドエンジニア" />
+        </a>
+        <a href="https://www.wantedly.com/companies/xincere-inc/projects" class="grid-box">
+          <SmallTitleText title="フロントエンドエンジニア" />
+        </a>
       </div>
     </div>
   </section>
@@ -53,6 +53,7 @@ export default Vue.extend({
       box-sizing: border-box;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
+      text-decoration: none;
       z-index: 1;
     }
   }
@@ -79,7 +80,11 @@ export default Vue.extend({
       box-sizing: border-box;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
       border-radius: 10px;
+      text-decoration: none;
       z-index: 1;
+      &:hover {
+        opacity: 0.7;
+      }
     }
   }
 }
