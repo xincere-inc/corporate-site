@@ -75,7 +75,7 @@ export default Vue.extend({
   .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 30px 0 60px 0;
   }
   .grid {
     display: grid;

@@ -60,7 +60,6 @@ export default Vue.extend({
 
 @media only screen and (min-width: 980px) {
   .container {
-    margin-top: 30px;
     width: 100%;
     padding: 80px 0;
     background-color: #f8f8f8;
