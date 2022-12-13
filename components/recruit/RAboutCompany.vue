@@ -5,8 +5,7 @@
       <div class="grid__title">
         <img
           src="~/assets/images/recruit/about.webp"
-          width="460"
-          height="auto"
+          class="grid__img"
         />
       </div>
       <div class="grid__item">
@@ -32,14 +31,24 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+.grid {
+  &__item {
+    h3 {
+      font-size: 28px;
+      border-bottom: 3px solid #c1e2ab;
+      margin-bottom: 24px;
+      line-height: 40px;
+    }
+  }
+}
+
 @media only screen and (max-width: 980px) {
   .container {
-    margin: 0 30px;
-    padding:  40px 0 20px;
+    margin: 50px 20px;
   }
   .grid {
-    font-weight: bold;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 24px;
     align-items: center;
 
     /* Gray 2 */
@@ -50,45 +59,34 @@ export default Vue.extend({
     }
     &__item > h3 {
       margin-bottom: 25px;
-      font-size: 21px;
-      line-height: 32px;
-      border-bottom: 3px solid #A9D68A;
+      h3 {
+        font-size: 21px;
+        line-height: 30px;
+      }
     }
-    &__item > p {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 24px;
-    }
-    &__item > br {
-      display: block;
-      content: "";
-      margin: 10px 0;
+    &__img {
+      width: 100%;
+      height: auto;
     }
   }
 }
 
 @media only screen and (min-width: 980px) {
   .container {
-    max-width: 980px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 60px 0 30px;
+    padding: 75px 0 30px 0;
   }
   .grid {
     display: grid;
     grid-template-columns: 500px 1fr;
-
-    &__title {
-      margin-bottom: 15px;
-    }
-    &__item > h3 {
-      margin-bottom: 25px;
-      font-size: 28px;
-      border-bottom: 3px solid #A9D68A;
-    }
-    &__item > p {
+    p {
       font-size: 16px;
-      font-weight: 300;
       line-height: 32px;
+    }
+    &__img {
+      width: 460px;
+      height: auto;
     }
   }
 }

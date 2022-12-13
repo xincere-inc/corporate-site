@@ -1,13 +1,15 @@
 <template>
   <div class="bg-gray">
-    <div class="container">
-      <div class="text-center">
-        <p>RECRUIT</p>
-        <h2>採用と選考</h2>
-        <p>シンシアに興味を持ってくださったみなさまへ</p>
-      </div>
-      <div>
-        <nuxt-link to="/recruit" class="btn"> 中途採用ページ </nuxt-link>
+    <div class="recruit_container">
+      <div class="recruit_wrapper">
+        <div class="text-center">
+          <p>RECRUIT</p>
+          <h2>採用と選考</h2>
+          <p>シンシアに興味を持ってくださったみなさまへ</p>
+        </div>
+        <div>
+          <nuxt-link to="/recruit" class="btn"> 採用ページ </nuxt-link>
+        </div>
       </div>
     </div>
   </div>
@@ -24,8 +26,9 @@
   font-size: 16px;
   line-height: 24px;
   width: 176px;
-  margin: 20px auto 0;
+  margin: 40px auto 0;
   display: block;
+  text-align: center;
 }
 @media only screen and (max-width: 980px) {
   h3 {
@@ -41,12 +44,14 @@
     color: #333333;
   }
   .bg-gray {
-    padding: 30px 0;
     margin-top: 100px;
+  }
+  .recruit_container {
+    padding: 30px 0;
   }
 }
 @media only screen and (min-width: 980px) {
-  .container {
+  .recruit_wrapper {
     max-width: 980px;
     margin: 0 auto;
     padding: 75px 0;
@@ -87,8 +92,12 @@ a {
   color: #828282;
 }
 .bg-gray {
-  background-image: url("http://localhost:3000/_nuxt/assets/images/board/president.jpg");
+  background-image: url("~/assets/images/dx-support/top.jpg");
   background-position: center;
   background-size: cover;
+}
+.recruit_container {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
 }
 </style>

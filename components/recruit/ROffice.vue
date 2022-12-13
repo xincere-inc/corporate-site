@@ -4,15 +4,15 @@
     <div class="grid">
       <div class="grid-box">
         <img class="img" src="~/assets/images/recruit/office1.png" />
-        <p>未来的なデザインの建物（的な文章）</p>
+        <p>未来的なデザインの建物</p>
       </div>
       <div class="grid-box">
         <img class="img" src="~/assets/images/recruit/office2.png" />
-        <p>未来的なデザインの建物（的な文章）</p>
+        <p>落ち着いた共有スペース</p>
       </div>
       <div class="grid-box">
         <img class="img" src="~/assets/images/recruit/office3.png" />
-        <p>未来的なデザインの建物（的な文章）</p>
+        <p>開放的なオフィス</p>
       </div>
       <div class="grid-box">
         <img class="img" src="~/assets/images/recruit/office4.png" />
@@ -45,7 +45,7 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @media only screen and (max-width: 980px) {
   .container {
-    margin: 100px 30px;
+    margin: 50px 20px;
   }
   .grid {
     font-weight: bold;
@@ -56,31 +56,42 @@ export default Vue.extend({
     /* Gray 2 */
 
     color: #4f4f4f;
-    &__title {
-      margin-bottom: 15px;
-    }
-    &__item {
-      margin-bottom: 25px;
+    .grid-box {
+      margin-bottom: 10px;
+      .img {
+        display: block;
+        height: auto;
+        width: 100%;
+      }
+      p {
+        padding: 5px 0;
+        text-align: center;
+      }
     }
   }
 }
 
 @media only screen and (min-width: 980px) {
-  .container { 
-    max-width: 980px;
+  .container {
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 30px 0 60px 0;
   }
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: 20px;
-    row-gap: 30px;
+    row-gap: 20px;
   }
 
   .grid-box {
     display: block;
+    height: auto;
+    width: 100%;
+  }
+  p {
+    padding: 5px 0;
   }
 
   .img {

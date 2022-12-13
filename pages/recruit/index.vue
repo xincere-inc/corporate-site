@@ -1,28 +1,31 @@
 <template>
   <div>
     <Top />
-    <AboutCompany />
+    <RAboutCompany />
     <OurValues />
     <ROffice />
     <RRecruit />
+    <AboutCompany />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
 import Top from "@/components/recruit/RTop.vue";
-import AboutCompany from "@/components/recruit/RAboutCompany.vue";
+import RAboutCompany from "@/components/recruit/RAboutCompany.vue";
 import OurValues from "@/components/recruit/ROurValues.vue";
 import ROffice from "@/components/recruit/ROffice.vue";
 import RRecruit from "@/components/recruit/RRecruit.vue";
+import AboutCompany from "@/components/AboutCompany.vue";
 
 export default Vue.extend({
   components: {
     Top,
-    AboutCompany,
+    RAboutCompany,
     OurValues,
     ROffice,
     RRecruit,
+    AboutCompany,
   },
   head() {
     return {

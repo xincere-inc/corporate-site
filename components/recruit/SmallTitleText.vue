@@ -1,8 +1,7 @@
 <template>
-  <div class="wrapper">
+  <div class="small_text_wrapper">
     <div class="contents">
-      <h2 class="text">{{ title }}</h2>
-      <p>{{ content }}</p>
+      <p class="text">{{ title }}</p>
     </div>
   </div>
 </template>
@@ -15,35 +14,43 @@ export default Vue.extend({
     title: {
       type: String,
       default: "",
-    },
-    content: {
-      type: String,
-      default: "",
-    },
+    }
   },
 });
 </script>
 
 <style lang="scss" scoped>
 
-.text {
+@media only screen and (max-width: 980px) {
+  .small_text_wrapper {
+    margin: 20px 10px 10px 10px;
+  }
+}
+
+.text::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 60px;
+  height: 60px;
   background-image: url(~/assets/images/icons/green_circle.png);
-  background-repeat: no-repeat;
-  background-size: 60px;
+  background-size: contain;
+  z-index: -1;
+}
+
+.text {
+  position: relative;
   font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 60px;
+  font-size: 22px;
+  line-height: 32px;
   /* or 80% */
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
   padding-left: 16px;
   color: #4F4F4F;
-}
-
-p {
-  font-size: 16px;
+  padding-left: 16px;
 }
 
 </style>

@@ -30,7 +30,7 @@ export default Vue.extend({});
 .bg-image {
   object-fit: cover;
   object-position: center;
-  height: 100%;
+  height: 430px;
   width: 100%;
   filter: brightness(0.5);
 }
@@ -54,7 +54,7 @@ export default Vue.extend({});
 }
 
 .top {
-  height: 500px;
+  height: 100%;
   position: relative;
 }
 @media all and (min-width: 980px) {
@@ -63,6 +63,9 @@ export default Vue.extend({});
   }
   .pc-only {
     display: block;
+  }
+  .bg-image {
+    height: 100%;
   }
   .top {
     height: 480px;
