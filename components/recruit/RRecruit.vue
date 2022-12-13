@@ -36,7 +36,7 @@ export default Vue.extend({
   }
   .grid {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     align-items: center;
 
@@ -56,6 +56,7 @@ export default Vue.extend({
   .container {
     max-width: 980px;
     margin: 0 auto;
+    padding: 30px 0;
   }
   .grid {
     display: grid;

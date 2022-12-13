@@ -27,27 +27,22 @@ export default Vue.extend({
 <style lang="scss" scoped>
 
 .wrapper {
-  margin-bottom: 40px;
+  margin-top: 40px;
 } 
 
-.text::before {
-  content: '';
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-  background-image: url(~/assets/images/icons/green_circle.png);
-  background-size: contain;
-}
-
 .text {
+  background-image: url(~/assets/images/icons/green_circle.png);
+  background-repeat: no-repeat;
+  background-size: 60px;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
-  line-height: 32px;
+  line-height: 60px;
   /* or 80% */
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
+  padding-left: 16px;
   color: #4F4F4F;
 }
 

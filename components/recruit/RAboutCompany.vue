@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <RH2 etitle="Mission" title="ミッション" />
+    <RH2 etitle="About" title="どんな会社？" />
     <div class="grid">
       <div class="grid__title">
         <img
@@ -34,11 +34,11 @@ export default Vue.extend({
 <style lang="scss" scoped>
 @media only screen and (max-width: 980px) {
   .container {
-    margin: 100px 30px;
+    margin: 0 30px;
+    padding:  40px 0 20px;
   }
   .grid {
     font-weight: bold;
-    font-size: 14px;
     line-height: 20px;
     align-items: center;
 
@@ -48,8 +48,21 @@ export default Vue.extend({
     &__title {
       margin-bottom: 15px;
     }
-    &__item {
+    &__item > h3 {
       margin-bottom: 25px;
+      font-size: 21px;
+      line-height: 32px;
+      border-bottom: 3px solid #A9D68A;
+    }
+    &__item > p {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 24px;
+    }
+    &__item > br {
+      display: block;
+      content: "";
+      margin: 10px 0;
     }
   }
 }
@@ -58,11 +71,25 @@ export default Vue.extend({
   .container {
     max-width: 980px;
     margin: 0 auto;
-    padding: 75px 0;
+    padding: 60px 0 30px;
   }
   .grid {
     display: grid;
     grid-template-columns: 500px 1fr;
+
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__item > h3 {
+      margin-bottom: 25px;
+      font-size: 28px;
+      border-bottom: 3px solid #A9D68A;
+    }
+    &__item > p {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 32px;
+    }
   }
 }
 </style>

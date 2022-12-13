@@ -49,7 +49,7 @@ export default Vue.extend({
   }
   .grid {
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     align-items: center;
 
@@ -66,9 +66,10 @@ export default Vue.extend({
 }
 
 @media only screen and (min-width: 980px) {
-  .container {
+  .container { 
     max-width: 980px;
     margin: 0 auto;
+    padding: 30px 0;
   }
   .grid {
     display: grid;
@@ -78,10 +79,16 @@ export default Vue.extend({
     row-gap: 30px;
   }
 
-  .img {
+  .grid-box {
     display: block;
-    height: 210px;
-    width: 360px;
   }
+
+  .img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
 }
+
 </style>
