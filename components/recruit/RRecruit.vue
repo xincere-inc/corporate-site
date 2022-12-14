@@ -12,7 +12,13 @@
             </p>
           </div>
           <div>
-            <a href="https://www.wantedly.com/companies/xincere-inc/projects" class="btn"> さっそくエントリーする </a>
+            <a
+              href="https://www.wantedly.com/companies/xincere-inc/projects"
+              class="btn"
+              target="_blank"
+            >
+              さっそくエントリーする
+            </a>
           </div>
         </div>
       </div>
@@ -29,15 +35,14 @@ export default Vue.extend({
   components: {
     RH2,
     onDeactivated,
-    SmallTitleText
-},
+    SmallTitleText,
+  },
 });
 </script>
 
 <style lang="scss" scoped>
-
 .btn {
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   background: #518c3c;
@@ -53,7 +58,6 @@ export default Vue.extend({
 }
 
 @media only screen and (max-width: 980px) {
-
   .recruit_container {
     padding: 30px 0;
   }
@@ -99,5 +103,4 @@ a {
   background-color: rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
 }
-
 </style>

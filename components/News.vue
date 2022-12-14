@@ -4,13 +4,8 @@
       <h2>お知らせ</h2>
       <div class="grid">
         <new-notice
-          date="2022/01/11（月）"
-          title="税理士法人グランサーズ様提携"
-          link="/news/grancers"
-        />
-        <new-notice
-          date="2022/01/11（月）"
-          title="税理士法人グランサーズ様提携"
+          date="2022/11/15（火）"
+          title="財務会計・DXコンサルティングサービスを運営する「グランサーズ株式会社」と業務提携"
           link="/news/grancers"
         />
       </div>
