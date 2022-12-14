@@ -91,7 +91,7 @@ a {
   color: #828282;
 }
 .bg-gray {
-  background-image: url("~/assets/images/dx-support/top.jpg");
+  background-image: url("~/assets/images/recruit/top.png");
   background-position: center;
   background-size: cover;
 }
