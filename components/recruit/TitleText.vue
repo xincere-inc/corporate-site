@@ -51,7 +51,6 @@ export default Vue.extend({
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
-  padding-left: 16px;
   color: #4F4F4F;
   padding-left: 16px;
   box-sizing: border-box;
