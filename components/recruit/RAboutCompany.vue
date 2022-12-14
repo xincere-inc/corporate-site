@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <RH2 etitle="Mission" title="ミッション" />
+    <RH2 etitle="About" title="どんな会社？" />
     <div class="grid">
       <div class="grid__title">
         <img
@@ -57,7 +57,7 @@ export default Vue.extend({
     &__title {
       margin-bottom: 15px;
     }
-    &__item {
+    &__item > h3 {
       margin-bottom: 25px;
       h3 {
         font-size: 21px;

@@ -1,17 +1,20 @@
 <template>
-  <section class="container">
-    <div class="wrapper">
-      <RH2 etitle="Recruit" title="募集要項" />
-      <div class="grid">
-        <a href="https://www.wantedly.com/companies/xincere-inc/projects" class="grid-box">
-          <SmallTitleText title="プロダクトマネージャー" />
-        </a>
-        <a href="https://www.wantedly.com/projects/1188998" class="grid-box">
-          <SmallTitleText title="バックエンドエンジニア" />
-        </a>
-        <a href="https://www.wantedly.com/projects/1199599" class="grid-box">
-          <SmallTitleText title="フロントエンドエンジニア" />
-        </a>
+  <section>
+    <RH2 etitle="Recruit" title="募集要項" />
+    <div class="bg-gray">
+      <div class="recruit_container">
+        <div class="recruit_wrapper">
+          <div class="text-center">
+            <h2>シンシアの採用情報を掲載</h2>
+            <p>
+              募集要項選考フローに<br />
+              ついてはWantedlyをご確認ください。
+            </p>
+          </div>
+          <div>
+            <a href="https://www.wantedly.com/companies/xincere-inc/projects" class="btn"> さっそくエントリーする </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -32,60 +35,69 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+
+.btn {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background: #518c3c;
+  border-radius: 4px;
+  padding: 10px 16px;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+  line-height: 24px;
+  height: 50px;
+  width: 290px;
+  margin: 32px auto 0;
+}
+
 @media only screen and (max-width: 980px) {
-  .container {
-    width: 100%;
-    margin: 0;
-  }
-  .wrapper {
-    margin: 50px 20px;
-  }
-  .grid {
-    display: grid;
-    row-gap: 20px;
 
-    /* Gray 2 */
-
-    color: #4f4f4f;
-    .grid-box {
-      background: #FFFFFF;
-      padding: 15px 10px;
-      box-sizing: border-box;
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      text-decoration: none;
-      z-index: 1;
-    }
+  .recruit_container {
+    padding: 30px 0;
   }
 }
 
 @media only screen and (min-width: 980px) {
-  .container {
-    width: 100%;
-    padding: 80px 0;
-    background-color: #f8f8f8;
-  }
-  .wrapper {
-    max-width: 1100px;
+  .recruit_wrapper {
+    max-width: 980px;
     margin: 0 auto;
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 20px;
-
-    .grid-box {
-      background: #FFFFFF;
-      padding: 30px 20px;
-      box-sizing: border-box;
-      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      text-decoration: none;
-      z-index: 1;
-      &:hover {
-        opacity: 0.7;
-      }
-    }
+    padding: 60px 0;
   }
 }
+.bg-gray {
+  background-color: #f8f8f8;
+}
+.text-center {
+  text-align: center;
+  color: white;
+  letter-spacing: 0.25em;
+}
+h2 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: white;
+}
+a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.05em;
+
+  text-decoration: none;
+  color: #828282;
+}
+.bg-gray {
+  background-image: url("~/assets/images/recruit/top.png");
+  background-position: center;
+  background-size: cover;
+}
+.recruit_container {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
 </style>
