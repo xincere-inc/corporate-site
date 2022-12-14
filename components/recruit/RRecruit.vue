@@ -92,7 +92,7 @@ a {
 }
 .bg-gray {
   background-image: url("~/assets/images/recruit/top.png");
-  background-position: center;
+  background-position: 10%;
   background-size: cover;
 }
 .recruit_container {
