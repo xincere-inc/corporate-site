@@ -16,15 +16,15 @@
       </div>
       <div class="grid-box">
         <img class="img" src="~/assets/images/recruit/office4.png" />
-        <p>未来的なデザインの建物（的な文章）</p>
+        <p>良好な人間関係</p>
       </div>
       <div class="grid-box">
         <img class="img" src="~/assets/images/recruit/office5.png" />
-        <p>未来的なデザインの建物（的な文章）</p>
+        <p>整った開発環境</p>
       </div>
       <div class="grid-box">
         <img class="img" src="~/assets/images/recruit/office6.png" />
-        <p>未来的なデザインの建物（的な文章）</p>
+        <p>活発な意見交換</p>
       </div>
     </div>
   </section>
