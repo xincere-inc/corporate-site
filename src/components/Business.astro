@@ -1,0 +1,24 @@
+---
+interface Props {
+  //   title: string;
+  //   body: string;
+  //   href: string;
+  order?: string;
+}
+
+const { order = "first" } = Astro.props;
+import H3 from "../atoms/H3.astro";
+---
+
+<div class="flex justify-between">
+  <div class=`${order === "last" ? "order-1" : ''}`>
+    <H3 title="プロダクト開発事業" />
+    <ul>
+      <li>不動産プロダクト</li>
+      <li>AIプロダクト</li>
+    </ul>
+  </div>
+  <div>
+    <img src="https://placehold.co/600x400" class="object-cover" />
+  </div>
+</div>
