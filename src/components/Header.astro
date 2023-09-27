@@ -59,33 +59,37 @@ const {} = Astro.props;
         <div class="hidden md:block">
           <nav class="text-sm leading-6 font-semibold text-slate-700">
             <ul class="flex space-x-8 leading-8">
-              <li class="py-3">
-                <a class="hover:text-sky-500" href="/docs/installation">
-                  事業紹介
-                </a>
-              </li>
-              <li class="py-3">
-                <a
-                  href="https://tailwindui.com/?ref=top"
-                  class="hover:text-sky-500"
+              <li class="py-3 group relative dropdown">
+                <a class="hover:text-sky-500" href=""> 事業紹介</a>
+                <div
+                  class="group-hover:block dropdown-menu absolute hidden h-auto"
                 >
-                  実績紹介
-                </a>
+                  <ul class="top-0 w-56 bg-white shadow p-4">
+                    <li class="py-1">
+                      <a
+                        class="block text-purple-500 font-bold text-base uppercase hover:text-purple-700 cursor-pointer"
+                      >
+                        デジタルパートナー事業
+                      </a>
+                    </li>
+                    <li class="py-1">
+                      <a
+                        class="block text-purple-500 font-bold text-base uppercase hover:text-purple-700 cursor-pointer"
+                      >
+                        プロダクト事業
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </li>
               <li class="py-3">
-                <a class="hover:text-sky-500" href="/blog"> 役員紹介</a>
+                <a class="hover:text-sky-500" href="/blogs"> ブログ</a>
               </li>
               <li class="py-3">
-                <a class="hover:text-sky-500" href="/showcase"> 採用と選考</a>
-              </li>
-              <li class="py-3">
-                <a class="hover:text-sky-500" href="/showcase"> ブログ</a>
-              </li>
-              <li class="py-3">
-                <a class="hover:text-sky-500" href="/showcase"> 会社概要</a>
+                <a class="hover:text-sky-500" href="/recruit"> 採用と選考</a>
               </li>
               <li class="bg-black py-3 px-2 h-[60px]">
-                <a class="hover:text-sky-500 text-white" href="/showcase">
+                <a class="hover:text-sky-500 text-white" href="/contact">
                   お問い合わせ
                 </a>
               </li>

@@ -1,0 +1,106 @@
+---
+import Layout from "../layouts/Layout.astro";
+import BlogList from "../components/BlogList.astro";
+import Business from "../components/Business.astro";
+import H2 from "../atoms/H2.astro";
+---
+
+<Layout title="">
+  <main>
+    <section>
+      <img
+        src="https://placehold.co/600x400"
+        class="object-cover w-full h-[500px]"
+      />
+    </section>
+    <section>
+      <div class="w-desktop m-auto">
+        <H2 title="事業紹介" etitle="Our services" />
+      </div>
+      <div class="w-desktop m-auto mb-6">
+        <Business />
+      </div>
+      <div class="w-desktop m-auto mb-6">
+        <Business order="last" />
+      </div>
+      <div class="w-desktop m-auto mb-6">
+        <Business />
+      </div>
+      <div class="text-center mt-4">
+        <a class="bg-primary text-white rounded-md hover:bg-primary-800 p-2">
+          もっと見る
+        </a>
+      </div>
+    </section>
+    <section class="bg-gray py-10">
+      <div class="w-desktop m-auto">
+        <H2 title="取引実績" etitle="Our services" />
+      </div>
+      <div class="bg-white w-desktop m-auto p-6 mt-4">
+        <div class="flex justify-between">
+          <img
+            src="https://placehold.co/600x400"
+            class="object-cover w-[240px] h-[120px]"
+          />
+          <img
+            src="https://placehold.co/600x400"
+            class="object-cover w-[240px] h-[120px]"
+          />
+          <img
+            src="https://placehold.co/600x400"
+            class="object-cover w-[240px] h-[120px]"
+          />
+          <img
+            src="https://placehold.co/600x400"
+            class="object-cover w-[240px] h-[120px]"
+          />
+        </div>
+        <div class="flex justify-between mt-4">
+          <img
+            src="https://placehold.co/600x400"
+            class="object-cover w-[240px] h-[120px]"
+          />
+          <img
+            src="https://placehold.co/600x400"
+            class="object-cover w-[240px] h-[120px]"
+          />
+          <img
+            src="https://placehold.co/600x400"
+            class="object-cover w-[240px] h-[120px]"
+          />
+          <img
+            src="https://placehold.co/600x400"
+            class="object-cover w-[240px] h-[120px]"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="w-desktop m-auto">
+        <H2 title="役員紹介" etitle="Board member" />
+      </div>
+    </section>
+
+    <section>
+      <div class="w-desktop m-auto">
+        <H2 title="お問い合わせ" etitle="Contact" />
+      </div>
+    </section>
+
+    <section>
+      <div class="w-desktop m-auto">
+        <H2 title="選考と採用" etitle="Recruit" />
+      </div>
+    </section>
+
+    <section class="bg-gray py-10">
+      <div class="w-desktop m-auto">
+        <H2 title="ブログ" etitle="Blog" />
+      </div>
+      <div class="w-desktop m-auto">
+        <BlogList />
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -19,8 +19,11 @@ module.exports = {
     fontFamily: {},
     extend: {
       width: {
-        'desktop': '1160px',
-      }
+        desktop: "1160px",
+      },
+    },
+    variants: {
+      display: ["group-hover"],
     },
   },
   plugins: [],
