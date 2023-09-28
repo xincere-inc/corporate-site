@@ -1,106 +1,75 @@
 ---
+import "../styles/blogs.css";
 import Layout from "../layouts/Layout.astro";
 import BlogList from "../components/BlogList.astro";
 import Business from "../components/Business.astro";
 import H2 from "../atoms/H2.astro";
+import { AstroComponentInstance } from "astro/dist/runtime/server";
+
+const allBlogs = await Astro.glob("../pages/blogs/*.md");
 ---
 
-<Layout title="">
-  <main>
-    <section>
-      <img
-        src="https://placehold.co/600x400"
-        class="object-cover w-full h-[500px]"
-      />
-    </section>
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="事業紹介" etitle="Our services" />
-      </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
-      </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business order="last" />
-      </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
-      </div>
-      <div class="text-center mt-4">
-        <a class="bg-primary text-white rounded-md hover:bg-primary-800 p-2">
-          もっと見る
-        </a>
-      </div>
-    </section>
-    <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
-        <H2 title="取引実績" etitle="Our services" />
-      </div>
-      <div class="bg-white w-desktop m-auto p-6 mt-4">
-        <div class="flex justify-between">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
+<Layout title="blogs">
+  <div class="wrapper">
+    <main class="main-container">
+      <section>
+        <h2>2023年 6月</h2>
+        <div class="btn-container">
+          <div class="filter-btn-selected">カテゴリ</div>
+          <div class="filter-btn">年別</div>
+          <div class="filter-btn">月別</div>
         </div>
-        <div class="flex justify-between mt-4">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-        </div>
+      </section>
+      <section class="blog-cards">
+        {
+          allBlogs.map((blog) => (
+            <div class="blog-card">
+              <div class="left">
+                <h3>{blog.frontmatter.title}</h3>
+                <div innerHTML={blog.content} />
+                <p>
+                  このブログの内容はこんな感じです。このブログの内容はこんな感じです。
+                </p>
+                <div class="categories">
+                  {/* カテゴリデータがあればここに表示 */}
+                  <div class="category">NEW</div>
+                  <div class="category">Atomic</div>
+                  <div class="category">イラスティック</div>
+                  <div class="category">アトミック</div>
+                </div>
+                <div class="date">
+                  {new Date(blog.frontmatter.date)
+                    .toISOString()
+                    .split("T")[0]
+                    .replace(/-/g, ".")}
+                </div>
+              </div>
+              <div class="circle-link" />></a>
+            </div>
+          ))
+        }
+      </section>
+    </main>
+    <aside class="sidebar">
+      <div class="category-section">
+        <h3>カテゴリ</h3>
+        <p>カテゴリ名カテゴリ名(100)</p>
+        <p>カテゴリ(50)</p>
+        <p>カテゴリ名カテゴリ名カテゴリ名(30)</p>
       </div>
-    </section>
-
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="役員紹介" etitle="Board member" />
+      <div class="monthly-section">
+        <h3>月別</h3>
+        <p>12月(1)</p>
+        <p>11月(9)</p>
+        <p>10月(32)</p>
       </div>
-    </section>
-
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="お問い合わせ" etitle="Contact" />
+      <div class="age-section">
+        <h3>年別</h3>
+        <p>2023年(12)</p>
+        <p>2022年(29)</p>
+        <p>2021年(22)</p>
+        <p>2020年(72)</p>
       </div>
-    </section>
-
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="選考と採用" etitle="Recruit" />
-      </div>
-    </section>
-
-    <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
-        <H2 title="ブログ" etitle="Blog" />
-      </div>
-      <div class="w-desktop m-auto">
-        <BlogList />
-      </div>
-    </section>
-  </main>
+    </aside>
+  </div>
 </Layout>
