@@ -15,11 +15,22 @@ module.exports = {
       gray: "#F0F0F0",
       primary: "#518C3C",
       black: "#000000",
+      "gray-333": "#333333",
+      "gray-949495": "#949495",
+      "gray-CDD0D3": "#CDD0D3",
+      "gray-505C65": "#505C65",
+      "gray-1E2D39": "#1E2D39",
     },
-    fontFamily: {},
+    fontFamily: {
+      gothic: ["YuGothic"],
+      sans: ["Noto Sans"],
+    },
     extend: {
       width: {
         desktop: "1160px",
+      },
+      boxShadow: {
+        "custom-lg": "0px 2px 8px 0px rgba(0, 0, 0, 0.25)",
       },
     },
     variants: {
