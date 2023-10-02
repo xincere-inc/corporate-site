@@ -9,6 +9,9 @@ module.exports = {
       h2: "2.5rem",
       eh2: "2rem",
       h3: "1.5rem",
+      xl: "1.25rem",
+      base: "1rem",
+      sm: "0.875rem",
     },
     colors: {
       white: "#FFFFFF",
