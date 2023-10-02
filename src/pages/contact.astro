@@ -7,100 +7,244 @@ import H2 from "../atoms/H2.astro";
 
 <Layout title="">
   <main>
-    <section>
-      <img
-        src="https://placehold.co/600x400"
-        class="object-cover w-full h-[500px]"
-      />
-    </section>
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="事業紹介" etitle="Our services" />
+    <div class="w-desktop m-auto">
+      <H2 title="お問い合わせ" etitle="Contact" />
+    </div>
+    <div class="w-[880px] flex flex-col my-20 mx-auto">
+      <!-- 注意事項 -->
+      <div class="border-2 border-Description mb-10">
+        <p class="p-5 font-medium text-base text-center font-gothic">
+          下記のフォームに必須項目入力の上、「確認画面へ進む」ボタンを押してください。
+          <br
+          />なお、内容によっては、ご連絡までお時間がかかるものがございますので、あらかじめご了承くださいませ。
+        </p>
       </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
-      </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business order="last" />
-      </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
-      </div>
-      <div class="text-center mt-4">
-        <a class="bg-primary text-white rounded-md hover:bg-primary-800 p-2">
-          もっと見る
-        </a>
-      </div>
-    </section>
-    <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
-        <H2 title="取引実績" etitle="Our services" />
-      </div>
-      <div class="bg-white w-desktop m-auto p-6 mt-4">
-        <div class="flex justify-between">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
+
+      <!-- お問い合わせフォーム -->
+      <div class="shadow-md p-10 mb-10">
+        <div class="m-0 p-0">
+          <div class="mb-6">
+            <div class="font-sans flex items-center mb-2">
+              <label for="inquiry-type" class="font-medium mr-2 text-sm"
+                >お問い合わせ種別</label
+              >
+              <p class="font-normal text-xs text-alert">必須</p>
+            </div>
+            <div>
+              <select
+                id="inquiry-type"
+                name="inquiry-type"
+                class="w-full px-4 py-5 border-2 border-border/light rounded-sm font-gothic text-Description"
+                placeholder="選択してください"
+              >
+                <option value="" selected disabled>選択してください</option>
+                <option value="1">選択肢1</option>
+                <option value="2">選択肢2</option>
+                <option value="3">選択肢3</option>
+                <option value="4">選択肢4</option>
+                <option value="5">選択肢5</option>
+                <option value="6">選択肢6</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="flex justify-between mt-4">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
+        <div class="mb-6">
+          <div class="font-sans flex items-center mb-2">
+            <label for="username" class="font-medium mr-2 text-sm">名前</label>
+            <p class="font-normal text-xs text-alert">必須</p>
+          </div>
+          <div>
+            <input
+              id="username"
+              name="username"
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="flex items-center mb-2">
+            <label for="email" class="font-medium mr-2 text-sm"
+              >メールアドレス</label
+            >
+            <p class="font-normal text-xs text-alert">必須</p>
+          </div>
+          <div>
+            <input
+              id="email"
+              name="email"
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="font-sans flex items-center mb-2">
+            <label for="tel" class="font-medium mr-2 text-sm">電話番号</label>
+            <p class="font-normal text-xs text-alert">必須</p>
+          </div>
+          <div>
+            <input
+              id="tel"
+              name="tel"
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="font-sans flex items-center mb-2">
+            <label for="companyname" class="font-medium mr-2 text-sm"
+              >会社名</label
+            >
+            <p class="font-normal text-xs text-Description">任意</p>
+          </div>
+          <div>
+            <input
+              id="companyname"
+              name="companyname"
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="font-sans flex items-center mb-2">
+            <label for="position" class="font-medium mr-2 text-sm">役職</label>
+            <p class="font-normal text-xs text-Description">任意</p>
+          </div>
+          <div>
+            <select
+              id="position"
+              name="position"
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm font-gothic text-Description"
+              placeholder="選択してください"
+            >
+              <option value="" selected disabled>選択してください</option>
+              <option value="position1">選択肢1</option>
+              <option value="position2">選択肢2</option>
+              <option value="position3">選択肢3</option>
+              <option value="position4">選択肢4</option>
+              <option value="position5">選択肢5</option>
+              <option value="position6">選択肢6</option>
+            </select>
+          </div>
+        </div>
+        <!-- アンケート -->
+        <div class="mb-6">
+          <div class="font-gothic flex items-center mb-2">
+            <p class="font-medium mr-2 text-sm">
+              シンシアをお知りになったきっかけを教えてください
+            </p>
+            <p class="font-normal text-xs text-Description">任意</p>
+          </div>
+          <div class="flex items-center font-gothic">
+            <div class="flex items-center py-4 px-5">
+              <input
+                id="media"
+                type="radio"
+                value=""
+                name="referral-method"
+                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="media"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >メディア</label
+              >
+            </div>
+            <div class="flex items-center py-4 px-5">
+              <input
+                id="our-employee"
+                type="radio"
+                value=""
+                name="referral-method"
+                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="our-employee"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >弊社社員からの紹介</label
+              >
+            </div>
+            <div class="flex items-center py-4 px-5">
+              <input
+                id="your-friend"
+                type="radio"
+                value=""
+                name="referral-method"
+                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="your-friend"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >ご友人の紹介</label
+              >
+            </div>
+            <div class="flex items-center py-4 px-5">
+              <input
+                id="event"
+                type="radio"
+                value=""
+                name="referral-method"
+                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="event"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >イベント</label
+              >
+            </div>
+            <div class="flex items-center py-4 px-5">
+              <input
+                id="other"
+                type="radio"
+                value=""
+                name="referral-method"
+                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+              />
+              <label
+                for="other"
+                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                >その他</label
+              >
+            </div>
+          </div>
+        </div>
+        <!-- 同意チェック -->
+        <div class="mb-6">
+          <div class="flex items-center justify-center">
+            <input
+              id="agree-to-privacy-policy"
+              type="checkbox"
+              name="agree-to-privacy-policy"
+              class="p-4 mr-2 text-body"
+            />
+            <label
+              for="agree-to-privacy-policy"
+              class="font-gothic font-medium text-xs text-body"
+            >
+              問い合わせに当たり、<a href="/" class="underline"
+                >個人情報の取り扱い</a
+              >に同意する
+            </label>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="役員紹介" etitle="Board member" />
+      <!-- 内容クリアボタン・送信ボタン -->
+      <div class="mb-6">
+        <div class="flex items-center justify-center font-gothic">
+          <button
+            id="clear-form"
+            type="reset"
+            class="w-[256px] text-xl font-bold text-primary rounded-sm py-3 px-5 mr-6 border-2 border-primary"
+            >内容をクリアする</button
+          >
+          <button
+            id="submit-form"
+            type="submit"
+            class="w-[256px] text-xl font-bold text-white bg-primary rounded-sm py-3 px-5 mr-6 border-2 border-primary"
+            >同意して送信する</button
+          >
+        </div>
       </div>
-    </section>
-
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="お問い合わせ" etitle="Contact" />
-      </div>
-    </section>
-
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="選考と採用" etitle="Recruit" />
-      </div>
-    </section>
-
-    <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
-        <H2 title="ブログ" etitle="Blog" />
-      </div>
-      <div class="w-desktop m-auto">
-        <BlogList />
-      </div>
-    </section>
+    </div>
   </main>
 </Layout>

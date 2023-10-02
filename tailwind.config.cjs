@@ -12,6 +12,7 @@ module.exports = {
       xl: "1.25rem",
       base: "1rem",
       sm: "0.875rem",
+      xs: "0.75rem",
     },
     colors: {
       white: "#FFFFFF",
@@ -20,11 +21,13 @@ module.exports = {
       black: "#000000",
       body: "#333333",
       Description: "#949495",
+      alert: "#FF0000",
+      "border/light": "#D6D6D6",
       "gray/90": "#1E2D39",
     },
     fontFamily: {
       gothic: ["YuGothic"],
-      sans: ["Noto Sans"],
+      sans: ["NotoSans"],
     },
     extend: {
       width: {
