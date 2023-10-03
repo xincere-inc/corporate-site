@@ -1,7 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import BlogList from "../components/BlogList.astro";
-import Business from "../components/Business.astro";
 import H2 from "../atoms/H2.astro";
 ---
 
@@ -25,17 +23,12 @@ import H2 from "../atoms/H2.astro";
         <div class="m-0 p-0">
           <div class="mb-6">
             <div class="font-sans flex items-center mb-2">
-              <label for="inquiry-type" class="font-medium mr-2 text-sm"
-                >お問い合わせ種別</label
-              >
+              <label class="font-medium mr-2 text-sm">お問い合わせ種別</label>
               <p class="font-normal text-xs text-alert">必須</p>
             </div>
             <div>
               <select
-                id="inquiry-type"
-                name="inquiry-type"
                 class="w-full px-4 py-5 border-2 border-border/light rounded-sm font-gothic text-Description"
-                placeholder="選択してください"
               >
                 <option value="" selected disabled>選択してください</option>
                 <option value="1">選択肢1</option>
@@ -50,71 +43,56 @@ import H2 from "../atoms/H2.astro";
         </div>
         <div class="mb-6">
           <div class="font-sans flex items-center mb-2">
-            <label for="username" class="font-medium mr-2 text-sm">名前</label>
+            <label class="font-medium mr-2 text-sm">名前</label>
             <p class="font-normal text-xs text-alert">必須</p>
           </div>
           <div>
             <input
-              id="username"
-              name="username"
               class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
             />
           </div>
         </div>
         <div class="mb-6">
           <div class="flex items-center mb-2">
-            <label for="email" class="font-medium mr-2 text-sm"
-              >メールアドレス</label
-            >
+            <label class="font-medium mr-2 text-sm">メールアドレス</label>
             <p class="font-normal text-xs text-alert">必須</p>
           </div>
           <div>
             <input
-              id="email"
-              name="email"
               class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
             />
           </div>
         </div>
         <div class="mb-6">
           <div class="font-sans flex items-center mb-2">
-            <label for="tel" class="font-medium mr-2 text-sm">電話番号</label>
+            <label class="font-medium mr-2 text-sm">電話番号</label>
             <p class="font-normal text-xs text-alert">必須</p>
           </div>
           <div>
             <input
-              id="tel"
-              name="tel"
               class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
             />
           </div>
         </div>
         <div class="mb-6">
           <div class="font-sans flex items-center mb-2">
-            <label for="companyname" class="font-medium mr-2 text-sm"
-              >会社名</label
-            >
+            <label class="font-medium mr-2 text-sm">会社名</label>
             <p class="font-normal text-xs text-Description">任意</p>
           </div>
           <div>
             <input
-              id="companyname"
-              name="companyname"
               class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
             />
           </div>
         </div>
         <div class="mb-6">
           <div class="font-sans flex items-center mb-2">
-            <label for="position" class="font-medium mr-2 text-sm">役職</label>
+            <label class="font-medium mr-2 text-sm">役職</label>
             <p class="font-normal text-xs text-Description">任意</p>
           </div>
           <div>
             <select
-              id="position"
-              name="position"
               class="w-full px-4 py-5 border-2 border-border/light rounded-sm font-gothic text-Description"
-              placeholder="選択してください"
             >
               <option value="" selected disabled>選択してください</option>
               <option value="position1">選択肢1</option>
@@ -136,72 +114,32 @@ import H2 from "../atoms/H2.astro";
           </div>
           <div class="flex items-center font-gothic">
             <div class="flex items-center py-4 px-5">
-              <input
-                id="media"
-                type="radio"
-                value=""
-                name="referral-method"
-                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="media"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
                 >メディア</label
               >
             </div>
             <div class="flex items-center py-4 px-5">
-              <input
-                id="our-employee"
-                type="radio"
-                value=""
-                name="referral-method"
-                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="our-employee"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
                 >弊社社員からの紹介</label
               >
             </div>
             <div class="flex items-center py-4 px-5">
-              <input
-                id="your-friend"
-                type="radio"
-                value=""
-                name="referral-method"
-                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="your-friend"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
                 >ご友人の紹介</label
               >
             </div>
             <div class="flex items-center py-4 px-5">
-              <input
-                id="event"
-                type="radio"
-                value=""
-                name="referral-method"
-                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="event"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
                 >イベント</label
               >
             </div>
             <div class="flex items-center py-4 px-5">
-              <input
-                id="other"
-                type="radio"
-                value=""
-                name="referral-method"
-                class="w-6 h-6 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-              />
-              <label
-                for="other"
-                class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
                 >その他</label
               >
             </div>
@@ -210,16 +148,8 @@ import H2 from "../atoms/H2.astro";
         <!-- 同意チェック -->
         <div class="mb-6">
           <div class="flex items-center justify-center">
-            <input
-              id="agree-to-privacy-policy"
-              type="checkbox"
-              name="agree-to-privacy-policy"
-              class="p-4 mr-2 text-body"
-            />
-            <label
-              for="agree-to-privacy-policy"
-              class="font-gothic font-medium text-xs text-body"
-            >
+            <input type="checkbox" class="p-4 mr-2 text-body" />
+            <label class="font-gothic font-medium text-xs text-body">
               問い合わせに当たり、<a href="/" class="underline"
                 >個人情報の取り扱い</a
               >に同意する
@@ -232,14 +162,10 @@ import H2 from "../atoms/H2.astro";
       <div class="mb-6">
         <div class="flex items-center justify-center font-gothic">
           <button
-            id="clear-form"
-            type="reset"
             class="w-[256px] text-xl font-bold text-primary rounded-sm py-3 px-5 mr-6 border-2 border-primary"
             >内容をクリアする</button
           >
           <button
-            id="submit-form"
-            type="submit"
             class="w-[256px] text-xl font-bold text-white bg-primary rounded-sm py-3 px-5 mr-6 border-2 border-primary"
             >同意して送信する</button
           >
