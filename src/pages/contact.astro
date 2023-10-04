@@ -1,106 +1,176 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import BlogList from "../components/BlogList.astro";
-import Business from "../components/Business.astro";
 import H2 from "../atoms/H2.astro";
 ---
 
 <Layout title="">
   <main>
-    <section>
-      <img
-        src="https://placehold.co/600x400"
-        class="object-cover w-full h-[500px]"
-      />
-    </section>
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="事業紹介" etitle="Our services" />
+    <div class="w-desktop m-auto">
+      <H2 title="お問い合わせ" etitle="Contact" />
+    </div>
+    <div class="w-[880px] flex flex-col my-20 mx-auto">
+      <!-- 注意事項 -->
+      <div class="border-2 border-Description mb-10">
+        <p class="p-5 font-medium text-base text-center font-gothic">
+          下記のフォームに必須項目入力の上、「確認画面へ進む」ボタンを押してください。
+          <br
+          />なお、内容によっては、ご連絡までお時間がかかるものがございますので、あらかじめご了承くださいませ。
+        </p>
       </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
-      </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business order="last" />
-      </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
-      </div>
-      <div class="text-center mt-4">
-        <a class="bg-primary text-white rounded-md hover:bg-primary-800 p-2">
-          もっと見る
-        </a>
-      </div>
-    </section>
-    <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
-        <H2 title="取引実績" etitle="Our services" />
-      </div>
-      <div class="bg-white w-desktop m-auto p-6 mt-4">
-        <div class="flex justify-between">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
+
+      <!-- お問い合わせフォーム -->
+      <div class="shadow-md p-10 mb-10">
+        <div class="m-0 p-0">
+          <div class="mb-6">
+            <div class="font-sans flex items-center mb-2">
+              <label class="font-medium mr-2 text-sm">お問い合わせ種別</label>
+              <p class="font-normal text-xs text-alert">必須</p>
+            </div>
+            <div>
+              <select
+                class="w-full px-4 py-5 border-2 border-border/light rounded-sm font-gothic text-Description"
+              >
+                <option value="" selected disabled>選択してください</option>
+                <option value="1">選択肢1</option>
+                <option value="2">選択肢2</option>
+                <option value="3">選択肢3</option>
+                <option value="4">選択肢4</option>
+                <option value="5">選択肢5</option>
+                <option value="6">選択肢6</option>
+              </select>
+            </div>
+          </div>
         </div>
-        <div class="flex justify-between mt-4">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
+        <div class="mb-6">
+          <div class="font-sans flex items-center mb-2">
+            <label class="font-medium mr-2 text-sm">名前</label>
+            <p class="font-normal text-xs text-alert">必須</p>
+          </div>
+          <div>
+            <input
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="flex items-center mb-2">
+            <label class="font-medium mr-2 text-sm">メールアドレス</label>
+            <p class="font-normal text-xs text-alert">必須</p>
+          </div>
+          <div>
+            <input
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="font-sans flex items-center mb-2">
+            <label class="font-medium mr-2 text-sm">電話番号</label>
+            <p class="font-normal text-xs text-alert">必須</p>
+          </div>
+          <div>
+            <input
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="font-sans flex items-center mb-2">
+            <label class="font-medium mr-2 text-sm">会社名</label>
+            <p class="font-normal text-xs text-Description">任意</p>
+          </div>
+          <div>
+            <input
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <div class="font-sans flex items-center mb-2">
+            <label class="font-medium mr-2 text-sm">役職</label>
+            <p class="font-normal text-xs text-Description">任意</p>
+          </div>
+          <div>
+            <select
+              class="w-full px-4 py-5 border-2 border-border/light rounded-sm font-gothic text-Description"
+            >
+              <option value="" selected disabled>選択してください</option>
+              <option value="position1">選択肢1</option>
+              <option value="position2">選択肢2</option>
+              <option value="position3">選択肢3</option>
+              <option value="position4">選択肢4</option>
+              <option value="position5">選択肢5</option>
+              <option value="position6">選択肢6</option>
+            </select>
+          </div>
+        </div>
+        <!-- アンケート -->
+        <div class="mb-6">
+          <div class="font-gothic flex items-center mb-2">
+            <p class="font-medium mr-2 text-sm">
+              シンシアをお知りになったきっかけを教えてください
+            </p>
+            <p class="font-normal text-xs text-Description">任意</p>
+          </div>
+          <div class="flex items-center font-gothic">
+            <div class="flex items-center py-4 px-5">
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
+                >メディア</label
+              >
+            </div>
+            <div class="flex items-center py-4 px-5">
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
+                >弊社社員からの紹介</label
+              >
+            </div>
+            <div class="flex items-center py-4 px-5">
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
+                >ご友人の紹介</label
+              >
+            </div>
+            <div class="flex items-center py-4 px-5">
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
+                >イベント</label
+              >
+            </div>
+            <div class="flex items-center py-4 px-5">
+              <input type="radio" class="w-6 h-6" />
+              <label class="ml-2 text-sm font-medium text-gray-900"
+                >その他</label
+              >
+            </div>
+          </div>
+        </div>
+        <!-- 同意チェック -->
+        <div class="mb-6">
+          <div class="flex items-center justify-center">
+            <input type="checkbox" class="p-4 mr-2 text-body" />
+            <label class="font-gothic font-medium text-xs text-body">
+              問い合わせに当たり、<a href="/" class="underline"
+                >個人情報の取り扱い</a
+              >に同意する
+            </label>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="役員紹介" etitle="Board member" />
+      <!-- 内容クリアボタン・送信ボタン -->
+      <div class="mb-6">
+        <div class="flex items-center justify-center font-gothic">
+          <button
+            class="w-[256px] text-xl font-bold text-primary rounded-sm py-3 px-5 mr-6 border-2 border-primary"
+            >内容をクリアする</button
+          >
+          <button
+            class="w-[256px] text-xl font-bold text-white bg-primary rounded-sm py-3 px-5 mr-6 border-2 border-primary"
+            >同意して送信する</button
+          >
+        </div>
       </div>
-    </section>
-
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="お問い合わせ" etitle="Contact" />
-      </div>
-    </section>
-
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="選考と採用" etitle="Recruit" />
-      </div>
-    </section>
-
-    <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
-        <H2 title="ブログ" etitle="Blog" />
-      </div>
-      <div class="w-desktop m-auto">
-        <BlogList />
-      </div>
-    </section>
+    </div>
   </main>
 </Layout>
