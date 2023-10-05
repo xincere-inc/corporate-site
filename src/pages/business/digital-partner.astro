@@ -1,0 +1,88 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import MemberCard from "../../components/MemberCard.astro";
+import H3 from "../../atoms/H3.astro";
+---
+
+<Layout title="デジタルパートナー事業">
+  <main>
+    <div class="bg-primary10 h-[500px] relative overflow-hidden">
+      <img src="/digital-partner.svg" class="absolute -left-24 w-1/2" />
+      <h1 class="text-5xl font-bold p-3 bg-white absolute right-64 top-1/4">
+        デジタルパートナー事業
+      </h1>
+      <div class="p-3 bg-white absolute right-64 top-1/2">
+        <a href="#geek-studio" class="mr-4"> GEEKスタジオ</a>
+        <a href="#startup-studio" class="ml-4">スタートアップスタジオ</a>
+      </div>
+    </div>
+    <section id="geek-studio">
+      <div class="w-desktop m-auto">
+        <div class="flex">
+          <div class="w-1/2">
+            <div>
+              <H3 title="GEEKスタジオ" />
+            </div>
+            <div>
+              <p>
+                最新鋭のサーチエンジンの開発から、AIを駆使した革新的なプロダクトの創出、更にはAWS
+                Marketplaceでの展開まで。私たちは、そのすべてにおいて卓越した技術力を持つ専門家集団です。お客様の直面する課題に立ち向かい、先進技術を駆使して解決策を提示いたします。
+              </p>
+            </div>
+          </div>
+          <div class="w-1/2">
+            <img src="/digital-partner.svg" class="" />
+          </div>
+        </div>
+
+        <MemberCard
+          name="徐 聖博"
+          ename="shengbo xu"
+          position="代表取締役・CEO"
+          imageUrl="https://placehold.co/320x320"
+        >
+          東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+          Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+        </MemberCard>
+        <MemberCard
+          name="徐 聖博"
+          ename="shengbo xu"
+          position="代表取締役・CEO"
+          imageUrl="https://placehold.co/320x320"
+        >
+          東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+          Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+        </MemberCard>
+        <MemberCard
+          name="徐 聖博"
+          ename="shengbo xu"
+          position="代表取締役・CEO"
+          imageUrl="https://placehold.co/320x320"
+        >
+          東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+          Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+        </MemberCard>
+      </div>
+    </section>
+    <section id="startup-studio">
+      <div class="w-desktop m-auto">
+        <div class="flex">
+          <div class="w-1/2">
+            <img src="/digital-partner.svg" class="" />
+          </div>
+          <div class="w-1/2">
+            <div>
+              <H3 title="スタートアップスタジオ" />
+            </div>
+            <div>
+              <p>
+                最新鋭のサーチエンジンの開発から、AIを駆使した革新的なプロダクトの創出、更にはAWS
+                Marketplaceでの展開まで。私たちは、そのすべてにおいて卓越した技術力を持つ専門家集団です。お客様の直面する課題に立ち向かい、先進技術を駆使して解決策を提示いたします。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
