@@ -5,9 +5,9 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="プロダクト開発事業">
   <!-- プロダクト事業 -->
   <section>
-    <div class="bg-blue">
-      <div class="flex items-center w-desktop m-auto">
-        <div class="w-[370px] font-gothic text-white">
+    <div class="bg-image">
+      <div class="h-[697px] w-desktop m-auto flex items-center">
+        <div class="w-[370px] font-gothic text-body">
           <p class="font-bold text-h2 mb-2">プロダクト事業</p>
           <p class="font-bold text-h3 mb-2">Products</p>
           <p class="font-medium text-sm mr-8">
@@ -17,9 +17,17 @@ import Layout from "../layouts/Layout.astro";
             Sun*が価値創造のインフラとなることで、全人類が生まれた時から持っているクリエイティブへの情熱を呼び起こし「誰もが価値創造に夢中になれる世界」を実現させます。
           </p>
         </div>
-        <div class="bg-gray w-[895px] h-[669px]"></div>
       </div>
     </div>
+    <style>
+      .bg-image {
+        height: 697px;
+        background-image: url("/images/dummy-background1.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
   </section>
 
   <!-- どんなことをしている？ -->
