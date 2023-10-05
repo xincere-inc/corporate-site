@@ -20,10 +20,11 @@ module.exports = {
       primary: "#518C3C",
       black: "#000000",
       body: "#333333",
-      Description: "#949495",
+      description: "#949495",
       alert: "#FF0000",
       "border/light": "#D6D6D6",
       "gray/90": "#1E2D39",
+      blue: "#0774D8",
     },
     fontFamily: {
       gothic: ["YuGothic"],

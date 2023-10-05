@@ -5,8 +5,11 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="プロダクト開発事業">
   <!-- プロダクト事業 -->
   <section>
-    <div class="bg-image">
-      <div class="h-[697px] w-desktop m-auto flex items-center">
+    <div
+      class="h-[697px] bg-center bg-cover bg-no-repeat"
+      style="background-image: url('/images/dummy-background1.png')"
+    >
+      <div class="h-full w-desktop mx-auto flex items-center">
         <div class="w-[370px] font-gothic text-body">
           <p class="font-bold text-h2 mb-2">プロダクト事業</p>
           <p class="font-bold text-h3 mb-2">Products</p>
@@ -19,15 +22,6 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </div>
-    <style>
-      .bg-image {
-        height: 697px;
-        background-image: url("/images/dummy-background1.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-      }
-    </style>
   </section>
 
   <!-- どんなことをしている？ -->
