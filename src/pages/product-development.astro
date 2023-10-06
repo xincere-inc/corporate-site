@@ -1,13 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Recruitment from "../components/Recruitment.astro";
 ---
 
 <Layout title="プロダクト開発事業">
   <!-- プロダクト事業 -->
   <section>
     <div
-      class="h-[697px] bg-center bg-cover bg-no-repeat"
-      style="background-image: url('/images/dummy-background1.png')"
+      class="h-[695px] bg-center bg-cover bg-no-repeat"
+      style="background-image: url('/images/product-development_header.png')"
     >
       <div class="h-full w-desktop mx-auto flex items-center">
         <div class="w-[370px] font-gothic text-body">
@@ -24,34 +25,29 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- どんなことをしている？ -->
-  <section class="relative">
-    <div class="w-desktop mx-auto">
-      <div
-        class="absolute left-0 top-0 bg-gray bg-opacity-30 w-[830px] h-[460px]"
-      >
-      </div>
-      <div
-        class="h-[460px] ml-[636px] font-gothic flex flex-col justify-center"
-      >
-        <p class="font-bold text-h3 mb-2 text-blue">どんなことをしている？</p>
-        <p class="font-medium text-sm text-black">
-          私たちの社名に含まれる“Sun”は、まさに「太陽」。
-          地球上のすべての生命を育むインフラです。
-          革新的なビジネスや、新しいイノベーターの「種」を、私たちの光で照らし、それらを育む最強のインフラになることを目指しています。
-          Sun*が価値創造のインフラとなることで、全人類が生まれた時から持っているクリエイティブへの情熱を呼び起こし「誰もが価値創造に夢中になれる世界」を実現させます。
-        </p>
-      </div>
-    </div>
-  </section>
-
   <!-- 不動産&マッチングアプリ -->
   <section>
     <div class="w-desktop mx-auto py-[72px]">
+      <!-- 不動産 -->
+      <div class="flex items-center">
+        <div class="bg-gray w-[564px] h-[306px] flex-shrink-0"></div>
+        <div class="font-gothic text-black ml-8">
+          <p class="font-bold text-h3 mb-2 text-primary/100">
+            不動産プロダクト（不動産メディア + CRM）
+          </p>
+          <p class="font-medium text-sm text-body">
+            私たちの社名に含まれる“Sun”は、まさに「太陽」。
+            地球上のすべての生命を育むインフラです。
+            革新的なビジネスや、新しいイノベーターの「種」を、私たちの光で照らし、それらを育む最強のインフラになることを目指しています。
+          </p>
+        </div>
+      </div>
+
+      <!-- マッチングアプリ -->
       <div class="flex items-center mb-8">
         <div class="font-gothic text-black mr-12">
-          <p class="font-bold text-h3 mb-2 text-blue">
-            不動産プロダクト（不動産メディア + CRM）
+          <p class="font-bold text-h3 mb-2 text-primary/100">
+            マッチングアプリ
           </p>
           <p class="font-medium text-sm text-body flex-grow">
             私たちの社名に含まれる“Sun”は、まさに「太陽」。
@@ -61,17 +57,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
         <div class="bg-gray w-[564px] h-[306px] flex-shrink-0"></div>
       </div>
-      <div class="flex items-center">
-        <div class="bg-gray w-[564px] h-[306px] flex-shrink-0"></div>
-        <div class="font-gothic text-black ml-8">
-          <p class="font-bold text-h3 mb-2 text-blue">マッチングアプリ</p>
-          <p class="font-medium text-sm text-body">
-            私たちの社名に含まれる“Sun”は、まさに「太陽」。
-            地球上のすべての生命を育むインフラです。
-            革新的なビジネスや、新しいイノベーターの「種」を、私たちの光で照らし、それらを育む最強のインフラになることを目指しています。
-          </p>
-        </div>
-      </div>
     </div>
   </section>
+  <Recruitment />
 </Layout>
