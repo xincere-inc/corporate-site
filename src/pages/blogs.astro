@@ -5,14 +5,28 @@ const allBlogs = await Astro.glob("../pages/blogs/*.md");
 ---
 
 <Layout title="blogs">
-  <div class="flex w-[1160px] my-[72px] mx-auto font-gothic">
-    <main class="w-[800px] mr-10 flex flex-col">
+  <div class="md:flex md:m-auto md:w-desktop md:mt-10">
+    <main class="md:w-[calc(100%-20rem)]">
       <section>
-        <h2 class="text-[40px] text-primary font-bold leading-[48px] mb-6">2023年 6月</h2>
+        <h2 class="text-[40px] text-primary font-bold leading-[48px] mb-6">
+          2023年 6月
+        </h2>
         <div class="flex mb-6">
-          <div class="text-base font-bold py-1 px-2 rounded-sm text-white bg-primary mr-4 cursor-pointer">カテゴリ</div>
-          <div class="text-base font-bold py-1 px-2 rounded-sm text-primary border border-primary mr-4 cursor-pointer">年別</div>
-          <div class="text-base font-bold py-1 px-2 rounded-sm text-primary border border-primary cursor-pointer">月別</div>
+          <div
+            class="text-base font-bold py-1 px-2 rounded-sm text-white bg-primary mr-4 cursor-pointer"
+          >
+            カテゴリ
+          </div>
+          <div
+            class="text-base font-bold py-1 px-2 rounded-sm text-primary border border-primary mr-4 cursor-pointer"
+          >
+            年別
+          </div>
+          <div
+            class="text-base font-bold py-1 px-2 rounded-sm text-primary border border-primary cursor-pointer"
+          >
+            月別
+          </div>
         </div>
       </section>
       <section class="space-y-6">
@@ -20,29 +34,54 @@ const allBlogs = await Astro.glob("../pages/blogs/*.md");
           allBlogs.map((blog) => (
             <div class="p-[10px] rounded-sm shadow-custom-lg flex items-center justify-between">
               <div class="flex flex-col truncate flex-wrap">
-                <h3 class="text-h3 text-gothic font-bold mb-2 truncate w-[calc(100%-40px)]">{blog.frontmatter.title}</h3>
+                <h3 class="text-h3 text-gothic font-bold mb-2 truncate w-[calc(100%-40px)]">
+                  {blog.frontmatter.title}
+                </h3>
                 <div innerHTML={blog.content} />
                 <p class="text-sm text-gray-333 font-medium opacity-90 mb-2 truncate w-[calc(100%-40px)]">
                   このブログの内容はこんな感じです。このブログの内容はこんな感じです。
                 </p>
                 <div class="flex space-x-2 mb-1 truncate]">
-                  <div class="text-[8px] font-medium text-white bg-gray-333 px-2 py-0.5 rounded-sm ">NEW</div>
-                  <div class="text-[8px] font-medium text-white bg-gray-333 px-2 py-0.5 rounded-sm">Atomic</div>
-                  <div class="text-[8px] font-medium text-white bg-gray-333 px-2 py-0.5 rounded-sm">イラスティック</div>
-                  <div class="text-[8px] font-medium text-white bg-gray-333 px-2 py-0.5 rounded-sm">アトミック</div>
+                  <div class="text-[8px] font-medium text-white bg-gray-333 px-2 py-0.5 rounded-sm ">
+                    NEW
+                  </div>
+                  <div class="text-[8px] font-medium text-white bg-gray-333 px-2 py-0.5 rounded-sm">
+                    Atomic
+                  </div>
+                  <div class="text-[8px] font-medium text-white bg-gray-333 px-2 py-0.5 rounded-sm">
+                    イラスティック
+                  </div>
+                  <div class="text-[8px] font-medium text-white bg-gray-333 px-2 py-0.5 rounded-sm">
+                    アトミック
+                  </div>
                 </div>
                 <div class="text-[10px]] font-normal text-gray-949495 font-sans opacity-90">
-                  {new Date(blog.frontmatter.date).toISOString().split("T")[0].replace(/-/g, ".")}
+                  {new Date(blog.frontmatter.date)
+                    .toISOString()
+                    .split("T")[0]
+                    .replace(/-/g, ".")}
                 </div>
               </div>
               <div class="w-[32px] h-[32px] p-[8px 12px] border rounded-full border-gray-333 text-gray-333 flex items-center justify-center cursor-pointer flex-shrink-0">
                 <a href="">
-                  <svg class="w-4 h-4 rotate-90" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 5 5 1 1 5"/>
+                  <svg
+                    class="w-4 h-4 rotate-90"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M9 5 5 1 1 5"
+                    />
                   </svg>
                 </a>
               </div>
-              </div>
+            </div>
           ))
         }
       </section>
