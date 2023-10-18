@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Recruitment from "../components/Recruitment.astro";
+import Layout from "../../layouts/Layout.astro";
+import Recruitment from "../../components/Recruitment.astro";
 ---
 
 <Layout title="プロダクト開発事業">
@@ -10,7 +10,7 @@ import Recruitment from "../components/Recruitment.astro";
       class="h-[695px] bg-center bg-cover bg-no-repeat"
       style="background-image: url('/images/product-development_header.png')"
     >
-      <div class="h-full w-desktop mx-auto flex items-center">
+      <div class="h-full md:w-desktop mx-auto md:flex md:items-center">
         <div class="font-gothic text-body">
           <p class="inline-block font-bold text-h2 py-2 px-5 bg-white mb-12">
             プロダクト事業
@@ -36,10 +36,9 @@ import Recruitment from "../components/Recruitment.astro";
 
   <!-- 不動産&マッチングアプリ -->
   <section>
-    <div class="w-desktop mx-auto py-[72px]">
+    <div class="md:w-desktop mx-auto py-[72px]">
       <!-- 不動産 -->
-      <div class="flex items-center">
-        <div class="bg-gray w-[564px] h-[306px] flex-shrink-0"></div>
+      <div class="md:flex md:items-center">
         <div class="font-gothic text-black ml-8">
           <p class="font-bold text-h3 mb-2 text-primary/100">
             不動産プロダクト（不動産メディア + CRM）
@@ -53,7 +52,7 @@ import Recruitment from "../components/Recruitment.astro";
       </div>
 
       <!-- マッチングアプリ -->
-      <div class="flex items-center mb-8">
+      <div class="md:flex md:items-center mb-8">
         <div class="font-gothic text-black mr-12">
           <p class="font-bold text-h3 mb-2 text-primary/100">
             マッチングアプリ
@@ -64,7 +63,6 @@ import Recruitment from "../components/Recruitment.astro";
             革新的なビジネスや、新しいイノベーターの「種」を、私たちの光で照らし、それらを育む最強のインフラになることを目指しています。
           </p>
         </div>
-        <div class="bg-gray w-[564px] h-[306px] flex-shrink-0"></div>
       </div>
     </div>
   </section>

@@ -9,8 +9,8 @@ module.exports = {
       h2: "2.5rem",
       eh2: "2rem",
       h3: "1.5rem",
-      "5xl": ['3rem', 1],
-      "xl": ['1.25rem', '1.75rem'],
+      "5xl": ["3rem", 1],
+      xl: ["1.25rem", "1.75rem"],
       base: "1rem",
       sm: "0.875rem",
       xs: "0.75rem",
@@ -26,10 +26,6 @@ module.exports = {
       "border/light": "#D6D6D6",
       "gray/90": "#1E2D39",
       blue: "#0774D8",
-    },
-    fontFamily: {
-      gothic: ["YuGothic"],
-      sans: ["NotoSans"],
     },
     extend: {
       width: {

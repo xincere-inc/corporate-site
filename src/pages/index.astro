@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import BlogList from "../components/BlogList.astro";
 import Business from "../components/Business.astro";
 import H2 from "../atoms/H2.astro";
+import MemberCard from "../components/MemberCard.astro";
 ---
 
 <Layout title="">
@@ -14,60 +15,47 @@ import H2 from "../atoms/H2.astro";
       />
     </section>
     <section>
-      <div class="w-desktop m-auto">
+      <div class="md:w-desktop m-auto">
         <H2 title="事業紹介" etitle="Our services" />
       </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
+      <div class="md:w-desktop m-auto mb-6">
+        <Business
+          businessTitle="digital-partner"
+          title="デジタルパートナー事業"
+        >
+          <ul>
+            <li>GEEK スタジオ</li>
+            <li>タレントスタジオ</li>
+          </ul>
+        </Business>
       </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business order="last" />
+      <div class="md:w-desktop m-auto mb-6">
+        <Business
+          order="last"
+          businessTitle="product-development"
+          title="プロダクト事業"
+        >
+          <ul>
+            <li>不動産プロダクト</li>
+            <li>AIプロダクト</li>
+          </ul>
+        </Business>
       </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
-      </div>
-      <div class="text-center mt-4">
-        <a class="bg-primary text-white rounded-md hover:bg-primary-800 p-2">
-          もっと見る
-        </a>
+      <div class="md:w-desktop m-auto mb-6">
+        <Business businessTitle="engineer-education" title="教育事業">
+          <ul>
+            <li>不動産プロダクト</li>
+            <li>AIプロダクト</li>
+          </ul>
+        </Business>
       </div>
     </section>
     <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
+      <div class="md:w-desktop m-auto">
         <H2 title="取引実績" etitle="Our services" />
       </div>
-      <div class="bg-white w-desktop m-auto p-6 mt-4">
-        <div class="flex justify-between">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-        </div>
-        <div class="flex justify-between mt-4">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
+      <div class="bg-white md:w-desktop m-auto p-6 mt-4">
+        <div class="md:flex md:justify-between mt-4">
           <img
             src="https://placehold.co/600x400"
             class="object-cover w-[240px] h-[120px]"
@@ -77,28 +65,50 @@ import H2 from "../atoms/H2.astro";
     </section>
 
     <section>
-      <div class="w-desktop m-auto">
+      <div class="md:w-desktop m-auto">
         <H2 title="役員紹介" etitle="Board member" />
       </div>
+      <div class="bg-white md:w-desktop m-auto p-6 mt-4">
+        <div class="md:flex md:items-center md:justify-around">
+          <MemberCard
+            name="徐 聖博"
+            ename="shengbo xu"
+            position="代表取締役・CEO"
+            imageUrl="https://placehold.co/320x320"
+          >
+            東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+            Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+          </MemberCard>
+          <MemberCard
+            name="徐 聖博"
+            ename="shengbo xu"
+            position="代表取締役・CEO"
+            imageUrl="https://placehold.co/320x320"
+          >
+            東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+            Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+          </MemberCard>
+        </div>
+      </div>
     </section>
 
     <section>
-      <div class="w-desktop m-auto">
+      <div class="md:w-desktop m-auto">
         <H2 title="お問い合わせ" etitle="Contact" />
       </div>
     </section>
 
     <section>
-      <div class="w-desktop m-auto">
+      <div class="md:w-desktop m-auto">
         <H2 title="選考と採用" etitle="Recruit" />
       </div>
     </section>
 
     <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
+      <div class="md:w-desktop m-auto">
         <H2 title="ブログ" etitle="Blog" />
       </div>
-      <div class="w-desktop m-auto">
+      <div class="md:w-desktop m-auto">
         <BlogList />
       </div>
     </section>
