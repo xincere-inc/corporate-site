@@ -1,0 +1,154 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import MemberCard from "../../components/MemberCard.astro";
+import Recruitment from "../../components/Recruitment.astro";
+import H3 from "../../atoms/H3.astro";
+---
+
+<Layout title="デジタルパートナー事業">
+  <main>
+    <div class="bg-primary10 h-[500px] relative overflow-hidden">
+      <img src="/digital-partner_01.svg" class="absolute -left-24 w-1/2" />
+    </div>
+
+    <div class="">
+      <h1
+        class="font-gothic text-5xl font-bold py-4 px-5 bg-white absolute right-64 top-1/4"
+      >
+        デジタルパートナー事業
+      </h1>
+
+      <div class="p-3 bg-white absolute right-64 top-1/2">
+        <a href="#geek-studio" class="mr-4"> GEEKスタジオ</a>
+        <a href="#startup-studio" class="ml-4">スタートアップスタジオ</a>
+      </div>
+    </div>
+
+    <!-- GEEKスタジオ -->
+    <section id="geek-studio">
+      <div class="w-desktop m-auto py-[72px]">
+        <div class="flex items-center justify-between">
+          <div class="w-1/2">
+            <div class="mb-12 py-2 px-5">
+              <H3 title="GEEKスタジオ" />
+            </div>
+            <div
+              class="border-2 rounded-sm border-primary p-5 font-gothic text-xl"
+            >
+              <p class="mb-4 text-primary">どんなことをする？</p>
+              <p class="text-body">
+                最新鋭のサーチエンジンの開発から、AIを駆使した革新的なプロダクトの創出、更にはAWS
+                Marketplaceでの展開まで。私たちは、そのすべてにおいて卓越した技術力を持つ専門家集団です。お客様の直面する課題に立ち向かい、先進技術を駆使して解決策を提示いたします。
+              </p>
+            </div>
+          </div>
+          <div class="w-1/2">
+            <img src="/digital-partner.svg" class="" />
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center mb-8">
+            <p class="mr-2 font-gothic text-primary text-xl">
+              経験豊富なPMを中心としたタレントスタジオ
+            </p>
+            <div class="flex-1 border-b font-gothic text-primary text-xl"></div>
+          </div>
+          <div class="flex items-center justify-between">
+            <MemberCard
+              name="徐 聖博"
+              ename="shengbo xu"
+              position="代表取締役・CEO"
+              imageUrl="https://placehold.co/320x320"
+            >
+              東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+              Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+            </MemberCard>
+            <MemberCard
+              name="徐 聖博"
+              ename="shengbo xu"
+              position="代表取締役・CEO"
+              imageUrl="https://placehold.co/320x320"
+            >
+              東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+              Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+            </MemberCard>
+            <MemberCard
+              name="徐 聖博"
+              ename="shengbo xu"
+              position="代表取締役・CEO"
+              imageUrl="https://placehold.co/320x320"
+            >
+              東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+              Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+            </MemberCard>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- スタートアップ -->
+    <section id="geek-studio" class="bg-primary10">
+      <div class="w-desktop m-auto py-[72px]">
+        <div class="flex items-center justify-between">
+          <div class="w-1/2">
+            <img src="/digital-partner.svg" class="" />
+          </div>
+          <div class="w-1/2">
+            <div class="mb-12 py-2 px-5">
+              <H3 title="GEEKスタジオ" />
+            </div>
+            <div
+              class="border-2 rounded-sm border-primary p-5 font-gothic text-xl"
+            >
+              <p class="mb-4 text-primary">どんなことをする？</p>
+              <p class="text-body">
+                最新鋭のサーチエンジンの開発から、AIを駆使した革新的なプロダクトの創出、更にはAWS
+                Marketplaceでの展開まで。私たちは、そのすべてにおいて卓越した技術力を持つ専門家集団です。お客様の直面する課題に立ち向かい、先進技術を駆使して解決策を提示いたします。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <div class="flex items-center mb-8">
+            <p class="mr-2 font-gothic text-primary text-xl">
+              東大・京大出身者を中心にしたGEEKスタジオ
+            </p>
+            <div class="flex-1 border-b font-gothic text-primary text-xl"></div>
+          </div>
+          <div class="flex items-center justify-between">
+            <MemberCard
+              name="徐 聖博"
+              ename="shengbo xu"
+              position="代表取締役・CEO"
+              imageUrl="https://placehold.co/320x320"
+            >
+              東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+              Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+            </MemberCard>
+            <MemberCard
+              name="徐 聖博"
+              ename="shengbo xu"
+              position="代表取締役・CEO"
+              imageUrl="https://placehold.co/320x320"
+            >
+              東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+              Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+            </MemberCard>
+            <MemberCard
+              name="徐 聖博"
+              ename="shengbo xu"
+              position="代表取締役・CEO"
+              imageUrl="https://placehold.co/320x320"
+            >
+              東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+              Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+            </MemberCard>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Recruitment />
+</Layout>
