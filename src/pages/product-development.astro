@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Recruitment from "../components/Recruitment.astro";
+---
+
+<Layout title="プロダクト開発事業">
+  <!-- プロダクト事業 -->
+  <section>
+    <div
+      class="h-[695px] bg-center bg-cover bg-no-repeat"
+      style="background-image: url('/images/product-development_header.png')"
+    >
+      <div class="h-full w-desktop mx-auto flex items-center">
+        <div class="font-gothic text-body">
+          <p class="inline-block font-bold text-h2 py-2 px-5 bg-white mb-12">
+            プロダクト事業
+          </p>
+          <div
+            class="font-bold text-eh2 text-primary py-4 px-5 bg-white flex flex-col justify-content"
+          >
+            <div class="mb-4">
+              <p class="inline-block border-b-8 border-warning leading-5">
+                テキストテキスト
+              </p>
+            </div>
+            <div>
+              <p class="inline-block border-b-8 border-warning leading-5">
+                テキストテキストテキストテキスト
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 不動産&マッチングアプリ -->
+  <section>
+    <div class="w-desktop mx-auto py-[72px]">
+      <!-- 不動産 -->
+      <div class="flex items-center">
+        <div class="bg-gray w-[564px] h-[306px] flex-shrink-0"></div>
+        <div class="font-gothic text-black ml-8">
+          <p class="font-bold text-h3 mb-2 text-primary/100">
+            不動産プロダクト（不動産メディア + CRM）
+          </p>
+          <p class="font-medium text-sm text-body">
+            私たちの社名に含まれる“Sun”は、まさに「太陽」。
+            地球上のすべての生命を育むインフラです。
+            革新的なビジネスや、新しいイノベーターの「種」を、私たちの光で照らし、それらを育む最強のインフラになることを目指しています。
+          </p>
+        </div>
+      </div>
+
+      <!-- マッチングアプリ -->
+      <div class="flex items-center mb-8">
+        <div class="font-gothic text-black mr-12">
+          <p class="font-bold text-h3 mb-2 text-primary/100">
+            マッチングアプリ
+          </p>
+          <p class="font-medium text-sm text-body flex-grow">
+            私たちの社名に含まれる“Sun”は、まさに「太陽」。
+            地球上のすべての生命を育むインフラです。
+            革新的なビジネスや、新しいイノベーターの「種」を、私たちの光で照らし、それらを育む最強のインフラになることを目指しています。
+          </p>
+        </div>
+        <div class="bg-gray w-[564px] h-[306px] flex-shrink-0"></div>
+      </div>
+    </div>
+  </section>
+  <Recruitment />
+</Layout>

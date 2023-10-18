@@ -1,105 +1,176 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import BlogList from "../components/BlogList.astro";
-import Business from "../components/Business.astro";
 import H2 from "../atoms/H2.astro";
+import Recruitment from "../components/Recruitment.astro";
 ---
 
-<Layout title="">
+<Layout title="バリューについて">
   <main>
-    <section>
-      <img
-        src="https://placehold.co/600x400"
-        class="object-cover w-full h-[500px]"
-      />
-    </section>
-    <section>
+    <!-- About どんな会社？ -->
+    <div class="w-full bg-body font-gothic text-white">
+      <div class="flex flex-col items-center justify-center py-40">
+        <p class="font-bold text-h3">About</p>
+        <p class="font-bold text-h2">どんな会社？</p>
+        <p class="font-medium text-h3">シンシアに興味を</p>
+        <p class="font-medium text-h3">持ってくださったみなさんへ。</p>
+      </div>
+    </div>
+    <!-- バリューについて -->
+    <section class="w-full py-16 font-gothic flex flex-wrap justify-between">
       <div class="w-desktop m-auto">
-        <H2 title="事業紹介" etitle="Our services" />
+        <H2 title="バリューについて" etitle="Value" />
       </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
-      </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business order="last" />
-      </div>
-      <div class="w-desktop m-auto mb-6">
-        <Business />
-      </div>
-      <div class="text-center mt-4">
-        <a class="bg-primary text-white rounded-md hover:bg-primary-800 p-2">
-          もっと見る
-        </a>
-      </div>
-    </section>
-    <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
-        <H2 title="取引実績" etitle="Our services" />
-      </div>
-      <div class="bg-white w-desktop m-auto p-6 mt-4">
-        <div class="flex justify-between">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
+      <div class="w-[1180px] bg-primary/10 rounded-r-full mb-10">
+        <div class="py-10 px-10 pl-20">
+          <p class="font-bold text-eh2 text-primary mb-2">1.ビジョン</p>
+          <p class="font-blod text-xl even:text-body">
+            「お客様のライフステージの変化をなめらかにする」を掲げ、現在は不動産事業に注力しています。社会や業界をよりよくするための事業の立ち上げ期に携わることができます。
+          </p>
         </div>
-        <div class="flex justify-between mt-4">
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
-          <img
-            src="https://placehold.co/600x400"
-            class="object-cover w-[240px] h-[120px]"
-          />
+      </div>
+      <div class="w-[1180px] bg-primary rounded-l-full mb-10 ml-auto">
+        <div class="py-10 px-10 pr-20 flex-grow">
+          <p class="font-bold text-eh2 text-white mb-2">
+            2.洗練されたワークフロー
+          </p>
+          <p class="font-blod text-xl text-white">
+            平均会社経験数3社以上、外資テック企業、日系大手企業、スタートアップCTO在籍していた創設メンバーがいままでの経験を元に開発しているため、ハイレベルな開発ができ、多くの知見が得られます。
+          </p>
+        </div>
+      </div>
+      <div class="w-[1180px] bg-primary/10 rounded-r-full mb-10">
+        <div class="py-10 px-10 pl-20">
+          <p class="font-bold text-eh2 text-primary mb-2">
+            3.経験豊富なスタッフと一緒に
+          </p>
+          <p class="font-blod text-xl even:text-body">
+            社内には宅建の資格を持ったメンバーや不動産会社での就業経験があるメンバーもいるため、不動産に関する知識を身につけることができます。
+          </p>
+        </div>
+      </div>
+      <div class="w-[1180px] bg-primary rounded-l-full mb-10 ml-auto">
+        <div class="py-10 px-10 pr-20">
+          <p class="font-bold text-eh2 text-white mb-2">4.開発について</p>
+          <p class="font-blod text-xl text-white">
+            0→1フェーズであるため、一緒に
+            "いい会社"とはなにか考え、制度・文化面から作っていくことができます。
+          </p>
+        </div>
+      </div>
+      <div class="w-[1180px] bg-primary/10 rounded-r-full mb-10">
+        <div class="py-10 px-10 pl-20">
+          <p class="font-bold text-eh2 text-primary mb-2">5.シンシアメンバー</p>
+          <p class="font-blod text-xl even:text-body">
+            創業者がエンジニアであるため、エンジニアリング起点に、どのようにビジネスをつくるか、長期的な技術戦略から一緒に考えることができます。
+          </p>
         </div>
       </div>
     </section>
 
+    <!-- オフィス -->
     <section>
-      <div class="w-desktop m-auto">
-        <H2 title="役員紹介" etitle="Board member" />
+      <div class="w-desktop mx-auto py-20 font-gothic font-bold text-body">
+        <H2 title="オフィス" etitle="Office" />
+        <div class="w-desktop m-auto grid grid-rows-2 grid-cols-3">
+          <div class="w-[370px] mb-6">
+            <div
+              class="h-[210px] bg-gray mb-2 flex items-center justify-center"
+            >
+            </div>
+            <div>01_近未来的なデザインの建物（的な文章）</div>
+          </div>
+          <div class="w-[370px] mb-6">
+            <div
+              class="h-[210px] bg-gray mb-2 flex items-center justify-center"
+            >
+            </div>
+            <div>02_落ち着いた共有スペース（的な文章）</div>
+          </div>
+          <div class="w-[370px] mb-6">
+            <div
+              class="h-[210px] bg-gray mb-2 flex items-center justify-center"
+            >
+            </div>
+            <div>03_落ち着いた共有スペース（的な文章）</div>
+          </div>
+          <div class="w-[370px] mb-6">
+            <div
+              class="h-[210px] bg-gray mb-2 flex items-center justify-center"
+            >
+            </div>
+            <div>04_落ち着いた共有スペース（的な文章）</div>
+          </div>
+          <div class="w-[370px] mb-6">
+            <div
+              class="h-[210px] bg-gray mb-2 flex items-center justify-center"
+            >
+            </div>
+            <div>05_近未来的なデザインの建物（的な文章）</div>
+          </div>
+          <div class="w-[370px] mb-6">
+            <div
+              class="h-[210px] bg-gray mb-2 flex items-center justify-center"
+            >
+            </div>
+            <div>06_近未来的なデザインの建物（的な文章）</div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section>
+    <!-- 募集職種 -->
+    <section class="w-full py-20">
       <div class="w-desktop m-auto">
-        <H2 title="お問い合わせ" etitle="Contact" />
+        <H2 title="募集職種" etitle="Recruit" />
       </div>
+      <Recruitment />
     </section>
 
-    <section>
-      <div class="w-desktop m-auto">
-        <H2 title="選考と採用" etitle="Recruit" />
+    <!-- 会社概要 -->
+    <section class="w-full py-20 h-[556px] bg-primary">
+      <div class="w-desktop mx-auto mb-10">
+        <div class="w-desktop m-auto"></div>
+        <H2 title="会社概要" etitle="Company Profile" textColor="text-white" />
       </div>
-    </section>
-
-    <section class="bg-gray py-10">
-      <div class="w-desktop m-auto">
-        <H2 title="ブログ" etitle="Blog" />
-      </div>
-      <div class="w-desktop m-auto">
-        <BlogList />
+      <div class="flex items-center justify-center font-gothic text-white">
+        <div class="w-[350px] mr-4">
+          <div class="mb-4">
+            <p class="text-xl mb-2 font-bold">会社名</p>
+            <p class="text-sm mont-medium">株式会社シンシア</p>
+          </div>
+          <div class="mb-4">
+            <p class="text-xl mb-2 font-bold">代表者</p>
+            <p class="text-sm mont-medium">代表取締役社長 徐 聖博</p>
+          </div>
+          <div class="mb-4">
+            <p class="text-xl mb-2 font-bold">資本金</p>
+            <p class="text-sm mont-medium">6,700万円（資本準備金含む）</p>
+          </div>
+          <div class="mb-4">
+            <p class="text-xl mb-2 font-bold">設立年月日</p>
+            <p class="text-sm mont-medium">2020年6月8日</p>
+          </div>
+        </div>
+        <div class="w-[350px]">
+          <div class="mb-4">
+            <p class="text-xl mb-2 font-bold">事業内容</p>
+            <p class="text-sm mont-medium">プロダクト開発事業</p>
+            <p class="text-sm mont-medium">ITコンサルティング事業</p>
+            <p class="text-sm mont-medium">
+              エンジニア育成・組織化支援事業（ワーディング要検討）
+            </p>
+          </div>
+          <div class="mb-4">
+            <p class="text-xl mb-2 font-bold">宅地建物取引業免許番号</p>
+            <p class="text-sm mont-medium">東京都知事(1)第105089号</p>
+          </div>
+          <div>
+            <p class="text-xl mb-2 font-bold">加盟団体</p>
+            <p class="text-sm mont-medium">
+              社団法人全日本不動産協会、社団法人不動産保証協会
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
