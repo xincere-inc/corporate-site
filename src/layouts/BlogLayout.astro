@@ -3,56 +3,67 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Aside from "../components/Aside.astro";
 import MobileHeader from "../components/MobileHeader.astro";
-const { frontmatter, content } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
 <!DOCTYPE html>
 <html lang="ja">
-  <head> <title>{frontmatter.title}</title></head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title} - 株式会社シンシアテックブログ</title>
+  </head>
   <body x-data="{ mobileSidebar: false }">
     <Header />
     <MobileHeader />
-    <div class="flex m-auto w-desktop mt-10">
-      <article class="p-4 w-desktop">
-        <header>
-          <p class="text-description text-sm">
-            {
-              new Date(frontmatter.date)
-                .toISOString()
-                .split("T")[0]
-                .replace(/-/g, ".")
-            }
-          </p>
-          <h1 class="text-h2 font-bold text-primary">{frontmatter.title}</h1>
-          <div class="flex space-x-2 mb-1 truncate]">
-            <div
-              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-            >
-              NEW
-            </div>
-            <div
-              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-            >
-              Atomic
-            </div>
-            <div
-              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-            >
-              イラスティック
-            </div>
-            <div
-              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-            >
-              アトミック
-            </div>
+    <div class="md:flex md:m-auto md:w-desktop md:mt-10">
+      <main class="md:w-[calc(100%-20rem)]">
+        <p class="text-description text-sm">
+          {
+            new Date(frontmatter.date)
+              .toISOString()
+              .split("T")[0]
+              .replace(/-/g, ".")
+          }
+        </p>
+        <h1 class="text-h2 font-bold text-primary">{frontmatter.title}</h1>
+        <div class="flex space-x-2 mb-1 truncate]">
+          <div
+            class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+          >
+            NEW
           </div>
-        </header>
-        <div innerHTML={content}></div>
-      </article>
-      <div>
-        <Aside />
-      </div>
+        </div>
+        <slot />
+      </main>
+      <Aside />
     </div>
     <Footer />
   </body>
 </html>
+
+<style is:global>
+  :root {
+  }
+  html {
+    font-family: system-ui, sans-serif;
+  }
+  code {
+  }
+  [x-cloak] {
+    display: none;
+  }
+</style>
+
+<script>
+  import Alpine from "alpinejs";
+  import collapse from "@alpinejs/collapse";
+
+  Alpine.plugin(collapse);
+
+  window.Alpine = Alpine;
+  Alpine.start();
+</script>

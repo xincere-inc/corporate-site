@@ -32,11 +32,12 @@ const allBlogs = await Astro.glob("../pages/blogs/*.md");
       <section class="space-y-6">
         {
           allBlogs.map((blog) => (
-            <a href={blog.url} class="p-4 rounded-sm shadow-custom-lg flex items-center justify-between">
+            <a
+              href={blog.url}
+              class="p-4 rounded-sm shadow-custom-lg flex items-center justify-between"
+            >
               <div class="">
-                <h3 class="text-h3 font-bold mb-2">
-                  {blog.frontmatter.title}
-                </h3>
+                <h3 class="text-h3 font-bold mb-2">{blog.frontmatter.title}</h3>
                 <p class="text-sm mb-2 line-clamp-2">
                   {blog.frontmatter.summary}
                 </p>
