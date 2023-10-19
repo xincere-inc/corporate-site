@@ -1,148 +1,50 @@
+---
+import Accordion from "./Accordion.astro";
+---
+
 <!-- カテゴリ -->
-<aside class="md:w-80 mx-5">
+<aside class="md:w-80 md:ml-10">
   <div class="mb-8">
-    <h3 class="mb-2 text-primary font-bold">カテゴリ</h3>
-    <div class="pt-4 border-y border-gray-black" x-data="{categoryBlogSelected:0}">
-      <div>
-        <div
-          class="flex justify-between mb-2 cursor-pointer"
-          @click="categoryBlogSelected !== 1 ? categoryBlogSelected = 1 : categoryBlogSelected = null"
-        >
-          <p
-            class="vertical-align text-sm font-bold text-gray/90 truncate pr-6"
-          >
-            2022年12月(20)
-          </p>
-          <div class="flex items-center justify-center">
-            <svg
-              class="w-4 h-4 rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                d="M9 5 5 1 1 5"></path>
-            </svg>
-          </div>
-        </div>
-        <div
-          class="relative overflow-hidden transition-all max-h-0"
-          x-ref="container1"
-          x-bind:style="categoryBlogSelected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-        >
-          <ul class="mb-2 text-sm font-bold text-gray/90 space-y-2 ml-6">
-            <li class="truncate pr-6">タイトルタイトルタイトルタイトル</li>
-            <li class="truncate pr-6">
-              タイトルタイトルタイトルタイトルタイトルタイトル
-            </li>
-            <li class="truncate pr-6">タイトルタイトル</li>
-            <li class="truncate pr-6">タイトルタイトルタイトルタイトル</li>
-          </ul>
-        </div>
-      </div>
+    <h3 class="mb-3 text-xl text-primary font-bold">カテゴリ</h3>
+    <div class="border-y space-y-2 py-2">
+      <Accordion title="2023年1月(20)">
+        <ul class="space-y-2">
+          <li>おおお</li>
+          <li>おおお</li>
+          <li>おおお</li>
+          <li>おおお</li>
+        </ul>
+      </Accordion>
     </div>
   </div>
 
   <!-- 月別 -->
   <div class="mb-8">
-    <h3 class="mb-2 text-primary font-bold">月別</h3>
-    <div class="pt-4 border-y border-gray-black" x-data="{monthBlogSelected:0}">
-      <div>
-        <div
-          class="flex justify-between mb-2 cursor-pointer"
-          @click="monthBlogSelected !== 1 ? monthBlogSelected = 1 : monthBlogSelected = null"
-        >
-          <p
-            class="vertical-align text-sm font-bold text-gray/90 truncate pr-6"
-          >
-            2022年12月(20)
-          </p>
-          <div class="flex items-center justify-center">
-            <svg
-              class="w-4 h-4 rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                d="M9 5 5 1 1 5"></path>
-            </svg>
-          </div>
-        </div>
-        <div
-          class="relative overflow-hidden transition-all max-h-0"
-          x-ref="container1"
-          x-bind:style="monthBlogSelected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-        >
-          <ul class="mb-2 text-sm font-bold text-gray/90 space-y-2 ml-6">
-            <li class="truncate pr-6">タイトルタイトルタイトルタイトル</li>
-            <li class="truncate pr-6">
-              タイトルタイトルタイトルタイトルタイトルタイトル
-            </li>
-            <li class="truncate pr-6">タイトルタイトル</li>
-            <li class="truncate pr-6">タイトルタイトルタイトルタイトル</li>
-          </ul>
-        </div>
-      </div>
+    <h3 class="mb-3 text-xl text-primary font-bold">月別</h3>
+    <div class="border-y space-y-2 py-2">
+      <Accordion title="2023年1月(20)">
+        <ul class="space-y-2">
+          <li>おおお</li>
+          <li>おおお</li>
+          <li>おおお</li>
+          <li>おおお</li>
+        </ul>
+      </Accordion>
     </div>
   </div>
 
   <!-- 年別 -->
   <div class="mb-8">
-    <h3 class="mb-2 text-primary font-bold">年別</h3>
-    <div class="pt-4 border-y border-gray-black" x-data="{yearBlogSelected:0}">
-      <div>
-        <div
-          class="flex justify-between mb-2 cursor-pointer"
-          @click="yearBlogSelected !== 1 ? yearBlogSelected = 1 : yearBlogSelected = null"
-        >
-          <p
-            class="vertical-align text-sm font-bold text-gray/90 truncate pr-6"
-          >
-            2022年12月(20)
-          </p>
-          <div class="flex items-center justify-center">
-            <svg
-              class="w-4 h-4 rotate-180"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 10 6"
-            >
-              <path
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1"
-                d="M9 5 5 1 1 5"></path>
-            </svg>
-          </div>
-        </div>
-        <div
-          class="relative overflow-hidden transition-all max-h-0"
-          x-ref="container1"
-          x-bind:style="monthBlogSelected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
-        >
-          <ul class="mb-2 text-sm font-bold text-gray/90 space-y-2 ml-6">
-            <li class="truncate pr-6">タイトルタイトルタイトルタイトル</li>
-            <li class="truncate pr-6">
-              タイトルタイトルタイトルタイトルタイトルタイトル
-            </li>
-            <li class="truncate pr-6">タイトルタイトル</li>
-            <li class="truncate pr-6">タイトルタイトルタイトルタイトル</li>
-          </ul>
-        </div>
-      </div>
+    <h3 class="mb-3 text-xl text-primary font-bold">年別</h3>
+    <div class="border-y space-y-2 py-2">
+      <Accordion title="2023年1月(20)">
+        <ul class="space-y-2">
+          <li>おおお</li>
+          <li>おおお</li>
+          <li>おおお</li>
+          <li>おおお</li>
+        </ul>
+      </Accordion>
     </div>
   </div>
 </aside>

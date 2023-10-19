@@ -6,7 +6,8 @@ module.exports = {
       md: "768px",
     },
     fontSize: {
-      h2: "2.5rem",
+      h1: "2.5rem",
+      h2: "2.0rem",
       eh2: "2rem",
       h3: "1.5rem",
       "5xl": ["3rem", 1],
@@ -39,5 +40,9 @@ module.exports = {
       display: ["group-hover"],
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+  ],
 };

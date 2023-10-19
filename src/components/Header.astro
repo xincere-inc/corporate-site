@@ -83,6 +83,9 @@ const {} = Astro.props;
                 </div>
               </li>
               <li class="py-3">
+                <a class="hover:text-sky-500" href="/blogs">会社概要</a>
+              </li>
+              <li class="py-3">
                 <a class="hover:text-sky-500" href="/blogs">テックブログ</a>
               </li>
               <li class="py-3">
@@ -93,17 +96,11 @@ const {} = Astro.props;
                   お問い合わせ
                 </a>
               </li>
-              <li class="py-3">
-                <a class="hover:text-sky-500" href="/blogs">会社概要</a>
-              </li>
             </ul>
           </nav>
         </div>
         <div class="-mr-1 md:hidden">
-          <button
-            @click="mobileSidebar =! mobileSidebar"
-            type="button"
-          >
+          <button @click="mobileSidebar =! mobileSidebar" type="button">
             <svg
               class="h-8 w-8"
               fill="none"
