@@ -38,6 +38,121 @@ const { frontmatter } = Astro.props;
           </div>
         </div>
         <slot />
+        <section>
+          <div class="flex justify-between mb-4">
+            <div>
+              <a href="/" class="text-base text-primary">次の記事を見る</a>
+            </div>
+            <div>
+              <a href="/" class="text-base text-primary">前の記事を見る</a>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <!-- 次の記事を見る -->
+            <div class="w-[350px] h-[154px] px-2 py-6 rounded-sm shadow-lg">
+              <div class="flex items-center">
+                <div class="mr-3">
+                  <a href="/">
+                    <img src="../../public/arrow-icon.svg" alt="矢印" />
+                  </a>
+                </div>
+                <div>
+                  <article>
+                    <header>
+                      <p class="text-description text-xs mb-2">
+                        {
+                          new Date(frontmatter.date)
+                            .toISOString()
+                            .split("T")[0]
+                            .replace(/-/g, ".")
+                        }
+                      </p>
+                      <h1 class="text-base text-primary mb-2 truncate">
+                        {frontmatter.title}
+                      </h1>
+                      <div class="flex space-x-2 mb-2 truncate">
+                        <div
+                          class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                        >
+                          NEW
+                        </div>
+                        <div
+                          class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                        >
+                          Atomic
+                        </div>
+                        <div
+                          class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                        >
+                          イラスティック
+                        </div>
+                        <div
+                          class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                        >
+                          アトミック
+                        </div>
+                      </div>
+                    </header>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- 前の記事を見る -->
+            <div class="w-[350px] h-[154px] px-2 py-6 rounded-sm shadow-lg">
+              <div class="flex justify-between items-center">
+                <div>
+                  <article>
+                    <header>
+                      <p class="text-description text-xs mb-2">
+                        {
+                          new Date(frontmatter.date)
+                            .toISOString()
+                            .split("T")[0]
+                            .replace(/-/g, ".")
+                        }
+                      </p>
+                      <h1 class="text-base text-primary mb-2 truncate">
+                        {frontmatter.title}
+                      </h1>
+                      <div class="flex space-x-2 mb-2 truncate">
+                        <div
+                          class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                        >
+                          NEW
+                        </div>
+                        <div
+                          class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                        >
+                          Atomic
+                        </div>
+                        <div
+                          class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                        >
+                          イラスティック
+                        </div>
+                        <div
+                          class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                        >
+                          アトミック
+                        </div>
+                      </div>
+                    </header>
+                  </article>
+                </div>
+                <div class="ml-3">
+                  <a href="/">
+                    <img
+                      class="rotate-180"
+                      src="../../public/arrow-icon.svg"
+                      alt="矢印"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
       <Aside />
     </div>
