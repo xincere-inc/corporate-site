@@ -5,74 +5,47 @@ import H1 from "../atoms/H1.astro";
 
 <Layout title="お問い合わせ 完了">
   <div class="md:w-[880px] my-10 mx-auto">
-    <H1 title="お問い合わせ完了" extraClass="mb-2 md:mx-0 mx-5" />
-    <!-- お問い合わせ完了フォーム -->
-    <div class="shadow-md p-10 mb-20">
-      <div class="m-0 p-0">
-        <div class="mb-6">
-          <div class="flex items-center mb-2">
-            <div class="mr-2 text-sm">お問い合わせ種別</div>
-            <p class="text-xs text-alert">必須</p>
-          </div>
-          <p class="text-base">お仕事をお願いしたい</p>
-        </div>
-        <div class="mb-6">
-          <div class="flex items-center mb-2">
-            <div class="mr-2 text-sm">名前</div>
-            <p class="text-xs text-alert">必須</p>
-          </div>
-          <p class="text-base">大野 豊</p>
-        </div>
-        <div class="mb-6">
-          <div class="flex items-center mb-2">
-            <div class="mr-2 text-sm">メールアドレス</div>
-            <p class="text-xs text-alert">必須</p>
-          </div>
-          <p class="text-base">yutaka.ohno@example.com</p>
-        </div>
-        <div class="mb-6">
-          <div class="flex items-center mb-2">
-            <div class="mr-2 text-sm">電話番号</div>
-          </div>
-          <div>
-            <p class="text-base">記載なし</p>
-          </div>
-        </div>
-        <div class="mb-6">
-          <div class="flex items-center mb-2">
-            <div class="mr-2 text-sm">会社名</div>
-          </div>
-          <p class="text-base">株式会社 豊</p>
-        </div>
-        <div class="mb-6">
-          <div class="flex items-center mb-2">
-            <div class="mr-2 text-sm">役職</div>
-          </div>
-          <div>
-            <p class="text-base">アソシエイト</p>
-          </div>
-        </div>
-        <div class="mb-6">
-          <div class="flex items-center mb-2">
-            <div class="mr-2 text-sm">
-              シンシアをお知りになったきっかけを教えてください
-            </div>
-          </div>
-          <p class="text-base">弊社社員からの紹介</p>
-        </div>
+    <H1 title="お問い合わせ完了" extraClass="md:mx-0 mx-5" />
+    <div class="shadow-md md:p-10 md:my-10 p-6 mx-5 my-6">
+      <div class="mb-6">
+        <label class="text-sm font-bold">お問い合わせ種別</label>
+        <p>お仕事をお願いしたい</p>
+      </div>
+      <div class="mb-6">
+        <label class="text-sm font-bold">名前</label>
+        <p>大野 豊</p>
+      </div>
+      <div class="mb-6">
+        <label class="text-sm font-bold">メールアドレス</label>
+        <p>yutaka.ohno@example.com</p>
+      </div>
+      <div class="mb-6">
+        <label class="text-sm font-bold">電話番号</label>
+        <p>記載なし</p>
+      </div>
+      <div class="mb-6">
+        <label class="text-sm font-bold">会社名</label>
+        <p>株式会社 豊</p>
+      </div>
+      <div class="mb-6">
+        <label class="text-sm font-bold">役職</label>
+        <p>アソシエイト</p>
+      </div>
+      <div class="">
+        <label class="text-sm font-bold">
+          シンシアをお知りになったきっかけを教えてください
+        </label>
+        <p>弊社社員からの紹介</p>
       </div>
     </div>
 
-    <!-- もどるボタン -->
-    <div class="mb-6">
-      <div class="flex items-center justify-center">
-        <button
-          id="go-back-button"
-          type="button"
-          class="w-[256px] text-xl text-primary rounded-sm py-3 px-5 mr-6 border-2 border-primary"
-          >もどる</button
-        >
-      </div>
+    <div class="mb-6 text-center md:mx-0 mx-5">
+      <button
+        id="go-back-button"
+        type="button"
+        class="md:w-[256px] w-full text-xl text-primary rounded-sm py-3 px-5 mr-6 border-2 border-primary"
+        >ホームに戻る</button
+      >
     </div>
   </div>
 </Layout>
