@@ -1,13 +1,181 @@
 ---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Aside from "../components/Aside.astro";
+import MobileHeader from "../components/MobileHeader.astro";
+import Recruitment from "../components/Recruitment.astro";
+
 const { frontmatter } = Astro.props;
 ---
-<html>
+
+<!DOCTYPE html>
+<html lang="ja">
   <head>
-    <title>{frontmatter.title}</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{frontmatter.title} - 株式会社シンシアテックブログ</title>
   </head>
-  <body>
-    <h1>{frontmatter.title} by {frontmatter.author}</h1>
-    <slot />
-    <p>Written on: {frontmatter.date}</p>
+  <body x-data="{ mobileSidebar: false }">
+    <Header />
+    <MobileHeader />
+    <div class="md:flex md:m-auto md:w-desktop md:mt-10">
+      <main class="pb-16 px-5 md:w-[calc(100%-20rem)]">
+        <p class="text-description text-sm">
+          {
+            new Date(frontmatter.date)
+              .toISOString()
+              .split("T")[0]
+              .replace(/-/g, ".")
+          }
+        </p>
+        <h1 class="text-h2 font-bold text-primary">{frontmatter.title}</h1>
+        <div class="flex space-x-2 mb-1 truncate">
+          <div
+            class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+          >
+            NEW
+          </div>
+        </div>
+        <div class="blog-content">
+          <slot />
+        </div>
+        <section class="mt-16">
+          <div class="flex justify-between">
+            <!-- 次の記事を見る -->
+            <div
+              class="w-[164px] h-[128px] md:w-[350px] md:h-[154px] px-2 py-6 rounded-sm shadow-lg"
+            >
+              <div class="flex items-center">
+                <div class="flex-shrink-0 mr-3">
+                  <a href="/">
+                    <img src="../../public/arrow-icon.svg" alt="矢印" />
+                  </a>
+                </div>
+                <div>
+                  <p class="text-description text-xs md:mb-0 mb-2">
+                    {
+                      new Date(frontmatter.date)
+                        .toISOString()
+                        .split("T")[0]
+                        .replace(/-/g, ".")
+                    }
+                  </p>
+                  <h2 class="text-base text-primary font-bold line-clamp-3">
+                    {frontmatter.title}
+                  </h2>
+                  <div class="hidden md:flex space-x-2 mb-2 truncate">
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      NEW
+                    </div>
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      Atomic
+                    </div>
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      イラスティック
+                    </div>
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      アトミック
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 前の記事を見る -->
+            <div
+              class="w-[164px] h-[128px] md:w-[350px] md:h-[154px] px-2 py-6 rounded-sm shadow-lg"
+            >
+              <div class="flex justify-between items-center">
+                <div>
+                  <p class="text-description text-xs md:mb-0 mb-2">
+                    {
+                      new Date(frontmatter.date)
+                        .toISOString()
+                        .split("T")[0]
+                        .replace(/-/g, ".")
+                    }
+                  </p>
+                  <h2
+                    class="text-base text-primary mb-2 font-bold line-clamp-3"
+                  >
+                    {frontmatter.title}
+                  </h2>
+                  <div class="hidden md:flex space-x-2 mb-2 truncate">
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      NEW
+                    </div>
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      Atomic
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-shrink-0 ml-3">
+                  <a href="/">
+                    <img class="rotate-180" src="/arrow-icon.svg" alt="矢印" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Aside />
+    </div>
+    <!-- 募集職種 -->
+    <section>
+      <div
+        class="flex items-center md:w-desktop md:m-auto md:pt-16 md:mb-12 hidden md:flex"
+      >
+        <p class="text-h1 text-primary mr-2">募集職種</p>
+        <p class="text-h2 text-primary">Recult</p>
+      </div>
+      <Recruitment />
+    </section>
+    <Footer />
   </body>
 </html>
+
+<style is:global>
+  :root {
+  }
+  html {
+    font-family: system-ui, sans-serif;
+  }
+  code {
+  }
+  [x-cloak] {
+    display: none;
+  }
+  .blog-content > h2 {
+    color: #518C3C;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
+  }
+</style>
+
+<script>
+  import Alpine from "alpinejs";
+  import collapse from "@alpinejs/collapse";
+
+  Alpine.plugin(collapse);
+
+  window.Alpine = Alpine;
+  Alpine.start();
+</script>
