@@ -22,7 +22,7 @@ const { frontmatter } = Astro.props;
     <Header />
     <MobileHeader />
     <div class="md:flex md:m-auto md:w-desktop md:mt-10">
-      <main class="py-16 px-5 md:w-[calc(100%-20rem)]">
+      <main class="pb-16 px-5 md:w-[calc(100%-20rem)]">
         <p class="text-description text-sm">
           {
             new Date(frontmatter.date)
@@ -39,16 +39,10 @@ const { frontmatter } = Astro.props;
             NEW
           </div>
         </div>
-        <slot />
-        <section>
-          <div class="flex justify-between mb-4 mt-16">
-            <div>
-              <a href="/" class="text-base text-primary">次の記事を見る</a>
-            </div>
-            <div>
-              <a href="/" class="text-base text-primary">前の記事を見る</a>
-            </div>
-          </div>
+        <div class="blog-content">
+          <slot />
+        </div>
+        <section class="mt-16">
           <div class="flex justify-between">
             <!-- 次の記事を見る -->
             <div
@@ -60,43 +54,41 @@ const { frontmatter } = Astro.props;
                     <img src="../../public/arrow-icon.svg" alt="矢印" />
                   </a>
                 </div>
-                <article>
-                  <header>
-                    <p class="text-description text-xs mb-2">
-                      {
-                        new Date(frontmatter.date)
-                          .toISOString()
-                          .split("T")[0]
-                          .replace(/-/g, ".")
-                      }
-                    </p>
-                    <h1 class="text-base text-primary mb-2 line-clamp-2">
-                      {frontmatter.title}
-                    </h1>
-                    <div class="hidden md:flex space-x-2 mb-2 truncate">
-                      <div
-                        class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-                      >
-                        NEW
-                      </div>
-                      <div
-                        class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-                      >
-                        Atomic
-                      </div>
-                      <div
-                        class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-                      >
-                        イラスティック
-                      </div>
-                      <div
-                        class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-                      >
-                        アトミック
-                      </div>
+                <div>
+                  <p class="text-description text-xs md:mb-0 mb-2">
+                    {
+                      new Date(frontmatter.date)
+                        .toISOString()
+                        .split("T")[0]
+                        .replace(/-/g, ".")
+                    }
+                  </p>
+                  <h2 class="text-base text-primary font-bold line-clamp-3">
+                    {frontmatter.title}
+                  </h2>
+                  <div class="hidden md:flex space-x-2 mb-2 truncate">
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      NEW
                     </div>
-                  </header>
-                </article>
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      Atomic
+                    </div>
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      イラスティック
+                    </div>
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      アトミック
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -105,50 +97,36 @@ const { frontmatter } = Astro.props;
               class="w-[164px] h-[128px] md:w-[350px] md:h-[154px] px-2 py-6 rounded-sm shadow-lg"
             >
               <div class="flex justify-between items-center">
-                <article>
-                  <header>
-                    <p class="text-description text-xs mb-2">
-                      {
-                        new Date(frontmatter.date)
-                          .toISOString()
-                          .split("T")[0]
-                          .replace(/-/g, ".")
-                      }
-                    </p>
-                    <h1 class="text-base text-primary mb-2 line-clamp-3">
-                      {frontmatter.title}
-                    </h1>
-                    <div class="hidden md:flex space-x-2 mb-2 truncate">
-                      <div
-                        class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-                      >
-                        NEW
-                      </div>
-                      <div
-                        class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-                      >
-                        Atomic
-                      </div>
-                      <div
-                        class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-                      >
-                        イラスティック
-                      </div>
-                      <div
-                        class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
-                      >
-                        アトミック
-                      </div>
+                <div>
+                  <p class="text-description text-xs md:mb-0 mb-2">
+                    {
+                      new Date(frontmatter.date)
+                        .toISOString()
+                        .split("T")[0]
+                        .replace(/-/g, ".")
+                    }
+                  </p>
+                  <h2
+                    class="text-base text-primary mb-2 font-bold line-clamp-3"
+                  >
+                    {frontmatter.title}
+                  </h2>
+                  <div class="hidden md:flex space-x-2 mb-2 truncate">
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      NEW
                     </div>
-                  </header>
-                </article>
+                    <div
+                      class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+                    >
+                      Atomic
+                    </div>
+                  </div>
+                </div>
                 <div class="flex-shrink-0 ml-3">
                   <a href="/">
-                    <img
-                      class="rotate-180"
-                      src="../../public/arrow-icon.svg"
-                      alt="矢印"
-                    />
+                    <img class="rotate-180" src="/arrow-icon.svg" alt="矢印" />
                   </a>
                 </div>
               </div>
@@ -182,6 +160,13 @@ const { frontmatter } = Astro.props;
   }
   [x-cloak] {
     display: none;
+  }
+  .blog-content > h2 {
+    color: #518C3C;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0px;
   }
 </style>
 

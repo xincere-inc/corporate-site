@@ -5,8 +5,8 @@ const allBlogs = await Astro.glob("../pages/blogs/*.md");
 ---
 
 <Layout title="blogs">
-  <div class="md:flex md:m-auto md:w-desktop md:mt-10">
-    <main class="md:w-[calc(100%-20rem)]">
+  <div class="md:flex md:m-auto md:w-desktop md:mt-10 mt-6">
+    <main class="md:w-[calc(100%-20rem)] md:mb-0 mb-8 md:mx-0 mx-5">
       <section>
         <h2 class="text-[40px] text-primary font-bold leading-[48px] mb-6">
           2023年 6月
@@ -36,24 +36,15 @@ const allBlogs = await Astro.glob("../pages/blogs/*.md");
               href={blog.url}
               class="p-4 rounded-sm shadow-custom-lg flex items-center justify-between"
             >
-              <div class="">
+              <div class="mr-4">
                 <h3 class="text-h3 font-bold mb-2">{blog.frontmatter.title}</h3>
                 <p class="text-sm mb-2 line-clamp-2">
                   {blog.frontmatter.summary}
                 </p>
-                <div class="flex space-x-2 mb-1">
-                  <div class="text-[12px] font-medium text-white bg-primary px-2 py-0.5 rounded-sm ">
+                <div class="md:flex md:space-x-2 mb-1">
+                  <label class="text-[12px] font-medium text-white bg-primary px-2 py-0.5 rounded-sm">
                     NEW
-                  </div>
-                  <div class="text-[12px] font-medium text-primary border-[1px] bg-gray-333 px-2 py-0.5 rounded-sm">
-                    Atomic
-                  </div>
-                  <div class="text-[12px] font-medium text-danger border-[1px] bg-gray-333 px-2 py-0.5 rounded-sm">
-                    イラスティック
-                  </div>
-                  <div class="text-[12px] font-medium text-alert border-[1px] bg-gray-333 px-2 py-0.5 rounded-sm">
-                    アトミック
-                  </div>
+                  </label>
                 </div>
                 <div class="text-[10px]] font-normal text-gray-949495 opacity-90">
                   {new Date(blog.frontmatter.date)
