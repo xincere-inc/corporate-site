@@ -99,18 +99,43 @@ import MemberCard from "../components/MemberCard.astro";
     </section>
 
     <section>
-      <div class="md:w-desktop m-auto">
-        <H2 title="選考と採用" etitle="Recruit" />
-      </div>
-    </section>
-
-    <section class="bg-gray py-10">
-      <div class="md:w-desktop m-auto">
-        <H2 title="ブログ" etitle="Blog" />
-      </div>
-      <div class="md:w-desktop m-auto">
-        <BlogList />
+      <div class="py-20 ml-[calc(50%-580px)]">
+        <div class="relative">
+          <div class="rotate-90 absolute w-[239px] mt-[60px] left-[-60px]">
+            <h2 class="md:text-eh2 text-h3 text-primary font-bold">
+              採用と選考
+            </h2>
+            <p class="text-primary text-h3 font-bold">
+              Recruitment and Selection
+            </p>
+          </div>
+          <div
+            class="w-[100%-40rem] h-[320px] bg-center bg-cover bg-[linear-gradient(rgba(81,160,80,.4),rgba(81,90,50,0.9)),url('/images/corporate-site_recruit.webp')] flex items-center justify-between px-10 ml-40"
+          >
+            <div>
+              <p class="text-h2 text-white">誰もが価値創造に夢中になれる世界</p>
+            </div>
+            <a href="/recruit" class="flex items-center">
+              <p class="md:text-base text-sm text-white mr-2">
+                選考に進む
+              </p>
+              <div
+                class="bg-[url('/arrow-icon_white.svg')] w-[80px] h-[80px] bg-contain"
+              >
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
+
+  <section class="bg-gray py-10">
+    <div class="md:w-desktop m-auto">
+      <H2 title="ブログ" etitle="Blog" />
+    </div>
+    <div class="md:w-desktop m-auto">
+      <BlogList />
+    </div>
+  </section>
 </Layout>
