@@ -5,8 +5,8 @@ const {} = Astro.props;
 ---
 
 <footer class="py-10">
-  <div class="md:w-desktop m-auto">
-    <div class="md:px-0 px-5">
+  <div class="m-auto">
+    <div class="md:w-desktop md:mx-auto md:mb-10 md:px-0 px-5">
       <svg
         width="140"
         height="32"
@@ -53,25 +53,40 @@ const {} = Astro.props;
       </svg>
     </div>
     <hr class="text-gray my-3" />
-    <div class="md:flex md:justify-between md:px-0 px-5">
-      <div>
-        <span class="text-xl">事業紹介</span>
+
+    <div class="md:w-desktop md:mx-auto md:flex md:px-0 px-5 md:py-10 mb-10">
+      <div class="mb-6 md:mb-0">
+        <div class="flex flex-col">
+          <span class="mb-6 md:mb-2 text-xl">事業紹介</span>
+          <span class="mb-2 md:hidden flex text-xl">実績紹介</span>
+        </div>
         <ul class="ml-4 mt-2">
-          <li class="mb-1">
-            <a href="/business/digital-partner">デジタルパートナー事業</a>
+          <li class="mb-2">
+            <a href="/business/product-development">プロダクト開発事業</a>
           </li>
-          <li class="mb-1">
-            <a href="/business/digital-partner">デジタルパートナー事業</a>
+          <li class="mb-2">
+            <a href="/business/digital-partner">ITコンサルティング事業</a>
           </li>
           <li>
-            <a href="/business/digital-partner">デジタルパートナー事業</a>
+            <a href="/business/engineer-education"
+              >エンジニア育成・組織化支援事業（ワーディング要検討）</a
+            >
           </li>
         </ul>
       </div>
-      <div>採用</div>
-      <div>テックブログ</div>
-      <div>お問い合わせ</div>
-      <div>プライバシーポリシー</div>
+      <div class="md:ml-6">
+        <a href="/" class="md:hidden flex mr-4">役員紹介</a>
+        <a href="/recruit" class="md:mr-6">採用と選考</a>
+        <a href="/blogs" class="md:mr-6">テックブログ</a>
+        <a href="/" class="md:mr-6">会社概要</a>
+        <a href="contact" class="md:mr-6">お問い合わせ</a>
+        <a href="/" class="md:hidden flex mr-4">利用規約</a>
+        <a href="/" class="md:hidden flex mr-4">プライバシーポリシー</a>
+      </div>
+    </div>
+    <hr class="text-gray" />
+    <div class="md:w-desktop m-auto pt-4 text-center">
+      <p>©2023 Xincere, Inc.</p>
     </div>
   </div>
 </footer>
