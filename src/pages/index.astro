@@ -110,30 +110,32 @@ import MemberCard from "../components/MemberCard.astro";
             </p>
           </div>
           <div
-            class="w-full h-[320px] bg-center bg-cover bg-[linear-gradient(rgba(81,160,80,.4),rgba(81,90,50,0.9)),url('/images/corporate-site_recruit.webp')] flex items-center justify-between px-10 ml-40"
+            class="w-[100%-40rem] h-[320px] bg-center bg-cover bg-[linear-gradient(rgba(81,160,80,.4),rgba(81,90,50,0.9)),url('/images/corporate-site_recruit.webp')] flex items-center justify-between px-10 ml-40"
           >
-            <p class="text-h2 text-white">誰もが価値創造に夢中になれる世界</p>
-            <div class="flex items-center absolute">
-              <p class="md:text-base text-sm text-white ml-[780px] mr-2">
+            <div>
+              <p class="text-h2 text-white">誰もが価値創造に夢中になれる世界</p>
+            </div>
+            <a href="/recruit" class="flex items-center">
+              <p class="md:text-base text-sm text-white mr-2">
                 選考に進む
               </p>
               <div
-                class="bg-[url('/arrow-icon_white.svg')] w-[80px] h-[80px] bg-cover"
+                class="bg-[url('/arrow-icon_white.svg')] w-[80px] h-[80px] bg-contain"
               >
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="bg-gray py-10">
-      <div class="md:w-desktop m-auto">
-        <H2 title="ブログ" etitle="Blog" />
-      </div>
-      <div class="md:w-desktop m-auto">
-        <BlogList />
-      </div>
-    </section>
   </main>
+
+  <section class="bg-gray py-10">
+    <div class="md:w-desktop m-auto">
+      <H2 title="ブログ" etitle="Blog" />
+    </div>
+    <div class="md:w-desktop m-auto">
+      <BlogList />
+    </div>
+  </section>
 </Layout>
