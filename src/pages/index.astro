@@ -101,19 +101,23 @@ import MemberCard from "../components/MemberCard.astro";
     <section>
       <div class="m-auto py-20">
         <div class="flex">
-          <div class="rotate-90">
-            <h2 class="text-primary text-eh2 font-bold">採用と選考</h2>
+          <div class="rotate-90 bg-blue">
+            <h2 class="md:text-eh2 text-h3 text-primary font-bold">
+              採用と選考
+            </h2>
             <p class="text-primary text-h3 font-bold">
               Recruitment and Selection
             </p>
           </div>
           <div
-            class="w-full h-[320px] bg-center bg-cover bg-[url('/images/corporate-site_recruit.webp')] flex items-center justify-between"
+            class="w-full h-[320px] bg-center bg-cover bg-[linear-gradient(rgba(81,160,80,.4),rgba(81,90,50,0.9)),url('/images/corporate-site_recruit.webp')] flex items-center justify-between px-10 ml-40"
           >
-            <p class="text-h2 text-white">誰もが価値創造に夢中になれる世界</p>
+            <p class="ml-20 text-h2 text-white">
+              誰もが価値創造に夢中になれる世界
+            </p>
             <div class="flex">
-              <p class="text-white">選考に進む</p>
-              <div class="bg-[url('/images/arrow-icon.svg')]"></div>
+              <p class="md:text-base text-sm text-white">選考に進む</p>
+              <div class="bg-[url('/arrow-icon.svg')]"></div>
             </div>
           </div>
         </div>
