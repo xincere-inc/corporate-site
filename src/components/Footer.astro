@@ -6,7 +6,7 @@ const {} = Astro.props;
 
 <footer class="py-10">
   <div class="m-auto">
-    <div class="md:w-desktop md:mx-auto md:mb-10 md:px-0 px-5">
+    <div class="md:w-desktop md:mx-auto mb-10 md:px-0 px-5">
       <svg
         width="140"
         height="32"
@@ -52,15 +52,17 @@ const {} = Astro.props;
           fill="#518C3C"></path>
       </svg>
     </div>
-    <hr class="text-gray my-3" />
+    <hr class="text-gray md:mb-0 mb-10" />
 
-    <div class="md:w-desktop md:mx-auto md:flex md:px-0 px-5 md:py-10 mb-10">
+    <div
+      class="md:w-desktop md:mx-auto md:flex md:px-0 px-5 md:py-10 mb-10 text-sm"
+    >
       <div class="mb-6 md:mb-0">
         <div class="flex flex-col">
-          <span class="mb-6 md:mb-2 text-xl">事業紹介</span>
-          <span class="mb-2 md:hidden flex text-xl">実績紹介</span>
+          <span class="mb-6 md:mb-2">事業紹介</span>
+          <span class="mb-2 md:hidden flex">実績紹介</span>
         </div>
-        <ul class="ml-4 mt-2">
+        <ul class="ml-4 mt-2 mb-10 md:mb-0">
           <li class="mb-2">
             <a href="/business/product-development">プロダクト開発事業</a>
           </li>
@@ -74,16 +76,18 @@ const {} = Astro.props;
           </li>
         </ul>
       </div>
-      <div class="md:ml-6">
-        <a href="/" class="md:hidden flex mr-4">役員紹介</a>
-        <a href="/recruit" class="md:mr-6">採用と選考</a>
-        <a href="/blogs" class="md:mr-6">テックブログ</a>
-        <a href="/" class="md:mr-6">会社概要</a>
-        <a href="contact" class="md:mr-6">お問い合わせ</a>
-        <a href="/" class="md:hidden flex mr-4">利用規約</a>
-        <a href="/" class="md:hidden flex mr-4">プライバシーポリシー</a>
+
+      <div class="flex flex-wrap md:ml-6 text-sm">
+        <a href="/" class="md:hidden flex mr-4 mb-4">役員紹介</a>
+        <a href="/recruit" class="md:mr-6 mr-4 mb-4">採用と選考</a>
+        <a href="/blogs" class="md:mr-6 mr-4 mb-4">テックブログ</a>
+        <a href="/" class="md:mr-6 mr-4 mb-4">会社概要</a>
+        <a href="contact" class="md:mr-6 mr-4 mb-4">お問い合わせ</a>
+        <a href="/" class="md:hidden flex mr-4 mb-4">利用規約</a>
+        <a href="/" class="md:hidden flex mr-4 mb-4">プライバシーポリシー</a>
       </div>
     </div>
+
     <hr class="text-gray" />
     <div class="md:w-desktop m-auto pt-4 text-center">
       <p>©2023 Xincere, Inc.</p>
