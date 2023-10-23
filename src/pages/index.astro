@@ -94,15 +94,15 @@ import MemberCard from "../components/MemberCard.astro";
 
     <!-- テックブログ -->
     <section>
-      <div class="md:w-desktop m-auto md:py-20">
-        <div class="flex items-center mb-10">
-          <h2 class="text-h1 text-primary md:mr-4">テックブログ</h2>
-          <p class="text-h2 text-primary">Tech Blog</p>
+      <div class="md:w-desktop m-auto md:py-20 md:mb-0 mb-16 px-5">
+        <div class="md:flex md:items-center mb-10">
+          <h2 class="md:text-h1 text-h2 text-primary md:mr-4">テックブログ</h2>
+          <p class="md:text-h2 text-h3 text-primary">Tech Blog</p>
         </div>
-        <div class="flex">
+        <div class="md:flex">
           <!-- 画像 -->
           <div
-            class="w-[540px] h-[320px] shrink-0 pr-8 border-r border-dotted border-border/light"
+            class="md:w-[540px] md:h-[320px] shrink-0 md:pr-8 pb-8 mb-8 md:border-r md:border-b-0 border-b border-dotted border-border/light"
           >
             <img
               src="/images/tech-blog.webp"
@@ -110,9 +110,9 @@ import MemberCard from "../components/MemberCard.astro";
             />
           </div>
           <!-- ここにブログ -->
-          <div class="w-full ml-8 flex flex-col justify-between">
+          <div class="w-full md:ml-8 flex flex-col justify-between">
             <BlogList />
-            <div class="flex justify-end">
+            <div class="flex justify-end pt-8 md:pt-0">
               <a href="/" class="inline-flex text-primary items-center">
                 <p class="mr-2">もっとみる</p>
                 <img src="/arrow-icon_green.svg" class="w-12 h-12" />
