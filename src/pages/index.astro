@@ -92,9 +92,28 @@ import MemberCard from "../components/MemberCard.astro";
       </div>
     </section>
 
+    <!-- テックブログ -->
     <section>
-      <div class="md:w-desktop m-auto">
-        <H2 title="お問い合わせ" etitle="Contact" />
+      <div class="md:w-desktop m-auto md:py-20">
+        <div class="flex items-center mb-10">
+          <h2 class="text-h1 text-primary md:mr-4">テックブログ</h2>
+          <p class="text-h2 text-primary">Tech Blog</p>
+        </div>
+        <div class="flex">
+          <!-- 画像 -->
+          <div
+            class="w-[540px] h-[320px] shrink-0 pr-8 border-r border-dotted border-border/light"
+          >
+            <img
+              src="/images/tech-blog.webp"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <!-- ここにブログ -->
+          <div class="bg-primary w-full ml-8">
+            <BlogList />
+          </div>
+        </div>
       </div>
     </section>
 
