@@ -1,5 +1,5 @@
 ---
-import { parseISO, format } from "date-fns";
+import { parseISO, format } from 'date-fns'
 const allBlogs = await Astro.glob("../pages/blogs/*.md");
 interface Props {}
 
@@ -8,38 +8,10 @@ const {} = Astro.props;
 
 <ul class="">
   {
-    allBlogs
-      .slice(-2)
-      .reverse()
-      .map((post) => (
-        <>
-          <li class="">
-            <div class="flex items-center justify-between">
-              <a href={post.url} class="block">
-                <div class="mb-2">
-                  <h3 class="text-xl font-bold mb-2">
-                    {post.frontmatter.title}
-                  </h3>
-                  <p class="mb-2">{post.frontmatter.summary}</p>
-
-                  <span class="text-white text-xs bg-body py-1 px-2 rounded">
-                    {post.frontmatter.tags?.join(" ") || "No tags"}
-                  </span>
-                  <div class="text-xs text-description pt-2">
-                    {format(parseISO(post.frontmatter.date), "yyyy.MM.dd")}
-                  </div>
-                </div>
-              </a>
-
-              <div>
-                <a href="/">
-                  <img src="/arrow-icon.svg" class="rotate-180" />
-                </a>
-              </div>
-            </div>
-            <hr class="border-dotted border-border/light mb-2" />
-          </li>
-        </>
-      ))
+    allBlogs.slice(-5).reverse().map((post) => (
+      <li>
+        <a href={post.url}>{post.frontmatter.title} ({format(parseISO(post.frontmatter.date), 'yyyy-MM-dd')})</a>
+      </li>
+    ))
   }
 </ul>
