@@ -4,7 +4,6 @@ import Business from "../components/Business.astro";
 import H2 from "../atoms/H2.astro";
 import MemberCard from "../components/MemberCard.astro";
 const allBlogs = await Astro.glob("../pages/blogs/*.md");
-const twoBlogs = allBlogs.slice(0, 2);
 ---
 
 <Layout title="">
@@ -115,39 +114,42 @@ const twoBlogs = allBlogs.slice(0, 2);
             <section class="space-y-6 md:mb-6">
               <ul>
                 {
-                  twoBlogs.map((blog) => (
-                    <li class="list-none space-y-2">
-                      <a
-                        href={blog.url}
-                        class="rounded-sm flex items-center justify-between"
-                      >
-                        <div class="mr-4">
-                          <h3 class="mb-2">{blog.frontmatter.title}</h3>
-                          <p class="text-xs mb-2 line-clamp-2">
-                            {blog.frontmatter.summary}
-                          </p>
-                          <div class="space-x-2 mb-1">
-                            {blog.frontmatter.tags?.map((tag) => (
-                              <label class="text-xs text-white bg-body px-2 py-0.5 rounded-sm">
-                                {tag}
-                              </label>
-                            ))}
+                  allBlogs
+                    .slice(-2)
+                    .reverse()
+                    .map((blog) => (
+                      <li class="list-none space-y-2">
+                        <a
+                          href={blog.url}
+                          class="rounded-sm flex items-center justify-between"
+                        >
+                          <div class="mr-4">
+                            <h3 class="mb-2">{blog.frontmatter.title}</h3>
+                            <p class="text-xs mb-2 line-clamp-2">
+                              {blog.frontmatter.summary}
+                            </p>
+                            <div class="space-x-2 mb-1">
+                              {blog.frontmatter.tags?.map((tag) => (
+                                <label class="text-xs text-white bg-body px-2 py-0.5 rounded-sm">
+                                  {tag}
+                                </label>
+                              ))}
+                            </div>
+                            <div class="text-xs text-description opacity-90">
+                              {new Date(blog.frontmatter.date)
+                                .toISOString()
+                                .split("T")[0]
+                                .replace(/-/g, ".")}
+                            </div>
                           </div>
-                          <div class="text-xs text-description opacity-90">
-                            {new Date(blog.frontmatter.date)
-                              .toISOString()
-                              .split("T")[0]
-                              .replace(/-/g, ".")}
-                          </div>
-                        </div>
-                        <img
-                          src="/arrow-icon.svg"
-                          class="rotate-180 w-[32px] h-[32px]"
-                        />
-                      </a>
-                      <hr class="border-dotted border-border/light mb-2" />
-                    </li>
-                  ))
+                          <img
+                            src="/arrow-icon.svg"
+                            class="rotate-180 w-[32px] h-[32px]"
+                          />
+                        </a>
+                        <hr class="border-dotted border-border/light mb-2" />
+                      </li>
+                    ))
                 }
               </ul>
             </section>
