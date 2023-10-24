@@ -94,11 +94,10 @@ import MemberCard from "../components/MemberCard.astro";
 
     <!-- テックブログ -->
     <section>
-      <div class="md:w-desktop m-auto md:py-20 md:mb-0 mb-16 px-5">
-        <div class="md:flex md:items-center mb-10">
-          <h2 class="md:text-h1 text-h2 text-primary md:mr-4">テックブログ</h2>
-          <p class="md:text-h2 text-h3 text-primary">Tech Blog</p>
-        </div>
+      <div class="md:w-desktop m-auto md:px-0 px-5">
+        <H2 title="テックブログ" etitle="Tech Blog" />
+      </div>
+      <div class="md:w-desktop m-auto md:mb-0 mb-16 md:px-0 px-5">
         <div class="md:flex">
           <!-- 画像 -->
           <div
@@ -112,8 +111,8 @@ import MemberCard from "../components/MemberCard.astro";
           <!-- ここにブログ -->
           <div class="w-full md:ml-8 flex flex-col justify-between">
             <BlogList />
-            <div class="flex justify-end pt-8 md:pt-0">
-              <a href="/" class="inline-flex text-primary items-center">
+            <div class="md:pt-0 pt-8 flex justify-end">
+              <a href="/blogs" class="inline-flex text-primary items-center">
                 <p class="mr-2">もっとみる</p>
                 <img src="/arrow-icon_green.svg" class="w-12 h-12" />
               </a>
