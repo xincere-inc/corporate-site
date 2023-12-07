@@ -18,6 +18,7 @@ import MobileHeader from "../components/MobileHeader.astro";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/css/custom.css" rel="stylesheet" />
     <title>{title}</title>
   </head>
   <body x-data="{ mobileSidebar: false }">
@@ -41,10 +42,10 @@ import MobileHeader from "../components/MobileHeader.astro";
 </style>
 
 <script>
-  import Alpine from 'alpinejs';
-  import collapse from '@alpinejs/collapse'
+  import Alpine from "alpinejs";
+  import collapse from "@alpinejs/collapse";
 
-  Alpine.plugin(collapse)
+  Alpine.plugin(collapse);
 
   window.Alpine = Alpine;
   Alpine.start();

@@ -2,9 +2,6 @@
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    screens: {
-      md: "768px",
-    },
     fontSize: {
       h1: "2.5rem",
       h2: "2.0rem",
@@ -34,6 +31,21 @@ module.exports = {
       },
       boxShadow: {
         "custom-lg": "0px 2px 8px 0px rgba(0, 0, 0, 0.25)",
+        dropdown: "0px 2px 8px 0px rgba(0, 0, 0, 0.25)",
+        card: "0px 2px 8px 0px rgba(0, 0, 0, 0.25)",
+      },
+      colors: {
+        "black-333": "#333",
+      },
+      padding: {
+        "15px": "15px",
+      },
+      backgroundColor: {
+        bg1: "#518C3C99",
+      },
+      backgroundImage: {
+        recruit:
+          "linear-gradient( rgb(81 140 60 / 50%), rgb(81 140 60 / 50%)), url('../images/recruit_bg.svg')",
       },
     },
     variants: {
@@ -42,6 +54,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/forms"),
-    require("@tailwindcss/typography")
+    require("@tailwindcss/typography"),
+    require("flowbite/plugin"),
   ],
 };
