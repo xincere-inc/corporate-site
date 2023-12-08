@@ -4,7 +4,7 @@ interface Props {}
 const {} = Astro.props;
 ---
 
-<header class="h-[60px]">
+<header class="h-[60px] fixed w-full z-50 bg-white top-0" id="desktopHeader">
   <div class="px-4 md:pl-8 md:pr-0">
     <div class="z-50 flex justify-between">
       <div class="flex items-center md:gap-x-12 py-3">
@@ -59,29 +59,50 @@ const {} = Astro.props;
         <div class="hidden md:block">
           <nav class="text-sm leading-6 font-semibold text-slate-700">
             <ul class="flex space-x-8 leading-8">
-              <li class="group relative dropdown">
-                <a
-                  class="hover:text-sky-500 h-[60px] leading-[60px] block"
-                  href=""
-                >
-                  事業紹介</a
-                >
+              <li
+                class="group relative"
+                x-data="{ headerBusinessDropdownButton: false }"
+              >
                 <div
-                  class="group-hover:block dropdown-menu absolute hidden h-auto"
+                  class="hover:text-sky-500 cursor-pointer h-[60px] leading-[60px]"
+                  @click="headerBusinessDropdownButton =! headerBusinessDropdownButton"
+                >
+                  事業紹介
+                </div>
+                <div
+                  class="group-hover:block absolute h-auto z-50"
+                  x-cloak
+                  x-show="headerBusinessDropdownButton"
+                  x-transition:enter="transition ease-out duration-100"
+                  x-transition:enter-start="transform opacity-0 scale-95"
+                  x-transition:enter-end="transform opacity-100 scale-100"
+                  x-transition:leave="transition ease-in duration-75"
+                  x-transition:leave-start="transform opacity-100 scale-100"
+                  x-transition:leave-end="transform opacity-0 scale-95"
                 >
                   <ul class="top-0 w-56 bg-white shadow p-4">
                     <li class="py-1">
                       <a
-                        class="block text-purple-500 font-bold text-base uppercase hover:text-purple-700 cursor-pointer"
+                        class="block text-primary font-bold text-base uppercase cursor-pointer"
+                        href="/business/product-development"
+                      >
+                        プロダクト事業
+                      </a>
+                    </li>
+                    <li class="py-1">
+                      <a
+                        class="block text-primary font-bold text-base uppercase cursor-pointer"
+                        href="/business/digital-partner"
                       >
                         デジタルパートナー事業
                       </a>
                     </li>
                     <li class="py-1">
                       <a
-                        class="block text-purple-500 font-bold text-base uppercase hover:text-purple-700 cursor-pointer"
+                        class="block text-primary font-bold text-base uppercase cursor-pointer"
+                        href="/business/product-development"
                       >
-                        プロダクト事業
+                        エンジニアチーム構築支援事業
                       </a>
                     </li>
                   </ul>
@@ -90,7 +111,7 @@ const {} = Astro.props;
               <li class="">
                 <a
                   class="hover:text-sky-500 h-[60px] leading-[60px] block"
-                  href="/blogs">会社概要</a
+                  href="/#aboutCompany">会社概要</a
                 >
               </li>
               <li class="">
@@ -148,4 +169,16 @@ const {} = Astro.props;
 
   window.Alpine = Alpine;
   Alpine.start();
+
+  window.addEventListener("scroll", () => {
+    const verticalScrollPx = window.scrollY;
+    const innerHeight = window.innerHeight;
+
+    let header = document.getElementById("desktopHeader");
+    if (header) {
+      header.style.backgroundColor = `rgba(255,255,255,${String(
+        verticalScrollPx ? verticalScrollPx * 2 / (window.document.body.scrollHeight - innerHeight) : 0
+      )})`;
+    }
+  });
 </script>

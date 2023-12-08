@@ -1,13 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 body {
   position: relative;
+  padding-top: 60px;
 }
 
 main {
-  z-index: 100;
+  z-index: 10;
 }
 
 .movie {
@@ -28,4 +25,8 @@ main {
 .rotated-text2 {
   top: 50%;
   transform: translateY(-50%) rotate(90deg);
+}
+
+a:hover {
+  opacity: 0.7;
 }
