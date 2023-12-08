@@ -1,16 +1,44 @@
 ---
-import H2 from "../atoms/H2.astro";
+const latestTwoBlog = (await Astro.glob("../pages/blogs/*.md")).slice(-2);
+interface Props {}
+
+const {} = Astro.props;
+import BlogListItem from "./BlogListItem.astro";
 ---
 
-<section>
-  <div class="md:w-desktop py-[72px] m-auto">
-    <div class="mb-2">
-      <H2 title="テックブログ" etitle="Tech Blog" />
-    </div>
-    <div class="flex items-center justify-between">
-      <div class="bg-gray w-[540px] h-[400px]"></div>
-      <!-- ↓ここにブログ -->
-      <div class="bg-gray w-[556px] h-[456px]"></div>
+<section class="pt-20 pb-[72px] md:mb-20">
+  <div class="container mx-auto px-5">
+    <h2
+      class="md:text-[56px] text-[48px] text-black-333 text-center font-bold mb-2"
+    >
+      テックブログ
+    </h2>
+    <p class="text-[24px] font-bold text-black-333 md:mb-14 mb-12 text-center">
+      Tech Blog
+    </p>
+
+    <div class="flex justify-center flex-wrap">
+      <div
+        class="w-[100%] md:w-[50%] border-b-[1px] md:border-b-[0px] md:border-e-[1px] border-dotted md:ps-[17.5px] md:pe-[32px] pb-[16px] md:pb-0 flex items-stretch"
+      >
+        <img
+          class="w-full min-h-[360px] object-cover"
+          src="/images/blog_1.png"
+          alt="blog"
+        />
+      </div>
+      <!-- <div class="h-full border-solid"></div> -->
+      <div class="w-[100%] md:w-[50%] md:ps-[32px] md:mt-0 mt-[16px]">
+        <BlogListItem item={latestTwoBlog[1]}/>
+        <BlogListItem item={latestTwoBlog[0]}/>
+
+        <div class="flex items-center justify-end me-0">
+          <a href="/blogs" class="flex items-center">
+            <span class="me-2 font-bold text-[24px]">もっとみる</span>
+            <img src="/images/arrow_left.svg" alt="arrow" />
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>

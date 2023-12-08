@@ -1,0 +1,40 @@
+---
+import { parseISO, format } from "date-fns";
+import type { MarkdownInstance } from "astro";
+interface Props {
+  item: MarkdownInstance<any>;
+}
+
+const { item } = Astro.props;
+---
+
+<a
+  href={item.url}
+  class="flex gap-x-[23px] mb-6 pb-2 border-b-[1px] items-center border-dotted"
+>
+  <div class="flex-1">
+    <h4 class="font-bold leading-[140%] text-base">
+      {item.frontmatter.title}
+    </h4>
+    <p class="text-[14px] my-2">
+      {item.frontmatter.summary}
+    </p>
+    <ul class="flex gap-x-2 mb-2">
+      {
+        item.frontmatter.tags?.split(",").map((tag: string) => {
+          return (
+            <li class="py-[2px] px-2 rounded-sm bg-[#333] text-white font-medium text-[8px]">
+              {tag}
+            </li>
+          );
+        })
+      }
+    </ul>
+    <p class="text-[#949495] font-normal text-[10px]">
+      {format(parseISO(item.frontmatter.date), "yyyy-MM-dd")}
+    </p>
+  </div>
+  <div class="w-8 h-8 basis-[32px]">
+    <img class="w-full" src="/images/arrow.svg" />
+  </div>
+</a>
