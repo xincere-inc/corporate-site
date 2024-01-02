@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
+  content: ["./src/**/*.{astro,html,js,jsx,md,ts,tsx}"],
   theme: {
     fontSize: {
       h1: "2.5rem",
@@ -41,6 +41,7 @@ module.exports = {
         "15px": "15px",
       },
       backgroundColor: {
+        alert: "#FF0000",
         bg1: "#518C3C99",
       },
       backgroundImage: {

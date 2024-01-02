@@ -1,11 +1,17 @@
 ---
 import { parseISO, format } from "date-fns";
 import type { MarkdownInstance } from "astro";
+import Label from "../atoms/Label.astro";
 interface Props {
   item: MarkdownInstance<any>;
 }
 
 const { item } = Astro.props;
+
+const oneWeekBefore = new Date(new Date().setHours(0, 0, 0, 0));
+oneWeekBefore.setDate(oneWeekBefore.getDate() - 7);
+
+const publishedDate = new Date(item.frontmatter.date);
 ---
 
 <a
@@ -19,17 +25,15 @@ const { item } = Astro.props;
     <p class="text-[14px] my-2">
       {item.frontmatter.summary}
     </p>
-    <ul class="flex gap-x-2 mb-2">
+    <div class="flex space-x-2 mb-1 truncate">
+      {oneWeekBefore < publishedDate ? <Label title="NEW" color="red" /> : null}
       {
-        item.frontmatter.tags?.split(",").map((tag: string) => {
-          return (
-            <li class="py-[2px] px-2 rounded-sm bg-[#333] text-white font-medium text-[8px]">
-              {tag}
-            </li>
-          );
-        })
+        item.frontmatter.tags
+          .split(",")
+          .map((item: string) => <Label title={item} />)
       }
-    </ul>
+    </div>
+
     <p class="text-[#949495] font-normal text-[10px]">
       {format(parseISO(item.frontmatter.date), "yyyy-MM-dd")}
     </p>

@@ -4,6 +4,8 @@ interface Props {}
 
 const {} = Astro.props;
 import BlogListItem from "./BlogListItem.astro";
+
+const allBlogs = await Astro.glob("../pages/blogs/*.md");
 ---
 
 <section class="pt-20 pb-[72px] md:mb-20">
@@ -29,9 +31,12 @@ import BlogListItem from "./BlogListItem.astro";
       </div>
       <!-- <div class="h-full border-solid"></div> -->
       <div class="w-[100%] md:w-[50%] md:ps-[32px] md:mt-0 mt-[16px]">
-        <BlogListItem item={latestTwoBlog[1]}/>
-        <BlogListItem item={latestTwoBlog[0]}/>
-
+        {
+          allBlogs
+            .slice(-2)
+            .reverse()
+            .map((post) => <BlogListItem item={post} />)
+        }
         <div class="flex items-center justify-end me-0">
           <a href="/blogs" class="flex items-center">
             <span class="me-2 font-bold text-[24px]">もっとみる</span>

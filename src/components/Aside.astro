@@ -1,50 +1,58 @@
 ---
+import { parseISO, format } from "date-fns";
 import Accordion from "./Accordion.astro";
+
+const allBlogs = await Astro.glob("../pages/blogs/*.md");
+
+const groupBy = <K, V>(
+  array: readonly V[],
+  getKey: (cur: V, idx: number, src: readonly V[]) => K
+): [K, V[]][] =>
+  Array.from(
+    array.reduce((map, cur, idx, src) => {
+      const key = getKey(cur, idx, src);
+      const list = map.get(key);
+      if (list) list.push(cur);
+      else map.set(key, [cur]);
+      return map;
+    }, new Map<K, V[]>())
+  );
+
+const uniq = (array: Array<any>) => {
+  const uniquedArray: Array<any> = [];
+  for (const elem of array) {
+    if (!uniquedArray.includes(elem)) uniquedArray.push(elem);
+  }
+  return uniquedArray;
+};
+
+const monthly = groupBy(allBlogs, (item) =>
+  format(parseISO(item.frontmatter.date), "yyyy年MM月")
+);
+
+const tags = uniq(
+  allBlogs.map((item) => item.frontmatter.tags.split(",")).flat()
+);
 ---
 
-<!-- カテゴリ -->
+<!-- 月別 -->
 <aside class="md:w-80 md:ml-10 md:mx-0 mx-5">
-  <div class="mb-8">
-    <h3 class="mb-3 text-xl text-primary font-bold">カテゴリ</h3>
-    <div class="border-y space-y-2 py-2" x-cloak>
-      <Accordion title="2023年1月(20)">
-        <ul class="space-y-2">
-          <li>おおお</li>
-          <li>おおお</li>
-          <li>おおお</li>
-          <li>おおお</li>
-        </ul>
-      </Accordion>
-    </div>
-  </div>
-
-  <!-- 月別 -->
   <div class="mb-8">
     <h3 class="mb-3 text-xl text-primary font-bold">月別</h3>
     <div class="border-y space-y-2 py-2" x-cloak>
-      <Accordion title="2023年1月(20)">
-        <ul class="space-y-2">
-          <li>おおお</li>
-          <li>おおお</li>
-          <li>おおお</li>
-          <li>おおお</li>
-        </ul>
-      </Accordion>
-    </div>
-  </div>
-
-  <!-- 年別 -->
-  <div class="mb-8">
-    <h3 class="mb-3 text-xl text-primary font-bold">年別</h3>
-    <div class="border-y space-y-2 py-2" x-cloak>
-      <Accordion title="2023年1月(20)">
-        <ul class="space-y-2">
-          <li>おおお</li>
-          <li>おおお</li>
-          <li>おおお</li>
-          <li>おおお</li>
-        </ul>
-      </Accordion>
+      {
+        monthly.map((item) => (
+          <Accordion title={`${item[0]}(${item[1].length})`}>
+            <ul class="space-y-2">
+              {item[1].map((blog) => (
+                <li>
+                  <a href={blog.url}>{blog.frontmatter.title}</a>
+                </li>
+              ))}
+            </ul>
+          </Accordion>
+        ))
+      }
     </div>
   </div>
 </aside>

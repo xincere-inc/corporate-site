@@ -1,13 +1,9 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import BlogList from "../components/BlogList.astro";
-import Business from "../components/Business.astro";
-import H2 from "../atoms/H2.astro";
-import MemberCard from "../components/MemberCard.astro";
 import TechBlog from "../components/TechBlog.astro";
 ---
 
-<Layout title="">
+<Layout title="株式会社シンシア">
   <main>
     <!-- Banner section starts -->
     <section>
@@ -29,7 +25,7 @@ import TechBlog from "../components/TechBlog.astro";
           事業紹介
         </h2>
         <p class="text-[24px] text-black-333 font-bold mb-14 text-center">
-          Our Services
+          Our Business
         </p>
 
         <!-- service 1 -->
@@ -40,20 +36,20 @@ import TechBlog from "../components/TechBlog.astro";
             <h4
               class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
             >
-              プロダクト開発事業
+              デジタルパートナー事業
             </h4>
             <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
-              不動産プロダクト（不動産メディア + CRM）<br />マッチングアプリ
+              タレントスタジオ <br />Geek スタジオ
             </p>
             <div class="flex items-center justify-end me-0 md:me-[76px]">
-              <a href="/business/product-development" class="flex items-center">
+              <a href="/business/digital-partner" class="flex items-center">
                 <span class="me-2 font-bold text-[24px]">もっとみる</span>
                 <img src="/images/arrow_left.svg" alt="arrow" />
               </a>
             </div>
           </div>
           <div class="w-full md:w-[50%]">
-            <img class="w-full" src="/images/service_img.svg" />
+            <img class="w-full" src="/images/service_img_2.svg" />
           </div>
         </div>
 
@@ -62,20 +58,19 @@ import TechBlog from "../components/TechBlog.astro";
           class="flex flex-col px-5 md:px-20 py-5 md:py-10 gap-x-[64px] gap-y-8 md:flex-row justify-between items-center"
         >
           <div class="w-full md:w-[50%]">
-            <img class="w-full" src="/images/service_img_2.svg" />
+            <img class="w-full" src="/images/service_img.svg" />
           </div>
           <div class="w-full md:w-[50%]">
             <h4
               class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
             >
-              デジタルパートナー事業
+              プロダクト開発事業
             </h4>
             <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
-              タレントスタジオ <br />Geek スタジオ <br />
-              Generative AI（生成AI）スタジオ
+              不動産プロダクト（不動産メディア + CRM）<br />Coming soon
             </p>
             <div class="flex items-center justify-end me-0 md:me-[76px]">
-              <a href="/business/digital-partner" class="flex items-center">
+              <a href="/business/product-development" class="flex items-center">
                 <span class="me-2 font-bold text-[24px]">もっとみる</span>
                 <img src="/images/arrow_left.svg" alt="arrow" />
               </a>
@@ -91,13 +86,13 @@ import TechBlog from "../components/TechBlog.astro";
             <h4
               class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
             >
-              エンジニア育成・組織化支援事業
+              エンジニアチーム構築支援事業
             </h4>
-            <p class="my-4 text-[16px] md:text-[32px] md:my-6 font-medium">
-              （ワーディング要検討）
+            <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
+              エンジニア採用支援<br />評価制度構築支援
             </p>
             <div class="flex items-center justify-end me-0 md:me-[76px]">
-              <a href="/business/digital-partner" class="flex items-center">
+              <a href="/business/engineer-team" class="flex items-center">
                 <span class="me-2 font-bold text-[24px]">もっとみる</span>
                 <img src="/images/arrow_left.svg" alt="arrow" />
               </a>
@@ -126,6 +121,11 @@ import TechBlog from "../components/TechBlog.astro";
         >
           <img
             class="md:w-[16%] w-[50%] px-2"
+            src="/images/recruit.svg"
+            alt="recruit"
+          />
+          <img
+            class="md:w-[16%] w-[50%] px-2"
             src="/images/daiichi.svg"
             alt="daiichi"
           />
@@ -145,11 +145,6 @@ import TechBlog from "../components/TechBlog.astro";
             src="/images/00ai.svg"
             alt="00ai"
           />
-          <img
-            class="md:w-[16%] w-[50%] px-2"
-            src="/images/recruit.svg"
-            alt="recruit"
-          />
         </div>
       </div>
     </section>
@@ -162,7 +157,7 @@ import TechBlog from "../components/TechBlog.astro";
         <p
           class="text-[24px] font-bold text-black-333 md:mb-14 mb-12 text-center"
         >
-          Management
+          Officers
         </p>
 
         <div class="flex gap-x-8 gap-y-6 justify-around flex-wrap mx-5 md:mx-0">
@@ -178,8 +173,8 @@ import TechBlog from "../components/TechBlog.astro";
               <h4 class="font-bold text-[24px] mt-4">徐 聖博</h4>
               <h5 class="font-medium text-base mb-2">Shengbo Xu</h5>
               <p class="text-sm font-medium leading-[140%]">
-                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
-                Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed等でエンジニアとして活躍し2020年にXincere,
+                Inc.を創業。
               </p>
             </div>
             <div
@@ -255,12 +250,13 @@ import TechBlog from "../components/TechBlog.astro";
             誰もが価値創造に夢中になれる世界
           </h3>
           <div class="w-full justify-end flex md:w-auto">
-            <button
+            <a
               class="flex items-center md:w-auto gap-x-2 flex-col-reverse md:flex-row"
+              href="/recruit"
             >
               <span class="font-bold text-[14px] md:text-base">選考に進む</span>
               <img src="/images/arrow-big.svg" alt="" />
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -290,7 +286,9 @@ import TechBlog from "../components/TechBlog.astro";
             </div>
             <div>
               <h5 class="text-[20px] font-bold mb-2">資本金</h5>
-              <p class="text-[14px] font-medium">6,700万円（資本準備金含む）</p>
+              <p class="text-[14px] font-medium">
+                10,700万円（資本準備金含む）
+              </p>
             </div>
             <div>
               <h5 class="text-[20px] font-bold mb-2">設立年月日</h5>

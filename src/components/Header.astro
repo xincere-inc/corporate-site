@@ -80,15 +80,7 @@ const {} = Astro.props;
                   x-transition:leave-start="transform opacity-100 scale-100"
                   x-transition:leave-end="transform opacity-0 scale-95"
                 >
-                  <ul class="top-0 w-56 bg-white shadow p-4">
-                    <li class="py-1">
-                      <a
-                        class="block text-primary font-bold text-base uppercase cursor-pointer"
-                        href="/business/product-development"
-                      >
-                        プロダクト事業
-                      </a>
-                    </li>
+                  <ul class="top-0 -ml-8 w-64 bg-white shadow p-4">
                     <li class="py-1">
                       <a
                         class="block text-primary font-bold text-base uppercase cursor-pointer"
@@ -101,6 +93,14 @@ const {} = Astro.props;
                       <a
                         class="block text-primary font-bold text-base uppercase cursor-pointer"
                         href="/business/product-development"
+                      >
+                        プロダクト事業
+                      </a>
+                    </li>
+                    <li class="py-1">
+                      <a
+                        class="block text-primary font-bold text-base uppercase cursor-pointer"
+                        href="/business/engineer-team"
                       >
                         エンジニアチーム構築支援事業
                       </a>
@@ -177,7 +177,10 @@ const {} = Astro.props;
     let header = document.getElementById("desktopHeader");
     if (header) {
       header.style.backgroundColor = `rgba(255,255,255,${String(
-        verticalScrollPx ? verticalScrollPx * 2 / (window.document.body.scrollHeight - innerHeight) : 0
+        verticalScrollPx
+          ? (verticalScrollPx * 2) /
+              (window.document.body.scrollHeight - innerHeight)
+          : 0
       )})`;
     }
   });
