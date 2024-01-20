@@ -1,0 +1,17 @@
+---
+import { parseISO, format } from 'date-fns'
+const allBlogs = await Astro.glob("../pages/blogs/*.md");
+interface Props {}
+
+const {} = Astro.props;
+---
+
+<ul class="">
+  {
+    allBlogs.slice(-5).reverse().map((post) => (
+      <li>
+        <a href={post.url}>{post.frontmatter.title} ({format(parseISO(post.frontmatter.date), 'yyyy-MM-dd')})</a>
+      </li>
+    ))
+  }
+</ul>

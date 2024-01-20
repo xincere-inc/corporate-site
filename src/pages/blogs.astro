@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Aside from "../components/Aside.astro";
+import Label from "../atoms/Label.astro";
+import Recruitment from "../components/Recruitment.astro";
+const allBlogs = await Astro.glob("../pages/blogs/*.md");
+
+const oneWeekBefore = new Date(new Date().setHours(0, 0, 0, 0));
+oneWeekBefore.setDate(oneWeekBefore.getDate() - 7);
+---
+
+<Layout title="テックブログ" currentPath="/blogs">
+  <div class="md:flex md:m-auto container mx-auto md:px-10 md:mt-10 mt-6 pb-16">
+    <main class="md:w-[calc(100%-20rem)] md:mb-0 mb-8 md:mx-0 mx-5">
+      <section>
+        <h1 class="text-[40px] text-primary font-bold leading-[48px] mb-6">
+          テックブログ
+        </h1>
+      </section>
+      <section class="space-y-6">
+        {
+          allBlogs.map((blog) => (
+            <a
+              href={blog.url}
+              class="p-4 rounded-sm shadow-custom-lg flex items-center justify-between"
+            >
+              <div class="mr-4">
+                <h2 class="text-h3 font-bold mb-2">{blog.frontmatter.title}</h2>
+                <p class="text-sm mb-2 line-clamp-2">
+                  {blog.frontmatter.summary}
+                </p>
+                <div class="flex space-x-2 mb-1 truncate">
+                  {oneWeekBefore < new Date(blog.frontmatter.date) ? (
+                    <Label title="NEW" color="red" />
+                  ) : null}
+                  {blog.frontmatter.tags.split(",").map((item: string) => (
+                    <Label title={item} />
+                  ))}
+                </div>
+
+                <div class="text-[10px]] font-normal text-gray-949495 opacity-90">
+                  {new Date(blog.frontmatter.date)
+                    .toISOString()
+                    .split("T")[0]
+                    .replace(/-/g, ".")}
+                </div>
+              </div>
+              <div class="w-[32px] h-[32px] p-[8px 12px] border rounded-full border-gray-333 text-gray-333 flex items-center justify-center cursor-pointer flex-shrink-0">
+                <div>
+                  <svg
+                    class="w-4 h-4 rotate-90"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1"
+                      d="M9 5 5 1 1 5"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </section>
+    </main>
+    <Aside />
+  </div>
+  <Recruitment />
+</Layout>

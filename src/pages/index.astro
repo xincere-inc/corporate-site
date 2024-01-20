@@ -1,0 +1,276 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TechBlog from "../components/TechBlog.astro";
+import Recruitment from "../components/Recruitment.astro";
+---
+
+<Layout title="株式会社シンシア" currentPath="/">
+  <main>
+    <!-- Banner section starts -->
+    <section>
+      <div
+        class="container mx-auto md:px-10 flex flex-col items-center px-[38px]"
+      >
+        <img
+          class="max-w-[595px] mt-[200px] w-full mb-[200px] md:mb-[140px]"
+          src="/images/banner_logo.svg"
+          alt="logo"
+        />
+        <img class="max-w-[48px]" src="/images/scroll_arrow.svg" alt="arrow" />
+      </div>
+    </section>
+    <!-- Banner section ends -->
+
+    <!-- Service section starts -->
+    <section class="mt-20 mb-20">
+      <div class="container mx-auto md:px-10 px-5">
+        <h2 class="text-[56px] text-black-333 text-center font-bold mb-2">
+          事業紹介
+        </h2>
+        <p class="text-[24px] text-black-333 font-bold mb-14 text-center">
+          Our Business
+        </p>
+
+        <!-- service 1 -->
+        <div
+          class="flex gap-x-[64px] py-5 md:py-10 flex-col-reverse gap-y-8 md:flex-row justify-between items-center"
+        >
+          <div class="w-full md:w-[50%]">
+            <h3
+              class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
+            >
+              デジタルパートナー事業
+            </h3>
+            <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
+              タレントスタジオ <br />Geek スタジオ
+            </p>
+            <div class="flex items-center justify-end me-0 md:me-[76px]">
+              <a href="/business/digital-partner" class="flex items-center">
+                <span class="me-2 font-bold text-[24px]">もっとみる</span>
+                <img src="/images/arrow_left.svg" alt="arrow" />
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-[50%]">
+            <img class="w-full" src="/images/service_img_2.webp" />
+          </div>
+        </div>
+
+        <!-- service 2 -->
+        <div
+          class="flex flex-col py-5 md:py-10 gap-x-[64px] gap-y-8 md:flex-row justify-between items-center"
+        >
+          <div class="w-full md:w-[50%]">
+            <img class="w-full" src="/images/service_img.webp" />
+          </div>
+          <div class="w-full md:w-[50%]">
+            <h3
+              class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
+            >
+              プロダクト開発事業
+            </h3>
+            <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
+              不動産プロダクト（不動産メディア + CRM）<br />Coming soon
+            </p>
+            <div class="flex items-center justify-end me-0 md:me-[76px]">
+              <a href="/business/product-development" class="flex items-center">
+                <span class="me-2 font-bold text-[24px]">もっとみる</span>
+                <img src="/images/arrow_left.svg" alt="arrow" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- service 3 -->
+        <div
+          class="flex py-5 md:py-10 gap-x-[64px] flex-col-reverse gap-y-8 md:flex-row justify-between items-center"
+        >
+          <div class="w-full md:w-[50%]">
+            <h3
+              class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
+            >
+              エンジニアチーム構築支援事業
+            </h3>
+            <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
+              エンジニア採用支援<br />評価制度構築支援
+            </p>
+            <div class="flex items-center justify-end me-0 md:me-[76px]">
+              <a href="/business/engineer-team" class="flex items-center">
+                <span class="me-2 font-bold text-[24px]">もっとみる</span>
+                <img src="/images/arrow_left.svg" alt="arrow" />
+              </a>
+            </div>
+          </div>
+          <div class="w-full md:w-[50%]">
+            <img class="w-full" src="/images/service_img_3.webp" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-20 pb-[72px] md:mb-20 md:bg-[#ffffff4d] bg-white">
+      <div class="container mx-auto md:px-10 px-5">
+        <h2 class="text-[56px] text-black-333 text-center font-bold mb-2">
+          取引実績
+        </h2>
+        <p
+          class="text-[24px] font-bold text-black-333 md:mb-14 mb-12 text-center"
+        >
+          Business Record
+        </p>
+
+        <div class="container flex-wrap gap-y-4 flex justify-between">
+          <img
+            class="md:w-[16%] w-[48%]"
+            src="/images/recruit.webp"
+            alt="株式会社リクルート"
+          />
+          <img
+            class="md:w-[16%] w-[48%]"
+            src="/images/daiichi.webp"
+            alt="第一生命保険株式会社"
+          />
+          <img
+            class="md:w-[16%] w-[48%]"
+            src="/images/dd.webp"
+            alt="電通デジタル"
+          />
+          <img class="md:w-[16%] w-[48%]" src="/images/zigexn.webp" alt="株式会社じげん" />
+          <img class="md:w-[16%] w-[48%]" src="/images/fd.webp" alt="株式会社FD" />
+          <img
+            class="md:w-[16%] w-[48%]"
+            src="/images/00ai.webp"
+            alt="00AI"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="pt-20 pb-[72px] md:pb-20">
+      <div class="container mx-auto md:px-10 px-5">
+        <h2 class="text-[56px] text-black-333 text-center font-bold mb-2">
+          役員紹介
+        </h2>
+        <p
+          class="text-[24px] font-bold text-black-333 md:mb-14 mb-12 text-center"
+        >
+          Officers
+        </p>
+
+        <div class="md:flex md:justify-between">
+          <!-- one -->
+          <div class="md:w-[520px] md:h-[370px]">
+            <img
+              class="md:w-[520px] md:h-[370px] object-cover md:max-w-[none]"
+              src="/images/shengboxu.webp"
+            />
+          </div>
+          <!-- two -->
+
+          <div class="md:p-10 pt-10">
+            <div>
+              <div class="mb-4">
+                <p>CEO・エンジニア</p>
+                <p class="text-[48px] font-bold leading-10 my-2">徐 聖博</p>
+                <small>Shengbo Xu</small>
+              </div>
+              <div>
+                <p>
+                  開成高校出身。東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。<br
+                  />卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+                  Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <TechBlog />
+    <!-- Recruit section starts -->
+    <Recruitment />
+    <!-- Recruit section ends -->
+
+    <!-- company section starts -->
+    <section class="pt-20 pb-[72px] md:pb-20" id="aboutCompany">
+      <div class="container mx-auto md:px-10 px-5">
+        <h2 class="text-[56px] text-black-333 text-center font-bold mb-2">
+          会社概要
+        </h2>
+        <p
+          class="text-[24px] font-bold text-black-333 md:mb-14 mb-12 text-center"
+        >
+          Company
+        </p>
+        <div class="flex md:justify-evenly gap-x-[64px] flex-wrap gap-y-[32px]">
+          <div class="flex flex-col md:gap-y-4 gap-y-8">
+            <div>
+              <p class="text-[20px] font-bold mb-2">会社名</p>
+              <h1 class="text-[14px] font-medium">株式会社シンシア</h1>
+            </div>
+            <div>
+              <p class="text-[20px] font-bold mb-2">代表者</p>
+              <p class="text-[14px] font-medium">代表取締役社長 徐 聖博</p>
+            </div>
+            <div>
+              <p class="text-[20px] font-bold mb-2">資本金</p>
+              <p class="text-[14px] font-medium">
+                10,700万円（資本準備金含む）
+              </p>
+            </div>
+            <div>
+              <p class="text-[20px] font-bold mb-2">設立年月日</p>
+              <p class="text-[14px] font-medium">2020年6月8日</p>
+            </div>
+          </div>
+          <div class="flex flex-col md:gap-y-4 gap-y-8">
+            <div>
+              <p class="text-[20px] font-bold mb-2">事業内容</p>
+              <p class="text-[14px] font-medium">
+                プロダクト開発事業 <br />ITコンサルティング事業
+                <br />エンジニア育成・組織化支援事業（ワーディング要検討）
+              </p>
+            </div>
+            <div>
+              <p class="text-[20px] font-bold mb-2">宅地建物取引業免許番号</p>
+              <p class="text-[14px] font-medium">東京都知事(1)第105089号</p>
+            </div>
+            <div>
+              <p class="text-[20px] font-bold mb-2">加盟団体</p>
+              <p class="text-[14px] font-medium">
+                社団法人全日本不動産協会、社団法人不動産保証協会
+              </p>
+            </div>
+            <div>
+              <p class="text-[20px] font-bold mb-2">設立年月日</p>
+              <p class="text-[14px] font-medium">2020年6月8日</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="movie">
+      <video
+        class="rotate-[-30deg] scale-[1.4] translate-x-[-2%] md:translate-x-[5%] translate-y-[100%] md:translate-y-[-20%] object-cover w-full"
+        autoplay
+        loop
+        src="/movies/top.mp4"></video>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.querySelector("video");
+
+        if (!video) return;
+
+        // Autoplay the video
+        video.autoplay = true;
+        video.load(); // Optional, to ensure the video starts loading immediately
+
+        // You might want to mute the video if autoplaying
+        video.muted = true;
+      });
+    </script>
+  </main>
+</Layout>

@@ -1,0 +1,93 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<section class="mt-16">
+  <div class="flex justify-between">
+    <!-- 次の記事を見る -->
+    <div
+      class="w-[164px] h-[128px] md:w-[350px] md:h-[154px] px-2 py-6 rounded-sm shadow-lg"
+    >
+      <div class="flex items-center">
+        <div class="flex-shrink-0 mr-3">
+          <a href="/">
+            <img src="../../public/arrow-icon.svg" alt="矢印" />
+          </a>
+        </div>
+        <div>
+          <p class="text-description text-xs md:mb-0 mb-2">
+            {
+              new Date(frontmatter.date)
+                .toISOString()
+                .split("T")[0]
+                .replace(/-/g, ".")
+            }
+          </p>
+          <h2 class="text-base text-primary font-bold line-clamp-3">
+            {frontmatter.title}
+          </h2>
+          <div class="hidden md:flex space-x-2 mb-2 truncate">
+            <div
+              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+            >
+              NEW
+            </div>
+            <div
+              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+            >
+              Atomic
+            </div>
+            <div
+              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+            >
+              イラスティック
+            </div>
+            <div
+              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+            >
+              アトミック
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 前の記事を見る -->
+    <div
+      class="w-[164px] h-[128px] md:w-[350px] md:h-[154px] px-2 py-6 rounded-sm shadow-lg"
+    >
+      <div class="flex justify-between items-center">
+        <div>
+          <p class="text-description text-xs md:mb-0 mb-2">
+            {
+              new Date(frontmatter.date)
+                .toISOString()
+                .split("T")[0]
+                .replace(/-/g, ".")
+            }
+          </p>
+          <h2 class="text-base text-primary mb-2 font-bold line-clamp-3">
+            {frontmatter.title}
+          </h2>
+          <div class="hidden md:flex space-x-2 mb-2 truncate">
+            <div
+              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+            >
+              NEW
+            </div>
+            <div
+              class="text-[8px] font-medium text-white bg-body px-2 py-0.5 rounded-sm"
+            >
+              Atomic
+            </div>
+          </div>
+        </div>
+        <div class="flex-shrink-0 ml-3">
+          <a href="/">
+            <img class="rotate-180" src="/arrow-icon.svg" alt="矢印" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

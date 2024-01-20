@@ -1,0 +1,44 @@
+---
+import { parseISO, format } from "date-fns";
+import type { MarkdownInstance } from "astro";
+import Label from "../atoms/Label.astro";
+interface Props {
+  item: MarkdownInstance<any>;
+}
+
+const { item } = Astro.props;
+
+const oneWeekBefore = new Date(new Date().setHours(0, 0, 0, 0));
+oneWeekBefore.setDate(oneWeekBefore.getDate() - 7);
+
+const publishedDate = new Date(item.frontmatter.date);
+---
+
+<a
+  href={item.url}
+  class="flex gap-x-[23px] mb-6 pb-2 border-b-[1px] items-center border-dotted"
+>
+  <div class="flex-1">
+    <h3 class="font-bold leading-[140%] text-base">
+      {item.frontmatter.title}
+    </h3>
+    <p class="text-[14px] my-2">
+      {item.frontmatter.summary}
+    </p>
+    <div class="flex space-x-2 mb-1 truncate">
+      {oneWeekBefore < publishedDate ? <Label title="NEW" color="red" /> : null}
+      {
+        item.frontmatter.tags
+          .split(",")
+          .map((item: string) => <Label title={item} />)
+      }
+    </div>
+
+    <p class="text-[#949495] font-normal text-[10px]">
+      {format(parseISO(item.frontmatter.date), "yyyy-MM-dd")}
+    </p>
+  </div>
+  <div class="w-8 h-8 basis-[32px]">
+    <img class="w-full" src="/images/arrow.svg" />
+  </div>
+</a>

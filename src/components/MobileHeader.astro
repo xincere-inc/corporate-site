@@ -1,0 +1,156 @@
+---
+interface Props {}
+
+const {} = Astro.props;
+---
+
+<div class="relative z-50 md:hidden" role="dialog" aria-modal="true" x-cloak>
+  <div
+    x-show="mobileSidebar"
+    x-transition:enter="transition-opacity ease-linear duration-300"
+    x-transition:enter-start="opacity-0"
+    x-transition:enter-end="opacity-100"
+    x-transition:leave="transition-opacity ease-linear duration-300"
+    x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0"
+    class="fixed inset-0 bg-black opacity-70"
+  >
+  </div>
+  <div
+    x-show="mobileSidebar"
+    x-transition:enter="transition ease-in-out duration-300 transform"
+    x-transition:enter-start="-translate-x-full"
+    x-transition:enter-end="translate-x-0"
+    x-transition:leave="transition ease-in-out duration-300 transform"
+    x-transition:leave-start="translate-x-0"
+    x-transition:leave-end="-translate-x-full"
+    class="fixed inset-0 flex"
+  >
+    <div class="relative mr-16 flex w-full max-w-xs flex-1">
+      <div
+        x-transition:enter="ease-in-out duration-300"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="ease-in-out duration-300"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        class="absolute left-full top-0 flex w-16 justify-center pt-5"
+      >
+        <button
+          @click="mobileSidebar =! mobileSidebar"
+          type="button"
+          class="-m-2.5 p-2.5"
+        >
+          <svg
+            class="h-6 w-6 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Sidebar component, swap this element with another sidebar if you
+      like -->
+      <div
+        class="w-9/12 flex flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-4"
+      >
+        <div class="flex h-16 shrink-0 items-center">
+          <svg
+            width="140"
+            height="32"
+            viewBox="0 0 140 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M44.9064 21.0692L50.6693 28.4154H46.3693L42.8229 23.7687L39.2322 28.4154H34.9766L40.7394 21.0692H44.9064Z"
+              fill="#231815"></path>
+            <path
+              d="M40.7394 21.1135L34.9766 13.7673H39.2322L42.8229 18.414L46.3693 13.7673H50.6693L44.9064 21.1135H40.7394Z"
+              fill="#231815"></path>
+            <path
+              d="M52.4424 8.58966C52.4424 7.30629 53.5506 6.37695 54.8362 6.37695C56.1661 6.37695 57.1857 7.30629 57.1857 8.58966C57.1857 9.82877 56.1661 10.8024 54.8362 10.8024C53.5506 10.8024 52.4424 9.82877 52.4424 8.58966ZM53.0187 28.4155V13.7674H56.6537V28.4155H53.0187Z"
+              fill="#231815"></path>
+            <path
+              d="M75.0506 20.1842V28.4154H71.4155V20.4497C71.4155 18.1042 69.997 16.8208 68.3568 16.8208C66.6722 16.8208 64.6331 17.7944 64.6331 20.6267V28.4154H60.998V13.7673H64.6331V16.0685C65.3867 14.2098 67.6918 13.369 69.199 13.369C72.9671 13.369 75.0506 15.9358 75.0506 20.1842Z"
+              fill="#231815"></path>
+            <path
+              d="M78.2871 21.0692C78.2871 16.4226 82.0108 13.369 86.2665 13.369C88.7932 13.369 90.8767 14.5196 92.251 16.2013L89.6798 18.237C88.9262 17.3076 87.685 16.7766 86.3551 16.7766C83.8283 16.7766 81.9665 18.591 81.9665 21.0692C81.9665 23.5032 83.784 25.4061 86.3551 25.4061C87.685 25.4061 88.9262 24.8308 89.6798 23.9458L92.251 25.9814C90.9211 27.6631 88.8376 28.8137 86.2665 28.8137C82.0108 28.8137 78.2871 25.7159 78.2871 21.0692Z"
+              fill="#231815"></path>
+            <path
+              d="M109.628 22.3526H98.2352C98.6342 24.3883 100.23 25.4946 102.402 25.4946C103.954 25.4946 105.505 24.7866 106.348 23.5917L108.786 25.4504C107.456 27.5746 104.84 28.7695 102.136 28.7695C97.7476 28.7695 94.4229 25.6274 94.4229 21.0692C94.4229 16.3783 97.9249 13.369 102.136 13.369C106.303 13.369 109.628 16.334 109.628 20.9365C109.672 21.3348 109.672 21.8216 109.628 22.3526ZM106.082 19.8301C105.86 17.8387 104.308 16.6438 102.225 16.6438C100.274 16.6438 98.6785 17.6174 98.2352 19.8301H106.082Z"
+              fill="#231815"></path>
+            <path
+              d="M123.326 13.9L122.616 17.3518C121.774 16.9093 121.02 16.8208 120.488 16.8208C118.095 16.8208 116.765 19.2105 116.765 23.3262V28.4596H113.041V13.7673H116.676V16.9093C117.474 14.4753 119.07 13.4132 120.887 13.4132C121.774 13.369 122.749 13.5902 123.326 13.9Z"
+              fill="#231815"></path>
+            <path
+              d="M139.949 22.3526H128.556C128.955 24.3883 130.551 25.4946 132.723 25.4946C134.275 25.4946 135.827 24.7866 136.669 23.5917L139.107 25.4504C137.777 27.5746 135.162 28.7695 132.457 28.7695C128.069 28.7695 124.744 25.6274 124.744 21.0692C124.744 16.3783 128.246 13.369 132.457 13.369C136.624 13.369 139.949 16.334 139.949 20.9365C140.038 21.3348 139.994 21.8216 139.949 22.3526ZM136.403 19.8301C136.181 17.8387 134.63 16.6438 132.546 16.6438C130.596 16.6438 129 17.6174 128.556 19.8301H136.403Z"
+              fill="#231815"></path>
+            <path
+              d="M23.4502 21.379V2.88079C23.4502 2.88079 23.4502 -0.128495 26.4646 0.00426714C29.9223 0.181284 29.7007 3.58885 29.7007 3.58885V22.3526L23.4502 21.379Z"
+              fill="#518C3C"></path>
+            <path
+              d="M0 31.1592V27.9287C0 27.9287 0 25.2292 3.01442 25.3619C6.47213 25.4947 6.25048 28.5482 6.25048 28.5482V32L0 31.1592Z"
+              fill="#518C3C"></path>
+            <path
+              d="M15.6484 25.5389V12.0856C15.6484 12.0856 15.6484 9.38614 18.6629 9.5189C22.1206 9.65166 21.8989 12.7052 21.8989 12.7052V26.424L15.6484 25.5389Z"
+              fill="#518C3C"></path>
+            <path
+              d="M7.80176 28.9907V20.7595C7.80176 20.7595 7.80176 18.06 10.8162 18.1927C14.2739 18.3255 14.0522 22.6624 14.0522 22.6624V29.8316L7.80176 28.9907Z"
+              fill="#518C3C"></path>
+          </svg>
+        </div>
+        <nav class="flex flex-1 flex-col">
+          <ul role="list" class="flex flex-1 flex-col gap-y-7">
+            <li>
+              <div>事業紹介</div>
+              <ul role="list" class="-mx-2 mt-2 space-y-1">
+                <li>
+                  <a
+                    href="/business/digital-partner"
+                    class="group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                  >
+                    <span class="pl-4">デジタルパートナー事業</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/business/product-development"
+                    class="group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                  >
+                    <span class="pl-4">プロダクト開発事業</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/business/engineer-team"
+                    class="group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                  >
+                    <span class="pl-4">エンジニアチーム構築支援事業</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/recruit">採用情報</a>
+            </li>
+            <li>
+              <a href="/#aboutCompany">会社概要</a>
+            </li>
+            <li>
+              <a href="/contact">お問い合わせ</a>
+              <div></div>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

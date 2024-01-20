@@ -1,0 +1,16 @@
+---
+import H1 from "../atoms/H1.astro";
+import ContactForm from "../components/ContactForm";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="お問い合わせ" currentPath="/contact">
+  <main>
+    <div class="md:w-[880px] my-10 mx-auto">
+      <H1 title="お問い合わせ" extraClass="mb-2 md:mx-0 mx-5" />
+      <p class="mb-6 md:mx-0 mx-5">回答は3営業日以内に致します。よろしくお願い致します。</p>
+      <!-- お問い合わせフォーム -->
+      <ContactForm client:load />
+    </div>
+  </main>
+</Layout>

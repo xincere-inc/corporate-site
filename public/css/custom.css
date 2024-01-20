@@ -1,0 +1,32 @@
+body {
+  position: relative;
+  padding-top: 60px;
+}
+
+main {
+  z-index: 10;
+}
+
+.movie {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100vw;
+  height: 100vh;
+}
+
+.rotated-text {
+  right: -80px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.rotated-text2 {
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+
+a:hover {
+  opacity: 0.7;
+}

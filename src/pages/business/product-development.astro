@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Recruitment from "../../components/Recruitment.astro";
+import TechBlog from "../../components/TechBlog.astro";
+---
+
+<Layout title="プロダクト開発事業" currentPath="/business/product-development">
+  <main>
+    <div class="wrapper relative overflow-hidden">
+      <div class="z-10 relative">
+        <!-- Banner starts -->
+        <section class="mt-[40px]">
+          <div
+            class="container pb-[60px] flex-wrap mx-auto px-5 flex items-center"
+          >
+            <div class="w-full md:pe-[32px] pe-[0] md:w-[50%]">
+              <img class="w-full" src="/images/service_img.webp" />
+            </div>
+            <div
+              class="w-full md:ps-[32px] ps-[0] mt-[48px] md:mt-0 md:w-[50%]"
+            >
+              <h1
+                class="md:text-[56px] text-[48px] font-bold tracking-[-2px] mb-[24px]"
+              >
+                プロダクト開発事業
+              </h1>
+              <p class="md:text-[24px] text-[20px] font-bold leading-[140%]">
+                不動産プロダクト<br />
+                Coming soon
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Banner ends -->
+      </div>
+    </div>
+
+    <!-- features  stats-->
+    <section class="my-[72px] md:my-20">
+      <!-- feature one-->
+      <div class="container mx-auto md:px-10 items-center flex flex-wrap gap-y-8 px-5">
+        <div class="w-full md:w-[50%] md:pe-8 md:h-[400px]">
+          <img class="h-full object-cover" src="/images/real_estate.webp" />
+        </div>
+        <div class="w-full md:w-[50%] md:ps-8">
+          <h2 class="text-[40px] md:text-[48px] font-bold tracking-[-2px]">
+            不動産プロダクト
+          </h2>
+          <p class="text-[32px] font-bold md:text-[24px] md:my-6 my-4">
+            （不動産メディア + CRM）
+          </p>
+          <p class="font-medium text-[16px] leading-[140%]">
+            不動産情報サービス<br />
+
+            売買および賃貸物件情報を網羅したウェブサイトを通じて、不動産市場における情報提供を牽引しています。<br
+            />
+            専門知識を生かし、市場のニーズに応える豊富な物件リストと詳細な分析をユーザーに提供しており、お客様が求める物件を迅速に見つけることができるようにデザインされています。<br
+            />
+          </p>
+        </div>
+      </div>
+      <!-- feature two-->
+      <div
+        class="container mx-auto md:px-10 items-center flex flex-col-reverse md:flex-row flex-wrap gap-y-8 px-5 mt-10"
+      >
+        <div class="w-full md:w-[50%] md:pe-8">
+          <h3
+            class="text-[40px] text-center md:text-[48px] font-bold tracking-[-2px]"
+          >
+            絶賛開発中!!
+          </h3>
+          <p
+            class="text-[32px] text-center font-bold md:text-[24px] md:my-6 my-4"
+          >
+            Coming soon!
+          </p>
+        </div>
+
+        <div class="w-full md:w-[50%] md:ps-8 md:h-[400px]">
+          <img class="h-full object-cover" src="/images/new_products.webp" />
+        </div>
+      </div>
+    </section>
+    <!-- features  ends-->
+
+    <TechBlog />
+
+    <!-- Blog section ends -->
+    <div class="movie">
+      <video
+        class="rotate-[-30deg] scale-[1.3] translate-x-[0%] md:translate-x-[2%] translate-y-[80%] md:translate-y-[-20%] object-cover w-full"
+        autoplay
+        loop
+        src="/movies/product.mp4"></video>
+    </div>
+    <Recruitment />
+  </main>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const video = document.querySelector("video");
+
+      if (!video) return;
+
+      // Autoplay the video
+      video.autoplay = true;
+      video.load(); // Optional, to ensure the video starts loading immediately
+
+      // You might want to mute the video if autoplaying
+      video.muted = true;
+    });
+  </script>
+</Layout>

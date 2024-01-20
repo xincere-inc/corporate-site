@@ -1,0 +1,114 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Recruitment from "../../components/Recruitment.astro";
+import TechBlog from "../../components/TechBlog.astro";
+---
+
+<Layout title="デジタルパートナー事業" currentPath="/business/digital-partner">
+  <main>
+    <!-- Banner section starts -->
+    <div
+      class="flex flex-col px-5 container mx-auto md:px-10 py-5 md:py-10 gap-x-[64px] gap-y-8 md:flex-row justify-between my-10 items-center"
+    >
+      <div class="w-full md:w-[50%]">
+        <img class="w-full" src="/images/service_img_2.webp" />
+      </div>
+      <div class="w-full md:w-[50%]">
+        <h1
+          class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
+        >
+          デジタルパートナー事業
+        </h1>
+        <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
+          タレントスタジオ <br />Geek スタジオ
+        </p>
+      </div>
+    </div>
+    <!-- Banner section ends -->
+
+    <section>
+      <div
+        class="container mx-auto md:px-10 items-center flex flex-wrap gap-y-8 px-5"
+      >
+        <div class="w-full md:w-[50%] md:pe-8">
+          <div
+            class="text-[40px] md:text-[48px] md:mb-6 mb-4 font-bold tracking-[-2px]"
+          >
+            <img src="/images/bold_txt_2.svg" />
+          </div>
+          <p class="font-medium text-[16px] leading-[140%]">
+            GEEKスタジオは、テクノロジーの力を借りて、現代のビジネスが直面する課題に対し、先駆的なソリューションを提供します。深い知見を活かし、企業が抱える複雑な問題に具体的かつ実用的な解を導き出します。私たちは、単なる理論ではなく、実際の市場での成果を重視し、お客様の目標達成をサポートします。<br
+            />
+            <br />
+            当スタジオのチームは、各分野でのリーダーシップと豊富な経験を兼ね備えています。エンジニアリングの深い知識、フィンテックとセキュリティの専門技術、そして製品の設計から運用に至るまでの広範なスキルセットを有し、多角的な視点から最良の戦略を策定します。<br
+            />
+            GEEKスタジオは、革新を続けることで、お客様にとって最も信頼できるパートナーとなることができます。
+          </p>
+        </div>
+
+        <h2 class="w-full md:w-[50%] md:ps-8">
+          <img
+            class="w-full"
+            src="/images/geek_studio.webp"
+            alt="ギークスタジオ"
+          />
+        </h2>
+      </div>
+    </section>
+
+    <section class="mt-20">
+      <div
+        class="container mx-auto md:px-10 items-center flex flex-wrap gap-y-8 px-5"
+      >
+        <h2 class="w-full md:w-[50%] md:pe-8">
+          <img
+            class="w-full"
+            src="/images/talent_studio.webp"
+            alt="タレントスタジオ"
+          />
+        </h2>
+        <div class="w-full md:w-[50%] md:ps-8">
+          <div
+            class="text-[40px] md:text-[48px] md:mb-6 mb-4 font-bold tracking-[-2px]"
+          >
+            <img src="/images/bold_txt.svg" />
+          </div>
+          <p class="font-medium text-[16px] leading-[140%]">
+            TALENTスタジオは、革新的なウェブサービスを生み出すための多様な才能を有しています。<br
+            />
+            クリエイティブなデザイナー、実績あるプロダクトマネージャー、テクノロジーの最前線を走るエンジニアたちが、お客様のビジョンを形にします。<br
+            />
+            新規プロジェクトの挑戦に際して、私たちはその専門知識と経験を結集させ、お客様の成功を支援します。<br
+            />
+            新しいウェブサービスの立ち上げは、多くの課題を含んでいますが、私たちのタレントスタジオは、あらゆるステージにおいて、お客様の強力なパートナーとなることができます。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <TechBlog />
+
+    <div class="movie">
+      <video
+        class="rotate-[-30deg] scale-[1.3] translate-x-[0%] md:translate-x-[0%] translate-y-[50%] md:translate-y-[0%] object-cover w-full"
+        autoplay
+        loop
+        src="/movies/digital-partner.mp4"></video>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const video = document.querySelector("video");
+
+        if (!video) return;
+
+        // Autoplay the video
+        video.autoplay = true;
+        video.load(); // Optional, to ensure the video starts loading immediately
+
+        // You might want to mute the video if autoplaying
+        video.muted = true;
+      });
+    </script>
+  </main>
+  <Recruitment />
+</Layout>
