@@ -87,10 +87,13 @@ export default function ContactForm({}: Props) {
         ],
       };
       fetch(
-        "https://hooks.slack.com/services/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",
+        "https://hooks.slack.com/services/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",
         {
           method: "POST",
-          headers: { Accept: "application/json" },
+          headers: {
+            Accept: "application/json",
+            "Content-type": "application/x-www-form-urlencoded",
+          },
           body: JSON.stringify(obj),
         }
       ).then(() => (window.location.href = "/contact-success"));
