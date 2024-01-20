@@ -87,7 +87,7 @@ export default function ContactForm({}: Props) {
         ],
       };
       fetch(
-        "https://hooks.slack.com/services/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",
+        "https://hooks.slack.com/services/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",
         {
           method: "POST",
           headers: { Accept: "application/json" },
