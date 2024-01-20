@@ -9,7 +9,11 @@ const oneWeekBefore = new Date(new Date().setHours(0, 0, 0, 0));
 oneWeekBefore.setDate(oneWeekBefore.getDate() - 7);
 ---
 
-<Layout title="テックブログ" currentPath="/blogs">
+<Layout
+  title="テックブログ"
+  description="シンシアのテックブログでは、技術革新や業界動向についての深い洞察を提供。私たちの専門家チームが最新の技術動向、プロジェクトの進捗、および企業文化に関する興味深い話題を共有し、業界の最前線での経験をお届けします。"
+  currentPath="/blogs"
+>
   <div class="md:flex md:m-auto container mx-auto md:px-10 md:mt-10 mt-6 pb-16">
     <main class="md:w-[calc(100%-20rem)] md:mb-0 mb-8 md:mx-0 mx-5">
       <section>

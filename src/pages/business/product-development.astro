@@ -4,7 +4,11 @@ import Recruitment from "../../components/Recruitment.astro";
 import TechBlog from "../../components/TechBlog.astro";
 ---
 
-<Layout title="プロダクト開発事業" currentPath="/business/product-development">
+<Layout
+  title="プロダクト開発事業"
+  description="株式会社シンシアのプロダクト開発事業では、不動産情報サービスを通じて、売買および賃貸物件情報の網羅的な提供と市場分析を実施。専門知識を駆使し、ニーズに応じた高品質なサービスを提供しています。また、AIを用いた新規プロダクトも絶賛開発中です。"
+  currentPath="/business/product-development"
+>
   <main>
     <div class="wrapper relative overflow-hidden">
       <div class="z-10 relative">
@@ -38,7 +42,9 @@ import TechBlog from "../../components/TechBlog.astro";
     <!-- features  stats-->
     <section class="my-[72px] md:my-20">
       <!-- feature one-->
-      <div class="container mx-auto md:px-10 items-center flex flex-wrap gap-y-8 px-5">
+      <div
+        class="container mx-auto md:px-10 items-center flex flex-wrap gap-y-8 px-5"
+      >
         <div class="w-full md:w-[50%] md:pe-8 md:h-[400px]">
           <img class="h-full object-cover" src="/images/real_estate.webp" />
         </div>
