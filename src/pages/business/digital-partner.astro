@@ -1,26 +1,24 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import MemberCard from "../../components/MemberCard.astro";
 import Recruitment from "../../components/Recruitment.astro";
-import H3 from "../../atoms/H3.astro";
 import TechBlog from "../../components/TechBlog.astro";
 ---
 
-<Layout title="デジタルパートナー事業">
+<Layout title="デジタルパートナー事業" currentPath="/business/digital-partner">
   <main>
     <!-- Banner section starts -->
     <div
-      class="flex flex-col px-5 md:px-20 container mx-auto py-5 md:py-10 gap-x-[64px] gap-y-8 md:flex-row justify-between my-10 items-center"
+      class="flex flex-col px-5 container mx-auto md:px-10 py-5 md:py-10 gap-x-[64px] gap-y-8 md:flex-row justify-between my-10 items-center"
     >
       <div class="w-full md:w-[50%]">
-        <img class="w-full" src="/images/service_img_2.svg" />
+        <img class="w-full" src="/images/service_img_2.webp" />
       </div>
       <div class="w-full md:w-[50%]">
-        <h4
+        <h1
           class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
         >
           デジタルパートナー事業
-        </h4>
+        </h1>
         <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
           タレントスタジオ <br />Geek スタジオ
         </p>
@@ -29,7 +27,9 @@ import TechBlog from "../../components/TechBlog.astro";
     <!-- Banner section ends -->
 
     <section>
-      <div class="container mx-auto items-center flex flex-wrap gap-y-8 px-5">
+      <div
+        class="container mx-auto md:px-10 items-center flex flex-wrap gap-y-8 px-5"
+      >
         <div class="w-full md:w-[50%] md:pe-8">
           <div
             class="text-[40px] md:text-[48px] md:mb-6 mb-4 font-bold tracking-[-2px]"
@@ -46,118 +46,27 @@ import TechBlog from "../../components/TechBlog.astro";
           </p>
         </div>
 
-        <div class="w-full md:w-[50%] md:ps-8">
-          <img class="w-full" src="/images/feature3.svg" />
-        </div>
+        <h2 class="w-full md:w-[50%] md:ps-8">
+          <img
+            class="w-full"
+            src="/images/geek_studio.webp"
+            alt="ギークスタジオ"
+          />
+        </h2>
       </div>
     </section>
 
-    <!-- management section starts -->
-    <section class="pt-20 pb-[72px] md:pb-20 bg-[#F1F6F080] md:my-12">
-      <div class="container mx-auto relative">
-        <p class="md:hidden text-[20px] mx-5 mb-5 text-[#518C3C] font-bold">
-          東大・京大出身者を中心にしたGEEKスタジオ
-        </p>
-        <div
-          class="flex flex-grow gap-x-8 flex-row-reverse gap-y-6 justify-center flex-wrap mx-5 md:mx-0"
-        >
-          <!-- one -->
-          <div
-            class="p-5 relative rounded-e-[8px] min-w-[350px] bg-white shadow-card w-[100%] md:w-[28%]"
-          >
-            <p
-              class="rotate-[90deg] w-[50px] hidden md:block text-[24px] text-[#518C3C] font-bold origin-left whitespace-nowrap absolute right-[-95px] top-[-17px]"
-            >
-              東大・京大出身者を中心にしたGEEKスタジオ
-            </p>
-
-            <div class="ms-[35px] z-10 relative">
-              <img
-                class="w-full h-[332px] object-cover mt-[20px]"
-                src="/images/management_img.svg"
-              />
-              <h4 class="font-bold text-[24px] mt-4">徐 聖博</h4>
-              <h5 class="font-medium text-base mb-2">Shengbo Xu</h5>
-              <p class="text-sm font-medium leading-[140%]">
-                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
-                Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
-              </p>
-            </div>
-            <div
-              class="h-[200px] w-[97px] bg-bg1 rounded-[60px] absolute top-[20px] left-[20px] z-0"
-            >
-              <p
-                class="text-white absolute font-bold left-[-40px] text-[16px] bottom-[100px] rotate-[90deg]"
-              >
-                CEO・エンジニア
-              </p>
-            </div>
-          </div>
-
-          <!-- two -->
-
-          <div
-            class="p-5 relative min-w-[350px] rounded-e-[8px] bg-white shadow-card w-[100%] md:w-[28%]"
-          >
-            <div class="ms-[35px] z-10 relative">
-              <img
-                class="w-full h-[332px] object-cover mt-[20px]"
-                src="/images/management_img.svg"
-              />
-              <h4 class="font-bold text-[24px] mt-4">徐 聖博</h4>
-              <h5 class="font-medium text-base mb-2">Shengbo Xu</h5>
-              <p class="text-sm font-medium leading-[140%]">
-                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
-                Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
-              </p>
-            </div>
-            <div
-              class="h-[200px] w-[97px] bg-bg1 rounded-[60px] absolute top-[20px] left-[20px] z-0"
-            >
-              <p
-                class="text-white absolute font-bold left-[-40px] text-[16px] bottom-[100px] rotate-[90deg]"
-              >
-                CEO・エンジニア
-              </p>
-            </div>
-          </div>
-          <!-- three -->
-
-          <div
-            class="p-5 relative min-w-[350px] rounded-e-[8px] bg-white shadow-card w-[100%] md:w-[28%]"
-          >
-            <div class="ms-[35px] z-10 relative">
-              <img
-                class="w-full h-[332px] object-cover mt-[20px]"
-                src="/images/management_img.svg"
-              />
-              <h4 class="font-bold text-[24px] mt-4">徐 聖博</h4>
-              <h5 class="font-medium text-base mb-2">Shengbo Xu</h5>
-              <p class="text-sm font-medium leading-[140%]">
-                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
-                Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
-              </p>
-            </div>
-            <div
-              class="h-[200px] w-[97px] bg-bg1 rounded-[60px] absolute top-[20px] left-[20px] z-0"
-            >
-              <p
-                class="text-white absolute font-bold left-[-40px] text-[16px] bottom-[100px] rotate-[90deg]"
-              >
-                CEO・エンジニア
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- management section ends -->
-
-    <section>
-      <div class="container mx-auto items-center flex flex-wrap gap-y-8 px-5">
-        <div class="w-full md:w-[50%] md:pe-8">
-          <img class="w-full" src="/images/feature2.svg" />
-        </div>
+    <section class="mt-20">
+      <div
+        class="container mx-auto md:px-10 items-center flex flex-wrap gap-y-8 px-5"
+      >
+        <h2 class="w-full md:w-[50%] md:pe-8">
+          <img
+            class="w-full"
+            src="/images/talent_studio.webp"
+            alt="タレントスタジオ"
+          />
+        </h2>
         <div class="w-full md:w-[50%] md:ps-8">
           <div
             class="text-[40px] md:text-[48px] md:mb-6 mb-4 font-bold tracking-[-2px]"
@@ -176,106 +85,6 @@ import TechBlog from "../../components/TechBlog.astro";
         </div>
       </div>
     </section>
-
-    <!-- management section starts -->
-    <section class="pt-20 pb-[72px] md:pb-20 md:my-12">
-      <div class="container mx-auto relative">
-        <p class="md:hidden text-[20px] mx-5 mb-5 text-[#518C3C] font-bold">
-          経験豊富なPMを中心としたタレントスタジオ
-        </p>
-        <div
-          class="flex flex-grow gap-x-8 gap-y-6 justify-center flex-wrap mx-5 md:mx-0"
-        >
-          <!-- one -->
-          <div
-            class="p-5 relative rounded-e-[8px] min-w-[350px] bg-white shadow-card w-[100%] md:w-[28%]"
-          >
-            <p
-              class="rotate-[90deg] w-[50px] hidden md:block text-[24px] text-[#518C3C] font-bold origin-left whitespace-nowrap absolute left-[-45px] top-[-17px]"
-            >
-              経験豊富なPMを中心としたタレントスタジオ
-            </p>
-
-            <div class="ms-[35px] z-10 relative">
-              <img
-                class="w-full h-[332px] object-cover mt-[20px]"
-                src="/images/management_img.svg"
-              />
-              <h4 class="font-bold text-[24px] mt-4">徐 聖博</h4>
-              <h5 class="font-medium text-base mb-2">Shengbo Xu</h5>
-              <p class="text-sm font-medium leading-[140%]">
-                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
-                Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
-              </p>
-            </div>
-            <div
-              class="h-[200px] w-[97px] bg-bg1 rounded-[60px] absolute top-[20px] left-[20px] z-0"
-            >
-              <p
-                class="text-white absolute font-bold left-[-40px] text-[16px] bottom-[100px] rotate-[90deg]"
-              >
-                CEO・エンジニア
-              </p>
-            </div>
-          </div>
-          <!-- two -->
-
-          <div
-            class="p-5 relative min-w-[350px] rounded-e-[8px] bg-white shadow-card w-[100%] md:w-[28%]"
-          >
-            <div class="ms-[35px] z-10 relative">
-              <img
-                class="w-full h-[332px] object-cover mt-[20px]"
-                src="/images/management_img.svg"
-              />
-              <h4 class="font-bold text-[24px] mt-4">徐 聖博</h4>
-              <h5 class="font-medium text-base mb-2">Shengbo Xu</h5>
-              <p class="text-sm font-medium leading-[140%]">
-                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
-                Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
-              </p>
-            </div>
-            <div
-              class="h-[200px] w-[97px] bg-bg1 rounded-[60px] absolute top-[20px] left-[20px] z-0"
-            >
-              <p
-                class="text-white absolute font-bold left-[-40px] text-[16px] bottom-[100px] rotate-[90deg]"
-              >
-                CEO・エンジニア
-              </p>
-            </div>
-          </div>
-          <!-- three -->
-
-          <div
-            class="p-5 relative min-w-[350px] rounded-e-[8px] bg-white shadow-card w-[100%] md:w-[28%]"
-          >
-            <div class="ms-[35px] z-10 relative">
-              <img
-                class="w-full h-[332px] object-cover mt-[20px]"
-                src="/images/management_img.svg"
-              />
-              <h4 class="font-bold text-[24px] mt-4">徐 聖博</h4>
-              <h5 class="font-medium text-base mb-2">Shengbo Xu</h5>
-              <p class="text-sm font-medium leading-[140%]">
-                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
-                Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
-              </p>
-            </div>
-            <div
-              class="h-[200px] w-[97px] bg-bg1 rounded-[60px] absolute top-[20px] left-[20px] z-0"
-            >
-              <p
-                class="text-white absolute font-bold left-[-40px] text-[16px] bottom-[100px] rotate-[90deg]"
-              >
-                CEO・エンジニア
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- management section ends -->
 
     <TechBlog />
 

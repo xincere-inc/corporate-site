@@ -2,19 +2,20 @@
 import Layout from "../layouts/Layout.astro";
 import Aside from "../components/Aside.astro";
 import Label from "../atoms/Label.astro";
+import Recruitment from "../components/Recruitment.astro";
 const allBlogs = await Astro.glob("../pages/blogs/*.md");
 
 const oneWeekBefore = new Date(new Date().setHours(0, 0, 0, 0));
 oneWeekBefore.setDate(oneWeekBefore.getDate() - 7);
 ---
 
-<Layout title="テックブログ">
-  <div class="md:flex md:m-auto md:w-desktop md:mt-10 mt-6 pb-16">
+<Layout title="テックブログ" currentPath="/blogs">
+  <div class="md:flex md:m-auto container mx-auto md:px-10 md:mt-10 mt-6 pb-16">
     <main class="md:w-[calc(100%-20rem)] md:mb-0 mb-8 md:mx-0 mx-5">
       <section>
-        <h2 class="text-[40px] text-primary font-bold leading-[48px] mb-6">
+        <h1 class="text-[40px] text-primary font-bold leading-[48px] mb-6">
           テックブログ
-        </h2>
+        </h1>
       </section>
       <section class="space-y-6">
         {
@@ -24,7 +25,7 @@ oneWeekBefore.setDate(oneWeekBefore.getDate() - 7);
               class="p-4 rounded-sm shadow-custom-lg flex items-center justify-between"
             >
               <div class="mr-4">
-                <h3 class="text-h3 font-bold mb-2">{blog.frontmatter.title}</h3>
+                <h2 class="text-h3 font-bold mb-2">{blog.frontmatter.title}</h2>
                 <p class="text-sm mb-2 line-clamp-2">
                   {blog.frontmatter.summary}
                 </p>
@@ -70,4 +71,5 @@ oneWeekBefore.setDate(oneWeekBefore.getDate() - 7);
     </main>
     <Aside />
   </div>
+  <Recruitment />
 </Layout>

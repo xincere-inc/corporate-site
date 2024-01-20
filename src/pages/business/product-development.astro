@@ -4,7 +4,7 @@ import Recruitment from "../../components/Recruitment.astro";
 import TechBlog from "../../components/TechBlog.astro";
 ---
 
-<Layout title="プロダクト開発事業">
+<Layout title="プロダクト開発事業" currentPath="/business/product-development">
   <main>
     <div class="wrapper relative overflow-hidden">
       <div class="z-10 relative">
@@ -14,7 +14,7 @@ import TechBlog from "../../components/TechBlog.astro";
             class="container pb-[60px] flex-wrap mx-auto px-5 flex items-center"
           >
             <div class="w-full md:pe-[32px] pe-[0] md:w-[50%]">
-              <img class="w-full" src="/images/product_banner.svg" />
+              <img class="w-full" src="/images/service_img.webp" />
             </div>
             <div
               class="w-full md:ps-[32px] ps-[0] mt-[48px] md:mt-0 md:w-[50%]"
@@ -38,9 +38,9 @@ import TechBlog from "../../components/TechBlog.astro";
     <!-- features  stats-->
     <section class="my-[72px] md:my-20">
       <!-- feature one-->
-      <div class="container mx-auto items-center flex flex-wrap gap-y-8 px-5">
-        <div class="w-full md:w-[50%] md:pe-8">
-          <img class="w-full" src="/images/feature_1.svg" />
+      <div class="container mx-auto md:px-10 items-center flex flex-wrap gap-y-8 px-5">
+        <div class="w-full md:w-[50%] md:pe-8 md:h-[400px]">
+          <img class="h-full object-cover" src="/images/real_estate.webp" />
         </div>
         <div class="w-full md:w-[50%] md:ps-8">
           <h2 class="text-[40px] md:text-[48px] font-bold tracking-[-2px]">
@@ -56,19 +56,12 @@ import TechBlog from "../../components/TechBlog.astro";
             />
             専門知識を生かし、市場のニーズに応える豊富な物件リストと詳細な分析をユーザーに提供しており、お客様が求める物件を迅速に見つけることができるようにデザインされています。<br
             />
-            <br />
-            CRMソリューション<br />
-            <br />
-            不動産業界専用のCRMソリューションを提供しています。<br />
-            このCRMは、顧客管理から物件の追跡、売買の記録まで、不動産ビジネスに特化した多様な機能を備えており、業務効率の飛躍的な向上を実現します。<br
-            />
-            当社のCRMは、お客様が市場でリードするための強力な支援となります。
           </p>
         </div>
       </div>
       <!-- feature two-->
       <div
-        class="container mx-auto items-center flex flex-col-reverse md:flex-row flex-wrap gap-y-8 px-5 mt-10"
+        class="container mx-auto md:px-10 items-center flex flex-col-reverse md:flex-row flex-wrap gap-y-8 px-5 mt-10"
       >
         <div class="w-full md:w-[50%] md:pe-8">
           <h3
@@ -76,15 +69,15 @@ import TechBlog from "../../components/TechBlog.astro";
           >
             絶賛開発中!!
           </h3>
-          <h5
+          <p
             class="text-[32px] text-center font-bold md:text-[24px] md:my-6 my-4"
           >
-            Coming soon
-          </h5>
+            Coming soon!
+          </p>
         </div>
 
-        <div class="w-full md:w-[50%] md:ps-8">
-          <img class="w-full" src="/images/feature_2.svg" />
+        <div class="w-full md:w-[50%] md:ps-8 md:h-[400px]">
+          <img class="h-full object-cover" src="/images/new_products.webp" />
         </div>
       </div>
     </section>

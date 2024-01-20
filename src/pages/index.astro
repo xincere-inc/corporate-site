@@ -1,13 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import TechBlog from "../components/TechBlog.astro";
+import Recruitment from "../components/Recruitment.astro";
 ---
 
-<Layout title="株式会社シンシア">
+<Layout title="株式会社シンシア" currentPath="/">
   <main>
     <!-- Banner section starts -->
     <section>
-      <div class="container mx-auto flex flex-col items-center px-[38px]">
+      <div
+        class="container mx-auto md:px-10 flex flex-col items-center px-[38px]"
+      >
         <img
           class="max-w-[595px] mt-[200px] w-full mb-[200px] md:mb-[140px]"
           src="/images/banner_logo.svg"
@@ -20,7 +23,7 @@ import TechBlog from "../components/TechBlog.astro";
 
     <!-- Service section starts -->
     <section class="mt-20 mb-20">
-      <div class="container mx-auto">
+      <div class="container mx-auto md:px-10 px-5">
         <h2 class="text-[56px] text-black-333 text-center font-bold mb-2">
           事業紹介
         </h2>
@@ -30,14 +33,14 @@ import TechBlog from "../components/TechBlog.astro";
 
         <!-- service 1 -->
         <div
-          class="flex gap-x-[64px] px-5 md:px-20 py-5 md:py-10 flex-col-reverse gap-y-8 md:flex-row justify-between items-center"
+          class="flex gap-x-[64px] py-5 md:py-10 flex-col-reverse gap-y-8 md:flex-row justify-between items-center"
         >
           <div class="w-full md:w-[50%]">
-            <h4
+            <h3
               class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
             >
               デジタルパートナー事業
-            </h4>
+            </h3>
             <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
               タレントスタジオ <br />Geek スタジオ
             </p>
@@ -49,23 +52,23 @@ import TechBlog from "../components/TechBlog.astro";
             </div>
           </div>
           <div class="w-full md:w-[50%]">
-            <img class="w-full" src="/images/service_img_2.svg" />
+            <img class="w-full" src="/images/service_img_2.webp" />
           </div>
         </div>
 
         <!-- service 2 -->
         <div
-          class="flex flex-col px-5 md:px-20 py-5 md:py-10 gap-x-[64px] gap-y-8 md:flex-row justify-between items-center"
+          class="flex flex-col py-5 md:py-10 gap-x-[64px] gap-y-8 md:flex-row justify-between items-center"
         >
           <div class="w-full md:w-[50%]">
-            <img class="w-full" src="/images/service_img.svg" />
+            <img class="w-full" src="/images/service_img.webp" />
           </div>
           <div class="w-full md:w-[50%]">
-            <h4
+            <h3
               class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
             >
               プロダクト開発事業
-            </h4>
+            </h3>
             <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
               不動産プロダクト（不動産メディア + CRM）<br />Coming soon
             </p>
@@ -80,14 +83,14 @@ import TechBlog from "../components/TechBlog.astro";
 
         <!-- service 3 -->
         <div
-          class="flex px-5 md:px-20 py-5 md:py-10 gap-x-[64px] flex-col-reverse gap-y-8 md:flex-row justify-between items-center"
+          class="flex py-5 md:py-10 gap-x-[64px] flex-col-reverse gap-y-8 md:flex-row justify-between items-center"
         >
           <div class="w-full md:w-[50%]">
-            <h4
+            <h3
               class="text-[40px] md:text-[48px] text-black-333 font-[700] tracking-[-2px]"
             >
               エンジニアチーム構築支援事業
-            </h4>
+            </h3>
             <p class="my-4 text-[16px] md:text-[20px] md:my-6 font-medium">
               エンジニア採用支援<br />評価制度構築支援
             </p>
@@ -99,14 +102,14 @@ import TechBlog from "../components/TechBlog.astro";
             </div>
           </div>
           <div class="w-full md:w-[50%]">
-            <img class="w-full" src="/images/service_img_3.svg" />
+            <img class="w-full" src="/images/service_img_3.webp" />
           </div>
         </div>
       </div>
     </section>
 
     <section class="pt-20 pb-[72px] md:mb-20 md:bg-[#ffffff4d] bg-white">
-      <div class="container mx-auto">
+      <div class="container mx-auto md:px-10 px-5">
         <h2 class="text-[56px] text-black-333 text-center font-bold mb-2">
           取引実績
         </h2>
@@ -116,41 +119,35 @@ import TechBlog from "../components/TechBlog.astro";
           Business Record
         </p>
 
-        <div
-          class="container flex-wrap px-5 gap-y-4 mx-auto flex justify-center"
-        >
+        <div class="container flex-wrap gap-y-4 flex justify-between">
           <img
-            class="md:w-[16%] w-[50%] px-2"
-            src="/images/recruit.svg"
-            alt="recruit"
+            class="md:w-[16%] w-[48%]"
+            src="/images/recruit.webp"
+            alt="株式会社リクルート"
           />
           <img
-            class="md:w-[16%] w-[50%] px-2"
-            src="/images/daiichi.svg"
-            alt="daiichi"
+            class="md:w-[16%] w-[48%]"
+            src="/images/daiichi.webp"
+            alt="第一生命保険株式会社"
           />
           <img
-            class="md:w-[16%] w-[50%] px-2"
-            src="/images/dentsu.svg"
-            alt="dentsu"
+            class="md:w-[16%] w-[48%]"
+            src="/images/dd.webp"
+            alt="電通デジタル"
           />
+          <img class="md:w-[16%] w-[48%]" src="/images/zigexn.webp" alt="株式会社じげん" />
+          <img class="md:w-[16%] w-[48%]" src="/images/fd.webp" alt="株式会社FD" />
           <img
-            class="md:w-[16%] w-[50%] px-2"
-            src="/images/zigen.svg"
-            alt="zigen"
-          />
-          <img class="md:w-[16%] w-[50%] px-2" src="/images/fd.svg" alt="fd" />
-          <img
-            class="md:w-[16%] w-[50%] px-2"
-            src="/images/00ai.svg"
-            alt="00ai"
+            class="md:w-[16%] w-[48%]"
+            src="/images/00ai.webp"
+            alt="00AI"
           />
         </div>
       </div>
     </section>
 
     <section class="pt-20 pb-[72px] md:pb-20">
-      <div class="container mx-auto">
+      <div class="container mx-auto md:px-10 px-5">
         <h2 class="text-[56px] text-black-333 text-center font-bold mb-2">
           役員紹介
         </h2>
@@ -160,58 +157,30 @@ import TechBlog from "../components/TechBlog.astro";
           Officers
         </p>
 
-        <div class="flex gap-x-8 gap-y-6 justify-around flex-wrap mx-5 md:mx-0">
+        <div class="md:flex md:justify-between">
           <!-- one -->
-          <div
-            class="p-5 relative rounded-e-[8px] min-w-[350px] bg-white shadow-card w-[100%] md:w-[30%]"
-          >
-            <div class="ms-[35px] z-10 relative">
-              <img
-                class="w-full h-[332px] object-cover mt-[20px]"
-                src="/images/management_img.svg"
-              />
-              <h4 class="font-bold text-[24px] mt-4">徐 聖博</h4>
-              <h5 class="font-medium text-base mb-2">Shengbo Xu</h5>
-              <p class="text-sm font-medium leading-[140%]">
-                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed等でエンジニアとして活躍し2020年にXincere,
-                Inc.を創業。
-              </p>
-            </div>
-            <div
-              class="h-[200px] w-[97px] bg-bg1 rounded-[60px] absolute top-[20px] left-[20px] z-0"
-            >
-              <p
-                class="text-white absolute font-bold left-[-40px] text-[16px] bottom-[100px] rotate-[90deg]"
-              >
-                CEO・エンジニア
-              </p>
-            </div>
+          <div class="md:w-[520px] md:h-[370px]">
+            <img
+              class="md:w-[520px] md:h-[370px] object-cover md:max-w-[none]"
+              src="/images/shengboxu.webp"
+            />
           </div>
           <!-- two -->
 
-          <div
-            class="p-5 relative min-w-[350px] rounded-e-[8px] bg-white shadow-card w-[100%] md:w-[30%]"
-          >
-            <div class="ms-[35px] z-10 relative">
-              <img
-                class="w-full h-[332px] object-cover mt-[20px]"
-                src="/images/management_img.svg"
-              />
-              <h4 class="font-bold text-[24px] mt-4">徐 聖博</h4>
-              <h5 class="font-medium text-base mb-2">Shengbo Xu</h5>
-              <p class="text-sm font-medium leading-[140%]">
-                東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
-                Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
-              </p>
-            </div>
-            <div
-              class="h-[200px] w-[97px] bg-bg1 rounded-[60px] absolute top-[20px] left-[20px] z-0"
-            >
-              <p
-                class="text-white absolute font-bold left-[-40px] text-[16px] bottom-[100px] rotate-[90deg]"
-              >
-                CEO・エンジニア
-              </p>
+          <div class="md:p-10 pt-10">
+            <div>
+              <div class="mb-4">
+                <p>CEO・エンジニア</p>
+                <p class="text-[48px] font-bold leading-10 my-2">徐 聖博</p>
+                <small>Shengbo Xu</small>
+              </div>
+              <div>
+                <p>
+                  開成高校出身。東京大学大学院でコンピュータ科学を学びAIの研究で学会発表などを行う。<br
+                  />卒業後、グリーに新卒入社しWeb開発を経験。その後、メドレーやIndeed
+                  Tokyoでエンジニアとして活躍し2020年にXincere, Inc.を創業。
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -220,52 +189,12 @@ import TechBlog from "../components/TechBlog.astro";
 
     <TechBlog />
     <!-- Recruit section starts -->
-    <section class="flex">
-      <div class="md:w-[20%] w-[25%] relative">
-        <div
-          class="rotated-text2 hidden right-[1%] absolute text-center text-base md:text-[24px] font-bold leading-[140%]"
-        >
-          Recruit
-        </div>
-        <div
-          class="pt-6 text-center rotated-text flex flex-col whitespace-nowrap absolute text-[48px] md:text-[56px] font-bold"
-        >
-          採用と選考
-          <span
-            class="text-center text-base md:text-[24px] font-bold leading-[140%]"
-          >
-            Recruit</span
-          >
-        </div>
-      </div>
-      <div
-        class="bg-recruit md:w-[80%] w-[75%] bg-cover py-[32px] md:py-[158px] md:ps-[80px] md:pe-[80px] px-5 text-white"
-      >
-        <div
-          class="container flex flex-wrap gap-y-6 justify-start md:justify-between"
-        >
-          <h3
-            class="text-[24px] md:text-[48px] w-full md:w-auto font-bold tracking-[-2px]"
-          >
-            誰もが価値創造に夢中になれる世界
-          </h3>
-          <div class="w-full justify-end flex md:w-auto">
-            <a
-              class="flex items-center md:w-auto gap-x-2 flex-col-reverse md:flex-row"
-              href="/recruit"
-            >
-              <span class="font-bold text-[14px] md:text-base">選考に進む</span>
-              <img src="/images/arrow-big.svg" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Recruitment />
     <!-- Recruit section ends -->
 
     <!-- company section starts -->
     <section class="pt-20 pb-[72px] md:pb-20" id="aboutCompany">
-      <div class="container mx-auto px-5">
+      <div class="container mx-auto md:px-10 px-5">
         <h2 class="text-[56px] text-black-333 text-center font-bold mb-2">
           会社概要
         </h2>
@@ -277,44 +206,44 @@ import TechBlog from "../components/TechBlog.astro";
         <div class="flex md:justify-evenly gap-x-[64px] flex-wrap gap-y-[32px]">
           <div class="flex flex-col md:gap-y-4 gap-y-8">
             <div>
-              <h5 class="text-[20px] font-bold mb-2">会社名</h5>
-              <p class="text-[14px] font-medium">株式会社シンシア</p>
+              <p class="text-[20px] font-bold mb-2">会社名</p>
+              <h1 class="text-[14px] font-medium">株式会社シンシア</h1>
             </div>
             <div>
-              <h5 class="text-[20px] font-bold mb-2">代表者</h5>
+              <p class="text-[20px] font-bold mb-2">代表者</p>
               <p class="text-[14px] font-medium">代表取締役社長 徐 聖博</p>
             </div>
             <div>
-              <h5 class="text-[20px] font-bold mb-2">資本金</h5>
+              <p class="text-[20px] font-bold mb-2">資本金</p>
               <p class="text-[14px] font-medium">
                 10,700万円（資本準備金含む）
               </p>
             </div>
             <div>
-              <h5 class="text-[20px] font-bold mb-2">設立年月日</h5>
+              <p class="text-[20px] font-bold mb-2">設立年月日</p>
               <p class="text-[14px] font-medium">2020年6月8日</p>
             </div>
           </div>
           <div class="flex flex-col md:gap-y-4 gap-y-8">
             <div>
-              <h5 class="text-[20px] font-bold mb-2">事業内容</h5>
+              <p class="text-[20px] font-bold mb-2">事業内容</p>
               <p class="text-[14px] font-medium">
                 プロダクト開発事業 <br />ITコンサルティング事業
                 <br />エンジニア育成・組織化支援事業（ワーディング要検討）
               </p>
             </div>
             <div>
-              <h5 class="text-[20px] font-bold mb-2">宅地建物取引業免許番号</h5>
+              <p class="text-[20px] font-bold mb-2">宅地建物取引業免許番号</p>
               <p class="text-[14px] font-medium">東京都知事(1)第105089号</p>
             </div>
             <div>
-              <h5 class="text-[20px] font-bold mb-2">加盟団体</h5>
+              <p class="text-[20px] font-bold mb-2">加盟団体</p>
               <p class="text-[14px] font-medium">
                 社団法人全日本不動産協会、社団法人不動産保証協会
               </p>
             </div>
             <div>
-              <h5 class="text-[20px] font-bold mb-2">設立年月日</h5>
+              <p class="text-[20px] font-bold mb-2">設立年月日</p>
               <p class="text-[14px] font-medium">2020年6月8日</p>
             </div>
           </div>

@@ -2,13 +2,20 @@
 interface Props {
   title: string;
   description?: string;
+  currentPath: string;
 }
 
-const { title, description = "株式会社シンシアはテクノロジーを強みとした企業です。" } = Astro.props;
+const {
+  title,
+  description = "株式会社シンシアはテクノロジーを強みとした企業です。",
+  currentPath,
+} = Astro.props;
 
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import MobileHeader from "../components/MobileHeader.astro";
+
+const baseUrl = import.meta.env.HOST;
 ---
 
 <!DOCTYPE html>
@@ -16,29 +23,48 @@ import MobileHeader from "../components/MobileHeader.astro";
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="株式会社シンシア,テクノロジー,DX" />
+    <meta
+      name="keywords"
+      content="株式会社シンシア,テクノロジー,DX,エンジニア採用"
+    />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="og:image" content={`${baseUrl}/images/og_image.png`} />
+    <link rel="canonical" href={`${baseUrl}${currentPath}`} />
     <meta name="generator" content={Astro.generator} />
     <link rel="stylesheet" href="/css/custom.css" rel="stylesheet" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F33V17FPK8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-F33V17FPK8");
+    </script>
     <title>{title}</title>
   </head>
+
   <body x-data="{ mobileSidebar: false }">
     <Header />
     <MobileHeader />
     <slot />
     <Footer />
   </body>
+
+  <style is:global>
+    :root {
+    }
+    html {
+      font-family: system-ui, sans-serif;
+    }
+    code {
+    }
+    [x-cloak] {
+      display: none;
+    }
+  </style>
 </html>
-<style is:global>
-  :root {
-  }
-  html {
-    font-family: system-ui, sans-serif;
-  }
-  code {
-  }
-  [x-cloak] {
-    display: none;
-  }
-</style>

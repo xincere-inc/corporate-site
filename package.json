@@ -3,9 +3,9 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
+    "dev": "HOST=http://localhost:3000 astro dev",
+    "start": "HOST=http://localhost:3000 astro dev",
+    "build": "HOST=https://corp.xincere.jp astro build",
     "preview": "astro preview",
     "astro": "astro"
   },

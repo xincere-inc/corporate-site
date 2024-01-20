@@ -12,6 +12,7 @@ const oneWeekBefore = new Date(new Date().setHours(0, 0, 0, 0));
 oneWeekBefore.setDate(oneWeekBefore.getDate() - 7);
 
 const publishedDate = new Date(frontmatter.date);
+const baseUrl = import.meta.env.HOST;
 ---
 
 <!DOCTYPE html>
@@ -22,12 +23,26 @@ const publishedDate = new Date(frontmatter.date);
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="og:image" content={`${baseUrl}/images/og_image.png`} />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F33V17FPK8"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-F33V17FPK8");
+    </script>
+
     <title>{frontmatter.title} - 株式会社シンシアテックブログ</title>
   </head>
   <body x-data="{ mobileSidebar: false }">
     <Header />
     <MobileHeader />
-    <div class="md:flex md:m-auto md:w-desktop md:mt-20 mt-20">
+    <div class="md:flex md:m-auto container mx-auto md:px-10 md:my-20 mt-20">
       <main class="pb-4 md:px-0 px-5 md:w-[calc(100%-20rem)]">
         <p class="text-description text-sm">
           {publishedDate.toISOString().split("T")[0].replace(/-/g, ".")}
@@ -37,9 +52,7 @@ const publishedDate = new Date(frontmatter.date);
           {
             oneWeekBefore < publishedDate ? (
               <Label title="NEW" color="red" />
-            ) : (
-              null
-            )
+            ) : null
           }
           {
             frontmatter.tags
@@ -53,16 +66,7 @@ const publishedDate = new Date(frontmatter.date);
       </main>
       <Aside />
     </div>
-    <!-- 募集職種 -->
-    <section>
-      <div
-        class="flex items-center md:w-desktop md:m-auto md:pt-16 md:mb-12 hidden md:flex"
-      >
-        <p class="text-h1 text-primary mr-2">募集職種</p>
-        <p class="text-h2 text-primary">Recult</p>
-      </div>
-      <Recruitment />
-    </section>
+    <Recruitment />
     <Footer />
   </body>
 </html>

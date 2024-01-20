@@ -12,7 +12,7 @@ const { title } = Astro.props;
     type="button"
     class="flex w-full items-center justify-between rounded-lg text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
   >
-    {title}
+    <h3>{title}</h3>
     <svg
       :class="isOpen ? 'rotate-180' : ''"
       class="h-5 w-5 flex-none transition duration-150"

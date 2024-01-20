@@ -9,7 +9,7 @@ const allBlogs = await Astro.glob("../pages/blogs/*.md");
 ---
 
 <section class="pt-20 pb-[72px] md:mb-20">
-  <div class="container mx-auto px-5">
+  <div class="container mx-auto md:px-10 px-5">
     <h2
       class="md:text-[56px] text-[48px] text-black-333 text-center font-bold mb-2"
     >
@@ -21,11 +21,11 @@ const allBlogs = await Astro.glob("../pages/blogs/*.md");
 
     <div class="flex justify-center flex-wrap">
       <div
-        class="w-[100%] md:w-[50%] border-b-[1px] md:border-b-[0px] md:border-e-[1px] border-dotted md:ps-[17.5px] md:pe-[32px] pb-[16px] md:pb-0 flex items-stretch"
+        class="w-[100%] md:w-[50%] border-b-[1px] md:border-b-[0px] md:border-e-[1px] border-dotted md:ps-[17.5px] md:pl-0 md:pr-[32px] pb-[16px] md:pb-0 flex items-stretch"
       >
         <img
-          class="w-full min-h-[360px] object-cover"
-          src="/images/blog_1.png"
+          class="w-full md:min-h-[360px] h-[240px] object-cover"
+          src="/images/blog.webp"
           alt="blog"
         />
       </div>
